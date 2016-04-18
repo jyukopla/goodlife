@@ -1,6 +1,7 @@
 all: build
 
-build: .vagrant buildout.cfg
+build: buildout.cfg
+	vagrant up
 	./buildout.sh
 
 watch: build
@@ -17,10 +18,4 @@ clean:
 
 ###
 
-.PHONY: all build watch clean
-
-.vagrant:
-	vagrant up
-
-resources/theme/webpack:
-	make -C resources
+.PHONY: all build watch serve clean

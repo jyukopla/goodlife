@@ -9,7 +9,7 @@ watch: clean node_modules $(LIB)
 	PORT=8090 TARGET=watch node_modules/.bin/webpack-dev-server
 
 clean:
-	rm -rf theme/webpack
+	rm -rf theme
 
 lib:
 	git submodule update --init --recursive
