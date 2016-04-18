@@ -6,7 +6,8 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <!-- Import Barceloneta rules -->
-  <xi:include href="++theme++barceloneta/rules.xml" />
+  <!-- <xi:include href="barceloneta.xml" /> -->
+  <theme href="index.html" />
 
   <!-- Configure webpack built bundles -->
   <xi:include href="webpack.xml" />
