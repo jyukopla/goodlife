@@ -18,7 +18,7 @@ clean:
 
 .PHONY: all build watch clean
 
-.vagrant: resources/theme/webpack
+.vagrant:
 	vagrant up
 
 resources/theme/webpack:
