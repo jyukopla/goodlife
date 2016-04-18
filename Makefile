@@ -3,10 +3,10 @@ all: build
 build: .vagrant buildout.cfg
 	./buildout.sh
 
-watch:
+watch: build
 	make -C resources watch
 
-serve:
+serve: build
 	./plonectl.sh fg
 
 clean:
