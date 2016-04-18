@@ -10,10 +10,10 @@ serve: build
 	./plonectl.sh fg
 
 clean:
-	vagrant destroy -f
+	vagrant halt -f
 	make -C resources clean
 	rm -f kill_plone.sh plonectl.sh buildout.sh vagrant_scp.sh
-	rm -rf .vagrant plone
+	rm -rf plone
 
 ###
 
