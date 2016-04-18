@@ -5,6 +5,7 @@ const merge = require('webpack-merge');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFileWebpackPlugin = require('write-file-webpack-plugin');
 
 const PATHS = {
@@ -52,6 +53,12 @@ if(TARGET === 'build' || !TARGET) {
       filename: '[name].[chunkhash].js',
       chunkFilename: '[chunkhash].js',
       publicPath: process.env.PUBLIC_PATH || '/Plone/++theme++webpack/'
+    },
+    resolve: {
+      alias: {
+        'react': 'react-lite',
+        'react-dom': 'react-lite'
+      }
     },
     module: {
       loaders: [
