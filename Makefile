@@ -3,10 +3,11 @@ all: build
 build: .vagrant buildout.cfg
 	./buildout.sh
 
-watch: build
-	node_modules/.bin/concurrently --kill-others \
-		"make -C resources watch" \
-		"./plonectl.sh fg"
+watch:
+	make -C resources watch
+
+serve:
+	./plonectl.sh fg
 
 clean:
 	vagrant destroy -f
@@ -23,7 +24,3 @@ clean:
 
 resources/theme/webpack:
 	make -C resources
-
-node_modules: package.json
-	npm install
-	touch node_modules
