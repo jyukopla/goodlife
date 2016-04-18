@@ -69,7 +69,9 @@ if(TARGET === 'build' || !TARGET) {
     module: {
       loaders: [
         { test: /\.less$/,
-          loader: ExtractTextPlugin.extract('style', 'css!less') }
+          loader: ExtractTextPlugin.extract('style', 'css!less') },
+        { test: /\.scss$/,
+          loader: ExtractTextPlugin.extract('style', 'css!sass') }
       ]
     },
     plugins: [
@@ -101,7 +103,9 @@ if(TARGET === 'watch') {
     module: {
       loaders: [
         { test: /\.less$/,
-          loaders: ['style', 'css', 'less'] }
+          loaders: ['style', 'css', 'less'] },
+        { test: /\.scss$/,
+          loaders: ['style', 'css', 'sass'] }
       ]
     },
     entry: join(PATHS.src, 'authenticated'),

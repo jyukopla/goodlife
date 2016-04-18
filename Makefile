@@ -1,26 +1,30 @@
-BUILDOUT_BIN ?= $(shell command -v buildout || echo 'bin/buildout')
-BUILDOUT_ARGS ?=
-
 all: build
 
-build: bin/instance resources/theme
+build: .vagrant buildout.cfg
+	./buildout.sh
+
+watch: build
+	node_modules/.bin/concurrently --kill-others \
+		"make -C resources watch" \
+		"./plonectl.sh fg" \
+		"vagrant rsync-auto" \
 
 clean:
-	rm -rf .installed.cfg bin develop-eggs parts test.py resources/theme
+	vagrant destroy -f
+	make -C resources clean
+	rm -f kill_plone.sh plonectl.sh buildout.sh vagrant_scp.sh
+	rm -rf .vagrant plone
 
 ###
 
-.PHONY: all build clean
+.PHONY: all build watch clean
 
-bootstrap-buildout.py:
-	curl -k -O https://bootstrap.pypa.io/bootstrap-buildout.py
+.vagrant: resources/theme/webpack
+	vagrant up
 
-bin/buildout: bootstrap-buildout.py buildout.cfg
-	python bootstrap-buildout.py -c buildout.cfg
+resources/theme/webpack:
+	make -C resources
 
-bin/instance: $(BUILDOUT_BIN) buildout.cfg
-	$(BUILDOUT_BIN) -N $(BUILDOUT_ARGS) install instance
-
-resources/theme: resources/Makefile
-	make -C resources build
-
+node_modules: package.json
+	npm install
+	touch node_modules

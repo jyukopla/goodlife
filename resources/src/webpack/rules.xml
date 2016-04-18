@@ -12,6 +12,7 @@
   <xi:include href="webpack.xml" />
 
   <!-- Inject license selector pattern -->
+  <!--
   <replace css:content="textarea#form-widgets-IDublinCore-rights">
     <xsl:copy>
       <xsl:attribute name="class">
@@ -20,8 +21,10 @@
       <xsl:apply-templates select="@*[name()!='class']|node()" />
     </xsl:copy>
   </replace>
+  -->
 
   <!-- Inject license badge below content body -->
+  <!--
   <replace css:content="#viewlet-below-content-body"
            css:if-not-content="textarea#form-widgets-IDublinCore-rights">
     <xsl:copy>
@@ -30,4 +33,5 @@
                           $diazo-base-document)/html/body/*" />
     </xsl:copy>
   </replace>
+  -->
 </rules>
