@@ -8,6 +8,12 @@
   <!-- Import Barceloneta rules -->
   <!-- <xi:include href="barceloneta.xml" /> -->
   <theme href="index.html" />
+  <notheme css:if-not-content="#visual-portal-wrapper" />
+
+  <!-- toolbar -->
+  <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
+  <drop css:theme="#portal-toolbar" css:if-content=".userrole-anonymous" />
+  <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
 
   <!-- Configure webpack built bundles -->
   <xi:include href="webpack.xml" />
