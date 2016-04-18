@@ -6,8 +6,7 @@ build: .vagrant buildout.cfg
 watch: build
 	node_modules/.bin/concurrently --kill-others \
 		"make -C resources watch" \
-		"./plonectl.sh fg" \
-		"vagrant rsync-auto" \
+		"./plonectl.sh fg"
 
 clean:
 	vagrant destroy -f
