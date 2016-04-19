@@ -37,7 +37,7 @@ const common = merge(require('./lib/plonetheme.webpack/webpack.globals'), {
     new CopyWebpackPlugin(
       [{ from: join(PATHS.src, '..'), to: '..' }],
       { ignore: ['**/webpack/*.js', '**/webpack/*.less',
-                 '**/webpack/*.jsx', '**/webpack/*.html'] }
+                 '**/webpack/*.jsx', 'index.html'] }
     ),
     // Inject bundles
     new HtmlWebpackPlugin({
