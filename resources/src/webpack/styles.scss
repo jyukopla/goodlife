@@ -58,10 +58,6 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
 
+// Import page spesific styles and overrides
 
-
-
-body {
-
-  background-color: green;
-}
+@import "sass/main.scss"
