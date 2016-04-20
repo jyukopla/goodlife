@@ -10,8 +10,7 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: 8080, host: 8080
 
     config.vm.provider "virtualbox" do |vb|
-        #vb.customize ["modifyvm", :id, "--memory", "1024"]
-        vb.customize ["modifyvm", :id, "--name", "plonedev" ]
+        vb.customize ["modifyvm", :id, "--memory", "1024"]
     end
 
     # Run apt-get update as a separate step in order to avoid
