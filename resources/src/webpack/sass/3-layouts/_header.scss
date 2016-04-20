@@ -1,0 +1,30 @@
+.hero-area
+{
+
+  &--carousell
+  {
+    @extend .row;
+
+    height: 400px;
+
+    background: url("img/hero-temp.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    &--title
+    {
+      width: 50%;
+      min-height: 300px;
+      padding: 20px;
+
+      position: relative;
+      top: 50px;
+      left: 50px;
+      background-color: rgba(255, 255, 255, 0.7);
+
+    }
+  }
+
+}

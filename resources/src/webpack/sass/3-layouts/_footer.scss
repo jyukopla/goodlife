@@ -1,0 +1,67 @@
+.footer--bg
+{
+  height: 400px;
+  padding: 0;
+
+  background:
+  linear-gradient(
+      rgba(255, 61, 0, 0.8),
+      rgba(255, 61, 0, 0.8)
+    ),
+  url("img/minimal02-5.png");
+}
+
+
+.footer-area
+{
+  @extend .row-fluid;
+
+
+  &--left
+  {
+      @extend .col-md-5;
+      @extend .col-md-offset-1;
+      height: 320px;;
+
+      &--logo
+      {
+        height: auto;
+        width: 300px;
+
+        position: relative;
+        top: 56px;
+        left: 40px;
+
+      }
+
+  }
+
+  &--right
+  {
+      @extend .col-md-4;
+      @extend .col-md-offset-right-2;
+  }
+}
+
+.footer-area-bottom
+{
+  @extend .row-fluid;
+
+  &--info
+  {
+    @extend .col-md-12;
+    height: 80px;
+    background-color: rgba(69, 140, 0, 0.8);
+    border-top: 1px solid #000;
+    -webkit-box-shadow: inset 0px 6px 10px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 6px 10px -1px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 6px 10px -1px rgba(0,0,0,0.75);
+
+    p
+    {
+        margin-top: 35px;
+        color: #fff;
+    }
+  }
+
+}

@@ -23,22 +23,57 @@
   .navbar-bottomlinks
   {
 
-    .navbar-brand
-    {
-      padding-right: 300px;
-
-
-      .header-logo
+      .navbar-brand
       {
-        position: relative;
-        bottom: 70px;
-        width: 200px;
-        max-width: 100%;
-        height: auto;
+        @media (min-width: 992px)
+        {
+            padding-right: 100px;
+        }
+
+        @media (min-width: 1200px)
+        {
+            padding-right: 300px;
+        }
+
+        @media (max-width: 480px)
+        {
+            display: none;
+        }
+
+        .header-logo
+        {
+          position: relative;
+          bottom: 70px;
+          width: 200px;
+          max-width: 100%;
+          height: auto;
+        }
       }
+
+      .navbar-brand--mobile
+      {
+
+        float: left;
+        padding: 15px 15px;
+        font-size: 18px;
+        line-height: 20px;
+        height: 50px;
+
+          @media (min-width: 480px)
+          {
+            display: none;
+          }
+
+          .header-logo--mobile
+          {
+            position: relative;
+            bottom: 75px;
+            width: 38px;
+            max-width: 100%;
+            height: auto;
+          }
+      }
+
+
     }
-  }
-
-
-
 }

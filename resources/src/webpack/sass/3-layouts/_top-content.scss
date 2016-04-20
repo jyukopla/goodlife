@@ -1,0 +1,14 @@
+.top-content
+{
+  @extend .row;
+
+  &--left
+  {
+      @extend .col-md-6;
+  }
+
+  &--right
+  {
+      @extend .col-md-6;
+  }
+}

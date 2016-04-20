@@ -1,0 +1,42 @@
+
+
+
+
+$base__font-size: 16 !default;
+$base__line: 20 !default;
+
+
+/* PX to EM Funciton */
+
+@function em($px, $base: $base__font-size) {
+  @return ($px / $base) * 1em;
+}
+
+
+/* Font size overrides */
+
+body
+{
+  font-size: $base__font-size !important;
+}
+
+
+h1
+{
+  font-size: em(37);
+}
+
+h2
+{
+  font-size: em(28);
+}
+
+h3
+{
+  font-size: em(21);
+}
+
+p
+{
+  font-size: em(16);
+}
