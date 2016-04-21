@@ -2,20 +2,20 @@
 
 
 
-$base__font-size: 16 !default;
-$base__line: 20 !default;
+//$base__font-size: 16 !default;
+//$base__line: 20 !default;
 
 
 /* PX to EM Funciton */
 
-@function em($px, $base: $base__font-size) {
+/*@function em($px, $base: $base__font-size) {
   @return ($px / $base) * 1em;
-}
+}*/
 
 
 /* Font size overrides */
 
-body
+/*body
 {
   font-size: $base__font-size !important;
 }
@@ -39,4 +39,4 @@ h3
 p
 {
   font-size: em(16);
-}
+}*/

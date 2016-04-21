@@ -1,14 +1,26 @@
 .top-content
 {
-  @extend .row;
+  @include make-row();
 
-  &--left
+  &-left
   {
-      @extend .col-md-6;
+
+    @include make-col();
+
+    @media (min-width: 20em) {
+      @include make-col-span(6);
+    }
+
   }
 
-  &--right
+  &-right
   {
-      @extend .col-md-6;
+
+    @include make-col();
+
+    @media (min-width: 20em) {
+      @include make-col-span(6);
+    }
+
   }
 }
