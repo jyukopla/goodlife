@@ -13,52 +13,54 @@
 
 <body>
 
-  <nav role="navigation" class="navbar navbar-default main-nav">
-    <div class="container">
-      <div class="row">
-        <div class="navbar-toplinks">
-          <ul class="pull-right list-unstyled list-inline">
-            <li class="language-fi"><a href="#">Suomi</a></li>
-            <li class="language-en"><a href="#">English</a></li>
-            <li class="language-en"><a href="#">German</a></li>
-            <li class="login"><a href="#">Kirjaudu / Login</a></li>
-          </ul>
-        </div>
-        <!--navbar-toplinks-->
+<div class="container">
 
-        <div class="navbar-bottomlinks">
+  <div class="row toprow">
 
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand"><img alt="Brand" src="img/jyu-logo.png" class="header-logo"></a>
-            <a href="#" class="navbar-brand--mobile"><img alt="Brand" src="img/jyu-torch.png" class="header-logo--mobile"></a>
-          </div>
-
-          <!-- Collection of nav links and other content for toggling -->
-          <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">JÄSENENET</a></li>
-              <li><a href="#">POLUT</a></li>
-              <li><a href="#">LISÄTIETOJA</a></li>
-              <li><a href="#">JOTAIN JOTAIN</a></li>
-              <li><a href="#">JOTAIN MUUTA</a></li>
-            </ul>
-          </div>
-
-        </div>
-        <!--navbar-bottomlinks-->
-      </div>
-      <!--row-->
+    <div class="toprow__logos col-xs-6 col-md-6">
+      <a class="navbar-brand" href="#"><img alt="Brand" src="img/jyu-logo.png" class="toprow__logos--big"></a>
+      <a class="navbar-brand__mobile" href="#"><img alt="Brand" src="img/jyu-torch.png" class="toprow__logos--mobile" </a>
     </div>
-    <!--container-->
-  </nav>
-  <!--navigation-->
+
+    <div class="toprow__language-links col-xs-6 col-md-6">
+      <ul class="list-inline list-unstyled pull-right">
+        <li class="language-fi"><a href="#">Suomi</a></li>
+        <li class="language-en"><a href="#">English</a></li>
+        <li class="language-ge"><a href="#">German</a></li>
+        <li class="login"><a href="#">Kirjaudu / Login</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <!--toprow-->
+
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-light">
+        <ul class="nav navbar-nav pull-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">LINKKI <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LINKKI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LINKKI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LINKKI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LINKKI</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!--container-->
+
+
 
 
   <header class="container hero-area">
