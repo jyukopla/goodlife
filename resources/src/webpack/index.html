@@ -116,13 +116,10 @@
     <section class="footer__row">
       <div class="footer__row__block">
         <div class="footer__row__block--links">
-          <ul>
-            <li>LINKKI</li>
-            <li>LINKKI</li>
-            <li>LINKKI</li>
-            <li>LINKKI</li>
-            <li>LINKKI</li>
-            <li>LINKKI</li>
+          <ul class="list-unstyled">
+            <li><a href="#">OTA YHTEYTTÄ</a></li>
+            <li><a href="#">JÄSENET</a></li>
+            <li><a href="#">LISÄTIETOJA</a></li>
           </ul>
         </div>
       </div>
@@ -134,13 +131,12 @@
       </div>
       <div class="footer__row__block">
         <div class="footer__row__block--some">
-          <ul>
-            <li>SOME</li>
-            <li>SOME</li>
-            <li>SOME</li>
-            <li>SOME</li>
-            <li>SOME</li>
-            <li>SOME</li>
+          <ul class="list-inline list-unstyled pull-right">
+            <li class="list-inline-item"><img src="img/some-icons/facebook.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/twitter.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/linkedin.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/instagram.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/youtube.png" alt="" /></li>
           </ul>
         </div>
       </div>
@@ -148,44 +144,13 @@
   </div>
 </footer>
 
-<!--<footer class="container-fluid footer-bg-wrapper">
 
 
-
-  <div class="footer-area">
-
-    <secion class="footer-area__left-block">
-      <img class="footer-area__left-block__logo" src="img/footer-logo.png" alt="Jyväskylän Yliopisto">
-    </secion>
-
-    <section class="footer-area__right-block">
-      <ul class="list-unstyled">
-        <li>LINKKI</li>
-        <li>LINKKI</li>
-        <li>LINKKI</li>
-        <li>LINKKI</li>
-      </ul>
-      <ul class="list-unstyled">
-        <li>SOME</li>
-        <li>SOME</li>
-        <li>SOME</li>
-        <li>SOME</li>
-      </ul>
-    </section>
-  </div>
-
-  <section class="footer-area-bottom">
-    <div class="footer-area-bottom__info">
-      <p class="text-center">Jyväskylän yliopisto | Psykologian laitos</p>
-    </div>
-  </section>
-
-</footer>-->
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <script data-name="bundle-<%= chunk %>" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
 
 
-  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-    <script data-name="bundle-<%= chunk %>" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-    <% } %>
 </body>
 
 </html>
