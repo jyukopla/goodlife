@@ -1,0 +1,23 @@
+
+.paths__row
+{
+
+  @include make-row();
+
+
+  &__item
+  {
+    background-color: green;
+
+
+
+    @include make-col();
+
+    @media (min-width: 32em)
+    {
+       @include make-col-span(12);
+    }
+
+  }
+
+}

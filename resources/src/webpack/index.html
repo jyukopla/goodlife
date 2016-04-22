@@ -62,20 +62,19 @@
 <!--container-->
 
 
+<header class="container hero-area">
+  <section class="hero-area--carousell">
+    <div class="hero-area--carousell--title">
+      <h1>Opiskelijan kompassi</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eius ipsum, taque consectetur facilis, reiciendis quibusdam sequi harum laboriosam voluptate culpa blanditiis. Beatae iusto quidem error aspernatur, voluptate magnam, perferendis!</p>
+    </div>
+  </section>
+</header>
 
 
-  <header class="container hero-area">
-    <section class="hero-area--carousell">
-      <div class="hero-area--carousell--title">
-        <h1>Opiskelijan kompassi</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eius ipsum, taque consectetur facilis, reiciendis quibusdam sequi harum laboriosam voluptate culpa blanditiis. Beatae iusto quidem error aspernatur, voluptate magnam, perferendis!</p>
-      </div>
-    </section>
-  </header>
-
-
-  <section class="container">
+<section class="container">
   <div class="top-content">
+
     <div class="top-content-left">
       <h1>POLUT JA TEHTÄVÄT</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, rerum, optio? Vel debitis possimus adipisci suscipit aliquam perferendis obcaecati impedit, fugiat quis numquam! Maxime laboriosam sit ut repudiandae dolores suscipit.</p>
@@ -86,46 +85,102 @@
       <img src="http://placehold.it/550x350/e8117f/00000" alt="">
     </div>
 
-
   </div>
 </section>
 
 
 
-
-  <footer class="container-fluid footer-bg-wrapper">
-
-
-
-    <div class="footer-area">
-
-      <secion class="footer-area__left-block">
-        <img class="footer-area__left-block__logo" src="img/footer-logo.png" alt="Jyväskylän Yliopisto">
-      </secion>
-
-      <section class="footer-area__right-block">
-        <ul class="list-unstyled">
-          <li>LINKKI</li>
-          <li>LINKKI</li>
-          <li>LINKKI</li>
-          <li>LINKKI</li>
-        </ul>
-        <ul class="list-unstyled">
-          <li>SOME</li>
-          <li>SOME</li>
-          <li>SOME</li>
-          <li>SOME</li>
-        </ul>
-      </section>
+<section class="container paths">
+  <div class="paths__row">
+    <div class="paths__row__item m-b-2">
+      <div class="paths__row__item--stress">
+        <h1>Path stress</h1>
+      </div>
     </div>
+    <div class="paths__row__item m-b-2">
+      <div class="paths__row__item--depress">
+        <h1>Path depress</h1>
+      </div>
+    </div>
+    <div class="paths__row__item m-b-2">
+      <div class="paths__row__item--distress">
+        <h1>Path distress</h1>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="footer-area-bottom">
-      <div class="footer-area-bottom__info">
-        <p class="text-center">Jyväskylän yliopisto | Psykologian laitos</p>
+
+<footer class="container-fluid footer-bg-wrapper">
+  <div class="container">
+    <section class="footer__row">
+      <div class="footer__row__block">
+        <div class="footer__row__block--links">
+          <ul>
+            <li>LINKKI</li>
+            <li>LINKKI</li>
+            <li>LINKKI</li>
+            <li>LINKKI</li>
+            <li>LINKKI</li>
+            <li>LINKKI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__row__block">
+        <div class="footer__row__block--logo">
+          <img class="img-fluid text-xs-center" src="img/footer-logo.png" alt="Jyväskylän Yliopisto">
+          <p class="text-xs-center">Yhteistyössä Psykologian laitos</p>
+        </div>
+      </div>
+      <div class="footer__row__block">
+        <div class="footer__row__block--some">
+          <ul>
+            <li>SOME</li>
+            <li>SOME</li>
+            <li>SOME</li>
+            <li>SOME</li>
+            <li>SOME</li>
+            <li>SOME</li>
+          </ul>
+        </div>
       </div>
     </section>
+  </div>
+</footer>
 
-  </footer>
+<!--<footer class="container-fluid footer-bg-wrapper">
+
+
+
+  <div class="footer-area">
+
+    <secion class="footer-area__left-block">
+      <img class="footer-area__left-block__logo" src="img/footer-logo.png" alt="Jyväskylän Yliopisto">
+    </secion>
+
+    <section class="footer-area__right-block">
+      <ul class="list-unstyled">
+        <li>LINKKI</li>
+        <li>LINKKI</li>
+        <li>LINKKI</li>
+        <li>LINKKI</li>
+      </ul>
+      <ul class="list-unstyled">
+        <li>SOME</li>
+        <li>SOME</li>
+        <li>SOME</li>
+        <li>SOME</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="footer-area-bottom">
+    <div class="footer-area-bottom__info">
+      <p class="text-center">Jyväskylän yliopisto | Psykologian laitos</p>
+    </div>
+  </section>
+
+</footer>-->
 
 
   <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
