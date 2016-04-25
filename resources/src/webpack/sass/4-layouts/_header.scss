@@ -1,30 +1,53 @@
 .hero-area
 {
-
-  &--carousell
-  {
-    @extend .row;
-
-    height: 400px;
-
-    background: url("img/hero-temp.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    &--title
+    &__row
     {
-      width: 50%;
-      min-height: 300px;
-      padding: 20px;
+        @include make-row();
 
-      position: relative;
-      top: 50px;
-      left: 50px;
-      background-color: rgba(255, 255, 255, 0.7);
 
+        &__carousell
+        {
+            height: 400px;
+
+            background: url('img/hero-temp.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+               -moz-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+
+            @include media-breakpoint-up(xs)
+            {
+                @include make-col();
+                @include make-col-span(12);
+            }
+
+
+            .carousell__title__row
+            {
+                @include make-row();
+
+
+                &__title
+                {
+                    @include media-breakpoint-up(xs)
+                    {
+                        background-color: rgba(255, 255, 255, .7);
+
+                        @include make-col();
+                        @include make-col-span(11);
+                    }
+                    @include media-breakpoint-up(sm)
+                    {
+                        @include make-col();
+                        @include make-col-span(10);
+                    }
+                    @include media-breakpoint-up(md)
+                    {
+                        @include make-col();
+                        @include make-col-span(8);
+                    }
+                }
+            }
+        }
     }
-  }
-
 }
