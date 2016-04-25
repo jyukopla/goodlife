@@ -44,3 +44,20 @@
   }
 
 }
+
+.bottomrow
+{
+
+  .navbar-toggler
+  {
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__hamburger
+  {
+    font-size: 2em;
+  }
+
+
+}

@@ -17,12 +17,11 @@
 
   <div class="row toprow">
 
-    <div class="toprow__logos col-xs-6 col-md-6">
+    <div class="toprow__logos col-xs-4 col-md-6">
       <a class="navbar-brand" href="#"><img alt="Brand" src="img/jyu-logo.png" class="toprow__logos--big"></a>
       <a class="navbar-brand__mobile" href="#"><img alt="Brand" src="img/jyu-torch.png" class="toprow__logos--mobile" </a>
     </div>
-
-    <div class="toprow__language-links col-xs-6 col-md-6">
+    <div class="toprow__language-links col-xs-8 col-md-6">
       <ul class="list-inline list-unstyled pull-right">
         <li class="list-inline-item language-fi"><a href="#">Suomi</a></li>
         <li class="list-inline-item language-en"><a href="#">English</a></li>
@@ -35,10 +34,15 @@
   </div>
   <!--toprow-->
 
-  <div class="row">
+  <div class="row bottomrow">
     <div class="col-md-12">
       <nav class="navbar navbar-light">
-        <ul class="nav navbar-nav pull-right">
+
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+            <span class="bottomrow__hamburger">&#9776;</span>
+        </button>
+
+        <ul class="nav navbar-nav pull-right collapse navbar-toggleable-xs" id="CollapsingNavbar">
           <li class="nav-item active">
             <a class="nav-link" href="#">LINKKI <span class="sr-only">(current)</span></a>
           </li>
