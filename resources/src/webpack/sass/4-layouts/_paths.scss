@@ -27,6 +27,13 @@
             @include make-col-span(2);
         }
 
+        /* Styles from SM DOWN */
+        @include media-breakpoint-down(sm)
+        {
+          background-color: $path-stress-green;
+          margin-bottom: 1em;
+        }
+
     }
 
     .task
@@ -58,7 +65,6 @@
             {
                 height: 4em;
                 margin-bottom: 2em;
-                margin-top: 1em;
 
                 @include make-col();
                 @include make-col-span(12);
@@ -77,8 +83,15 @@
                 img
                 {
                   position: relative;
-                  top: 5%;
+                  top: 16%;
                 }
+            }
+
+            /* Styles from SM DOWN */
+            @include media-breakpoint-down(sm)
+            {
+              height: 8em;
+              border-bottom: 1em solid $path-stress-green;
             }
         }
     }
@@ -133,6 +146,13 @@
       {
         text-align: center;
 
+        // Styles from SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+          background-color: $path-stress-green;
+          margin-bottom: 1em;
+        }
+
         h3
         {
           width: 2.5em;
@@ -143,10 +163,16 @@
           line-height: 2.5em;
           top: 28%;
 
-          // Center position title in SM DOWN -->
+          // Styles from SM DOWN -->
           @include media-breakpoint-down(sm)
           {
-              left: 44%;
+              padding-top: 1.2em;
+              border-radius: 0;
+              left: 48%;
+              line-height: 0;
+              top: 0;
+              width: auto;
+              height: auto;
           }
         }
       }
