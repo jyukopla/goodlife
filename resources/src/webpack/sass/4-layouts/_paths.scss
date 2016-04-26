@@ -1,12 +1,40 @@
 /* Placeholder mixing */
 
+/* This creates paths area header, title and completed responsive grid */
+
 %create-paths-grid
 {
     .header
     {
         @include media-breakpoint-up(xs)
         {
-            background-color: rgb(231, 92, 40);
+            @include make-col();
+            @include make-col-span(12);
+        }
+        @include media-breakpoint-up(sm)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+        @include media-breakpoint-up(md)
+        {
+            @include make-col();
+            @include make-col-span(3);
+        }
+        @include media-breakpoint-up(lg)
+        {
+            @include make-col();
+            @include make-col-span(2);
+        }
+
+    }
+
+    .task
+    {
+        @include media-breakpoint-up(xs)
+        {
+            height: 4em;
+            margin-bottom: 2em;
 
             @include make-col();
             @include make-col-span(12);
@@ -14,41 +42,43 @@
         @include media-breakpoint-up(sm)
         {
             @include make-col();
-            @include make-col-span(6);
+            @include make-col-span(12);
         }
         @include media-breakpoint-up(md)
         {
+            height: 9em;
             @include make-col();
-            @include make-col-span(2);
-        }
-    }
-
-    .task
-    {
-        height: 9em;
-
-        background-color: rgb(72, 181, 55);
-
-        @include media-breakpoint-up(xs)
-        {
-            height: 4em;
-
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col-span(1);
         }
 
         &--completed
         {
-            height: 9em;
-
-            background-color: rgb(199, 37, 226);
 
             @include media-breakpoint-up(xs)
             {
                 height: 4em;
+                margin-bottom: 2em;
+                margin-top: 1em;
 
                 @include make-col();
                 @include make-col-span(12);
+            }
+            @include media-breakpoint-up(sm)
+            {
+                @include make-col();
+                @include make-col-span(12);
+            }
+            @include media-breakpoint-up(md)
+            {
+                height: 9em;
+                @include make-col();
+                @include make-col-span(1);
+
+                img
+                {
+                  position: relative;
+                  top: 5%;
+                }
             }
         }
     }
@@ -61,33 +91,165 @@
 {
 
   @include make-row();
+  margin-bottom: 4em;
 
 
   &__item
   {
 
-    @include make-col();
-
-    @media (min-width: 32em)
-    {
-       @include make-col-span(12);
-    }
-
     &--stress
     {
       @extend %create-paths-grid;
+
+      .stress__header__circle
+      {
+        position: relative;
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        background: url("img/tasks/stressi-header.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;
+
+        // Center position header in SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+            margin: 0 auto;
+        }
+        /*------------------------------------*/
+
+        &__title
+        {
+          position: absolute;
+          top: 2em;
+          left: 1em;
+          color: $white;
+        }
+      }
+
+
+      > .task
+      {
+        text-align: center;
+
+        h3
+        {
+          width: 2.5em;
+          height: 2.5em;
+          background-color: $path-stress-green;
+          border-radius: 50%;
+          position: absolute;
+          line-height: 2.5em;
+          top: 28%;
+
+          // Center position title in SM DOWN -->
+          @include media-breakpoint-down(sm)
+          {
+              left: 44%;
+          }
+        }
+      }
     }
 
 
     &--depress
     {
       @extend %create-paths-grid;
+
+      .depress__header__circle
+      {
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        background: url("img/tasks/mielimaassa-header.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;
+
+        &__title
+        {
+          position: absolute;
+          top: 1.5em;
+          left: 1.5em;
+          color: $white;
+        }
+      }
+
+      > .task
+      {
+        text-align: center;
+        background: linear-gradient(180deg, $white 50%, $path-stress-blue 50%);
+        background-size: 100px 100px;
+
+        h3
+        {
+          width: 2.5em;
+          height: 2.5em;
+          background-color: $path-stress-blue;
+          border-radius: 50%;
+          position: absolute;
+          line-height: 2.5em;
+          top: 28%;
+
+          // Center position title in SM DOWN -->
+          @include media-breakpoint-down(sm)
+          {
+              left: 41%;
+          }
+        }
+      }
+
     }
 
 
     &--distress
     {
       @extend %create-paths-grid;
+
+      .distress__header__circle
+      {
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        background: url("img/tasks/ahdistaako-header.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;
+
+        &__title
+        {
+          position: absolute;
+          top: 1.5em;
+          left: 1.8em;
+          color: $white;
+        }
+      }
+
+      > .task
+      {
+        text-align: center;
+        background: linear-gradient(180deg, $white 50%, $path-stress-darkpink 50%);
+        background-size: 100px 100px;
+
+        h3
+        {
+          width: 2.5em;
+          height: 2.5em;
+          background-color: $path-stress-darkpink;
+          border-radius: 50%;
+          position: absolute;
+          line-height: 2.5em;
+          top: 28%;
+
+          // Center position title in SM DOWN -->
+          @include media-breakpoint-down(sm)
+          {
+              left: 41%;
+          }
+        }
+      }
+
     }
   }
 
