@@ -29,17 +29,20 @@
 
                 &__title
                 {
+
                     @include media-breakpoint-up(xs)
                     {
                         background-color: rgba(255, 255, 255, .7);
 
                         @include make-col();
-                        @include make-col-span(11);
+                        @include make-col-span(12);
                     }
                     @include media-breakpoint-up(sm)
                     {
                         @include make-col();
                         @include make-col-span(10);
+
+                        margin: 1em 0 0 1em;
                     }
                     @include media-breakpoint-up(md)
                     {
