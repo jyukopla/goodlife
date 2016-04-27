@@ -129,6 +129,11 @@
   border-top: 0.5em solid $path-stress-green;
   border-bottom: 0.5em solid $path-stress-green;
 
+  @include media-breakpoint-down(sm)
+  {
+    border: 0;
+  }
+
 
   &__grid
   {
@@ -210,6 +215,11 @@
 
   border-top: 0.5em solid $path-depress-blue;
   border-bottom: 0.5em solid $path-depress-blue;
+
+  @include media-breakpoint-down(sm)
+  {
+    border: 0;
+  }
 
 
   &__grid
@@ -294,6 +304,12 @@
 
   border-top: 0.5em solid $path-distress-darkpink;
   border-bottom: 0.5em solid $path-distress-darkpink;
+
+  @include media-breakpoint-down(sm)
+  {
+    border: 0;
+  }
+
 
   &__grid
   {
