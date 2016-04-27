@@ -40,7 +40,6 @@
         @include media-breakpoint-up(xs)
         {
             height: 4em;
-            margin-bottom: 2em;
 
             @include make-col();
             @include make-col-span(12);
@@ -63,7 +62,6 @@
             @include media-breakpoint-up(xs)
             {
                 height: 4em;
-                margin-bottom: 2em;
 
                 @include make-col();
                 @include make-col-span(12);
@@ -97,22 +95,50 @@
 
 
 
-/* ----------- Path STRESS ------------- */
 
-.paths__row
+
+.paths__title__row
 {
-
   @include make-row();
-  margin-bottom: 4em;
 
-
-  &__item
+  &__column__left
   {
-
-    &--stress
+    @include media-breakpoint-up(xs)
     {
-      @extend %create-paths-grid;
+        @include make-col();
+        @include make-col-span(12);
+    }
+  }
 
+  &__column__right
+  {
+    @include media-breakpoint-up(xs)
+    {
+        @include make-col();
+        @include make-col-span(12);
+    }
+  }
+}
+
+
+
+.paths__row__stress
+{
+  @include make-row();
+
+  border-top: 0.5em solid $path-stress-green;
+  border-bottom: 0.5em solid $path-stress-green;
+
+
+  &__grid
+  {
+    @extend %create-paths-grid;
+  }
+
+  &__grid
+  {
+    .header
+    {
       .stress__header__circle
       {
         position: relative;
@@ -124,12 +150,10 @@
         background-attachment: scroll;
         background-size: contain;
 
-        // Center position header in SM DOWN -->
         @include media-breakpoint-down(sm)
         {
             margin: 0 auto;
         }
-        /*------------------------------------*/
 
         &__title
         {
@@ -139,54 +163,65 @@
           color: $white;
         }
       }
+    } // Header
 
+    > .task
+    {
+      text-align: center;
 
-      > .task
+      @include media-breakpoint-down(sm)
       {
-        text-align: center;
+        background-color: $path-stress-green;
+        margin-bottom: 1em;
+      }
+
+      h3
+      {
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $path-stress-green;
+        border-radius: 50%;
+        position: absolute;
+        line-height: 2.5em;
+        top: 28%;
 
         // Styles from SM DOWN -->
         @include media-breakpoint-down(sm)
         {
-          background-color: $path-stress-green;
-          margin-bottom: 1em;
-        }
-
-        h3
-        {
-          width: 2.5em;
-          height: 2.5em;
-          background-color: $path-stress-green;
-          border-radius: 50%;
-          position: absolute;
-          line-height: 2.5em;
-          top: 28%;
-
-          // Styles from SM DOWN -->
-          @include media-breakpoint-down(sm)
-          {
-              padding-top: 1.2em;
-              border-radius: 0;
-              left: 48%;
-              line-height: 0;
-              top: 0;
-              width: auto;
-              height: auto;
-          }
+            padding-top: 1.2em;
+            border-radius: 0;
+            left: 48%;
+            line-height: 0;
+            top: 0;
+            width: auto;
+            height: auto;
         }
       }
-    }
+    } // Task
+  } // item--stress
+} // paths__row
 
-/* ----------------------------------------------------- */
 
 
 
-/* ----------- Path DEPRESS ------------- */
+.paths__row__depress
+{
+  @include make-row();
 
-    &--depress
+  border-top: 0.5em solid $path-depress-blue;
+  border-bottom: 0.5em solid $path-depress-blue;
+
+
+  &__grid
+  {
+    @extend %create-paths-grid;
+  }
+
+
+  &__grid
+  {
+    .header
     {
-      @extend %create-paths-grid;
-
       .depress__header__circle
       {
         position: relative;
@@ -199,14 +234,10 @@
         background-size: contain;
 
 
-        // Center position header in SM DOWN -->
         @include media-breakpoint-down(sm)
         {
             margin: 0 auto;
         }
-        /*------------------------------------*/
-
-
 
         &__title
         {
@@ -215,33 +246,32 @@
           left: 1em;
           color: $white;
         }
+      } // depress__header__circle
+    } // Header
+
+    > .task
+    {
+      text-align: center;
+
+      @include media-breakpoint-down(sm)
+      {
+        background-color: $path-depress-blue;
+        margin-bottom: 1em;
       }
 
-      > .task
+      h3
       {
-        text-align: center;
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $path-depress-blue;
+        border-radius: 50%;
+        position: absolute;
+        line-height: 2.5em;
+        top: 28%;
 
         // Styles from SM DOWN -->
         @include media-breakpoint-down(sm)
         {
-          background-color: $path-stress-blue;
-          margin-bottom: 1em;
-        }
-
-
-        h3
-        {
-          width: 2.5em;
-          height: 2.5em;
-          background-color: $path-stress-blue;
-          border-radius: 50%;
-          position: absolute;
-          line-height: 2.5em;
-          top: 28%;
-
-          // Center position title in SM DOWN -->
-          @include media-breakpoint-down(sm)
-          {
             padding-top: 1.2em;
             border-radius: 0;
             left: 48%;
@@ -249,22 +279,31 @@
             top: 0;
             width: auto;
             height: auto;
-          }
         }
       }
-
-    }
-/* ----------------------------------------------------- */
-
-
-
-/* ----------- Path DISTRESS ------------- */
+    } // Task
+  } // grid
+} // paths__row__depress
 
 
-    &--distress
+
+
+.paths__row__distress
+{
+  @include make-row();
+
+  border-top: 0.5em solid $path-distress-darkpink;
+  border-bottom: 0.5em solid $path-distress-darkpink;
+
+  &__grid
+  {
+    @extend %create-paths-grid;
+  }
+
+  &__grid
+  {
+    .header
     {
-      @extend %create-paths-grid;
-
       .distress__header__circle
       {
         position: relative;
@@ -276,47 +315,44 @@
         background-attachment: scroll;
         background-size: contain;
 
-        // Center position header in SM DOWN -->
         @include media-breakpoint-down(sm)
         {
             margin: 0 auto;
         }
-        /*------------------------------------*/
-
 
         &__title
         {
           position: absolute;
           top: 1.5em;
-          left: 1.3em;
+          left: 1em;
           color: $white;
         }
+      } // distress__header__circle
+    } // header
+
+    > .task
+    {
+      text-align: center;
+
+      @include media-breakpoint-down(sm)
+      {
+        background-color: $path-distress-darkpink;
+        margin-bottom: 1em;
       }
 
-      > .task
+      h3
       {
-        text-align: center;
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $path-distress-darkpink;
+        border-radius: 50%;
+        position: absolute;
+        line-height: 2.5em;
+        top: 28%;
 
         // Styles from SM DOWN -->
         @include media-breakpoint-down(sm)
         {
-          background-color: $path-stress-darkpink;
-          margin-bottom: 1em;
-        }
-
-        h3
-        {
-          width: 2.5em;
-          height: 2.5em;
-          background-color: $path-stress-darkpink;
-          border-radius: 50%;
-          position: absolute;
-          line-height: 2.5em;
-          top: 28%;
-
-          // Center position title in SM DOWN -->
-          @include media-breakpoint-down(sm)
-          {
             padding-top: 1.2em;
             border-radius: 0;
             left: 48%;
@@ -324,12 +360,8 @@
             top: 0;
             width: auto;
             height: auto;
-          }
         }
       }
-
-    }
-  }
-
-}
-/* ----------------------------------------------------- */
+    } // Task
+  } // grid
+} // paths__row__distress
