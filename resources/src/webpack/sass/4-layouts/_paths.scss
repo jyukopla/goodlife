@@ -30,7 +30,6 @@
         /* Styles from SM DOWN */
         @include media-breakpoint-down(sm)
         {
-          background-color: $path-stress-green;
           margin-bottom: 1em;
         }
 
@@ -91,7 +90,6 @@
             @include media-breakpoint-down(sm)
             {
               height: 8em;
-              border-bottom: 1em solid $path-stress-green;
             }
         }
     }
@@ -99,6 +97,7 @@
 
 
 
+/* ----------- Path STRESS ------------- */
 
 .paths__row
 {
@@ -178,6 +177,11 @@
       }
     }
 
+/* ----------------------------------------------------- */
+
+
+
+/* ----------- Path DEPRESS ------------- */
 
     &--depress
     {
@@ -185,6 +189,7 @@
 
       .depress__header__circle
       {
+        position: relative;
         width: 9em;
         height: 9em;
         border-radius: 50%;
@@ -193,11 +198,21 @@
         background-attachment: scroll;
         background-size: contain;
 
+
+        // Center position header in SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+            margin: 0 auto;
+        }
+        /*------------------------------------*/
+
+
+
         &__title
         {
           position: absolute;
           top: 1.5em;
-          left: 1.5em;
+          left: 1em;
           color: $white;
         }
       }
@@ -205,8 +220,14 @@
       > .task
       {
         text-align: center;
-        background: linear-gradient(180deg, $white 50%, $path-stress-blue 50%);
-        background-size: 100px 100px;
+
+        // Styles from SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+          background-color: $path-stress-blue;
+          margin-bottom: 1em;
+        }
+
 
         h3
         {
@@ -221,12 +242,23 @@
           // Center position title in SM DOWN -->
           @include media-breakpoint-down(sm)
           {
-              left: 41%;
+            padding-top: 1.2em;
+            border-radius: 0;
+            left: 48%;
+            line-height: 0;
+            top: 0;
+            width: auto;
+            height: auto;
           }
         }
       }
 
     }
+/* ----------------------------------------------------- */
+
+
+
+/* ----------- Path DISTRESS ------------- */
 
 
     &--distress
@@ -235,6 +267,7 @@
 
       .distress__header__circle
       {
+        position: relative;
         width: 9em;
         height: 9em;
         border-radius: 50%;
@@ -243,11 +276,19 @@
         background-attachment: scroll;
         background-size: contain;
 
+        // Center position header in SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+            margin: 0 auto;
+        }
+        /*------------------------------------*/
+
+
         &__title
         {
           position: absolute;
           top: 1.5em;
-          left: 1.8em;
+          left: 1.3em;
           color: $white;
         }
       }
@@ -255,8 +296,13 @@
       > .task
       {
         text-align: center;
-        background: linear-gradient(180deg, $white 50%, $path-stress-darkpink 50%);
-        background-size: 100px 100px;
+
+        // Styles from SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+          background-color: $path-stress-darkpink;
+          margin-bottom: 1em;
+        }
 
         h3
         {
@@ -271,7 +317,13 @@
           // Center position title in SM DOWN -->
           @include media-breakpoint-down(sm)
           {
-              left: 41%;
+            padding-top: 1.2em;
+            border-radius: 0;
+            left: 48%;
+            line-height: 0;
+            top: 0;
+            width: auto;
+            height: auto;
           }
         }
       }
@@ -280,3 +332,4 @@
   }
 
 }
+/* ----------------------------------------------------- */
