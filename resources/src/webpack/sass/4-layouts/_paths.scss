@@ -128,6 +128,7 @@
 
   border-top: 0.5em solid $path-stress-green;
   border-bottom: 0.5em solid $path-stress-green;
+  margin-bottom: 5em;
 
   @include media-breakpoint-down(sm)
   {
@@ -215,6 +216,7 @@
 
   border-top: 0.5em solid $path-depress-blue;
   border-bottom: 0.5em solid $path-depress-blue;
+  margin-bottom: 5em;
 
   @include media-breakpoint-down(sm)
   {
@@ -304,6 +306,7 @@
 
   border-top: 0.5em solid $path-distress-darkpink;
   border-bottom: 0.5em solid $path-distress-darkpink;
+  margin-bottom: 5em;
 
   @include media-breakpoint-down(sm)
   {
