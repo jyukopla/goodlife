@@ -25,7 +25,38 @@
         @media (min-width: 24em)
         {
           @include make-col-span(4);
-          padding: 40px 0;
+        }
+
+        &--links
+        {
+            margin-top: 1rem;
+        }
+
+        &--logo
+        {
+            margin-top: 1rem;
+
+            p
+            {
+              padding-top: 0.4rem;
+              color: rgba($white, 0.6);
+            }
+        }
+
+        &--some
+        {
+          text-align: right;
+
+          ul
+          {
+            margin-top: 1rem;
+
+            li
+            {
+              margin: 0.2rem;
+            }
+
+          }
         }
       }
     }
