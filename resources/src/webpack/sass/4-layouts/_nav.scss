@@ -1,0 +1,63 @@
+.toprow
+{
+
+  height: 100px;
+
+  &__logos
+  {
+    .navbar-brand
+    {
+      @include media-breakpoint-down(xs)
+      {
+        display: none;
+      }
+    }
+
+    .navbar-brand__mobile
+    {
+      @include media-breakpoint-up(sm)
+      {
+        display: none;
+      }
+    }
+
+    &--big
+    {
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &--mobile
+    {
+      width: 38px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+
+
+  &__language-links
+  {
+
+  }
+
+}
+
+.bottomrow
+{
+
+  .navbar-toggler
+  {
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__hamburger
+  {
+    font-size: 2em;
+  }
+
+
+}

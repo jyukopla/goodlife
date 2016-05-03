@@ -1,0 +1,386 @@
+/* Placeholder mixing */
+
+/* This creates paths area header, title and completed responsive grid */
+
+%create-paths-grid
+{
+    .header
+    {
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+        @include media-breakpoint-up(sm)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+        @include media-breakpoint-up(md)
+        {
+            @include make-col();
+            @include make-col-span(3);
+        }
+        @include media-breakpoint-up(lg)
+        {
+            @include make-col();
+            @include make-col-span(2);
+        }
+
+        /* Styles from SM DOWN */
+        @include media-breakpoint-down(sm)
+        {
+          margin-bottom: 1em;
+        }
+
+    }
+
+    .task
+    {
+        @include media-breakpoint-up(xs)
+        {
+            height: 4em;
+
+            @include make-col();
+            @include make-col-span(12);
+        }
+        @include media-breakpoint-up(sm)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+        @include media-breakpoint-up(md)
+        {
+            height: 9em;
+            @include make-col();
+            @include make-col-span(1);
+        }
+
+        &--completed
+        {
+
+            @include media-breakpoint-up(xs)
+            {
+                height: 4em;
+
+                @include make-col();
+                @include make-col-span(12);
+            }
+            @include media-breakpoint-up(sm)
+            {
+                @include make-col();
+                @include make-col-span(12);
+            }
+            @include media-breakpoint-up(md)
+            {
+                height: 9em;
+                @include make-col();
+                @include make-col-span(1);
+
+                img
+                {
+                  position: relative;
+                  top: 16%;
+                }
+            }
+
+            /* Styles from SM DOWN */
+            @include media-breakpoint-down(sm)
+            {
+              height: 8em;
+            }
+        }
+    }
+}
+
+
+
+
+
+.paths__title__row
+{
+  @include make-row();
+
+  &__column__left
+  {
+    @include media-breakpoint-up(xs)
+    {
+        @include make-col();
+        @include make-col-span(12);
+    }
+  }
+
+  &__column__right
+  {
+    @include media-breakpoint-up(xs)
+    {
+        @include make-col();
+        @include make-col-span(12);
+    }
+  }
+}
+
+
+
+.paths__row__stress
+{
+  @include make-row();
+
+  border-top: 0.5em solid $path-stress-green;
+  border-bottom: 0.5em solid $path-stress-green;
+  margin-bottom: 5em;
+
+  @include media-breakpoint-down(sm)
+  {
+    border: 0;
+  }
+
+
+  &__grid
+  {
+    @extend %create-paths-grid;
+  }
+
+  &__grid
+  {
+    .header
+    {
+      .stress__header__circle
+      {
+        position: relative;
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        background: url("img/tasks/stressi-header.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;
+
+        @include media-breakpoint-down(sm)
+        {
+            margin: 0 auto;
+        }
+
+        &__title
+        {
+          position: absolute;
+          top: 2em;
+          left: 1em;
+          color: $white;
+        }
+      }
+    } // Header
+
+    > .task
+    {
+      text-align: center;
+
+      @include media-breakpoint-down(sm)
+      {
+        background-color: $path-stress-green;
+        margin-bottom: 1em;
+      }
+
+      h3
+      {
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $path-stress-green;
+        border-radius: 50%;
+        position: absolute;
+        line-height: 2.5em;
+        top: 28%;
+
+        // Styles from SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+            padding-top: 1.2em;
+            border-radius: 0;
+            left: 48%;
+            line-height: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+        }
+      }
+    } // Task
+  } // item--stress
+} // paths__row
+
+
+
+
+.paths__row__depress
+{
+  @include make-row();
+
+  border-top: 0.5em solid $path-depress-blue;
+  border-bottom: 0.5em solid $path-depress-blue;
+  margin-bottom: 5em;
+
+  @include media-breakpoint-down(sm)
+  {
+    border: 0;
+  }
+
+
+  &__grid
+  {
+    @extend %create-paths-grid;
+  }
+
+
+  &__grid
+  {
+    .header
+    {
+      .depress__header__circle
+      {
+        position: relative;
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        background: url("img/tasks/mielimaassa-header.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;
+
+
+        @include media-breakpoint-down(sm)
+        {
+            margin: 0 auto;
+        }
+
+        &__title
+        {
+          position: absolute;
+          top: 1.5em;
+          left: 1em;
+          color: $white;
+        }
+      } // depress__header__circle
+    } // Header
+
+    > .task
+    {
+      text-align: center;
+
+      @include media-breakpoint-down(sm)
+      {
+        background-color: $path-depress-blue;
+        margin-bottom: 1em;
+      }
+
+      h3
+      {
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $path-depress-blue;
+        border-radius: 50%;
+        position: absolute;
+        line-height: 2.5em;
+        top: 28%;
+
+        // Styles from SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+            padding-top: 1.2em;
+            border-radius: 0;
+            left: 48%;
+            line-height: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+        }
+      }
+    } // Task
+  } // grid
+} // paths__row__depress
+
+
+
+
+.paths__row__distress
+{
+  @include make-row();
+
+  border-top: 0.5em solid $path-distress-darkpink;
+  border-bottom: 0.5em solid $path-distress-darkpink;
+  margin-bottom: 5em;
+
+  @include media-breakpoint-down(sm)
+  {
+    border: 0;
+  }
+
+
+  &__grid
+  {
+    @extend %create-paths-grid;
+  }
+
+  &__grid
+  {
+    .header
+    {
+      .distress__header__circle
+      {
+        position: relative;
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        background: url("img/tasks/ahdistaako-header.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;
+
+        @include media-breakpoint-down(sm)
+        {
+            margin: 0 auto;
+        }
+
+        &__title
+        {
+          position: absolute;
+          top: 1.5em;
+          left: 1em;
+          color: $white;
+        }
+      } // distress__header__circle
+    } // header
+
+    > .task
+    {
+      text-align: center;
+
+      @include media-breakpoint-down(sm)
+      {
+        background-color: $path-distress-darkpink;
+        margin-bottom: 1em;
+      }
+
+      h3
+      {
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $path-distress-darkpink;
+        border-radius: 50%;
+        position: absolute;
+        line-height: 2.5em;
+        top: 28%;
+
+        // Styles from SM DOWN -->
+        @include media-breakpoint-down(sm)
+        {
+            padding-top: 1.2em;
+            border-radius: 0;
+            left: 48%;
+            line-height: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+        }
+      }
+    } // Task
+  } // grid
+} // paths__row__distress

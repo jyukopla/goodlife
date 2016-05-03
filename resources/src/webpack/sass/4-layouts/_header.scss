@@ -1,0 +1,56 @@
+.hero-area
+{
+    &__row
+    {
+        @include make-row();
+
+
+        &__carousell
+        {
+            height: 400px;
+
+            background: url('img/hero-temp.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+               -moz-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+
+            @include media-breakpoint-up(xs)
+            {
+                @include make-col();
+                @include make-col-span(12);
+            }
+
+
+            .carousell__title__row
+            {
+                @include make-row();
+
+
+                &__title
+                {
+
+                    @include media-breakpoint-up(xs)
+                    {
+                        background-color: rgba(255, 255, 255, .7);
+
+                        @include make-col();
+                        @include make-col-span(12);
+                    }
+                    @include media-breakpoint-up(sm)
+                    {
+                        @include make-col();
+                        @include make-col-span(10);
+
+                        margin: 1em 0 0 1em;
+                    }
+                    @include media-breakpoint-up(md)
+                    {
+                        @include make-col();
+                        @include make-col-span(8);
+                    }
+                }
+            }
+        }
+    }
+}

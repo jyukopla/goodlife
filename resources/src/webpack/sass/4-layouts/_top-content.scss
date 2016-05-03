@@ -1,0 +1,46 @@
+.top-content
+{
+  @include make-row();
+
+  &-left
+  {
+
+    @include media-breakpoint-up(xs)
+    {
+        @include make-col();
+        @include make-col-span(12);
+    }
+    @include media-breakpoint-up(sm)
+    {
+        @include make-col();
+        @include make-col-span(12);
+    }
+    @include media-breakpoint-up(md)
+    {
+        @include make-col();
+        @include make-col-span(6);
+    }
+
+  }
+
+  &-right
+  {
+
+    @include media-breakpoint-up(xs)
+    {
+        @include make-col();
+        @include make-col-span(0);
+    }
+    @include media-breakpoint-up(sm)
+    {
+        @include make-col();
+        @include make-col-span(0);
+    }
+    @include media-breakpoint-up(md)
+    {
+        @include make-col();
+        @include make-col-span(6);
+    }
+
+  }
+}
