@@ -2,6 +2,17 @@
 {
   @include make-row();
 
+  &-full
+  {
+
+    @include media-breakpoint-up(xs)
+    {
+      @include make-col();
+      @include make-col-span(12);
+    }
+
+  }
+
   &-left
   {
 

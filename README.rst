@@ -1,3 +1,13 @@
+Vagrant setup
+-------------
+
+* start vagrant with autosynchronized theme with
+
+  .. code:: bash
+
+     make up
+
+
 Theme mockup
 ------------
 

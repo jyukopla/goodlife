@@ -37,4 +37,9 @@ Vagrant.configure("2") do |config|
         shell.path = "manifests/install_plone.sh"
         shell.args = UI_URL + " '" + UI_OPTIONS + "'"
     end
+
+    # rsync resources folder
+    config.vm.synced_folder \
+        "./resources/theme", "/home/vagrant/resources/theme", \
+        type: "rsync"
 end

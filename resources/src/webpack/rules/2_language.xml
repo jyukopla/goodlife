@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    css:if-content="#portal-languageselector">
+
+  <!-- At first, replace the mockup with content -->
+  <replace css:theme-children=".toprow__language-links"
+           css:content="#portal-languageselector" />
+
+  <!-- Then, rebuild the copied content to look like mockup -->
+  <replace css:content="#portal-languageselector">
+    <ul class="list-inline list-unstyled pull-right">
+      <xsl:for-each select="li">
+        <li>
+          <xsl:attribute name="class">
+            <xsl:value-of select="concat('list-inline-item ', @class)" />
+            <xsl:if test="contains(@class, 'currentLanguage')"> active</xsl:if>
+          </xsl:attribute>
+          <xsl:apply-templates />
+        </li>
+      </xsl:for-each>
+      <br/>
+      <xsl:for-each select="//*[@id='portal-anontools']//li">
+        <li class="list-inline-item login">
+          <xsl:apply-templates />
+        </li>
+      </xsl:for-each>
+    </ul>
+  </replace>
+
+</rules>
