@@ -4,6 +4,10 @@ build: buildout.cfg
 	vagrant up
 	./buildout.sh
 
+up: build
+	[ ! -d ./resources/theme ] && make -C resources || true
+	vagrant rsync-auto
+
 watch: build
 	make -C resources watch
 

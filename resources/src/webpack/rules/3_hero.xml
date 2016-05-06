@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <replace
+      css:theme="header.hero-area h1"
+      css:content="h1.documentFirstHeading" />
+
+  <replace
+      css:theme="header.hero-area p"
+      css:content=".documentDescription" />
+
+  <!-- Drop hero when no content-core -->
+  <drop css:theme="header.hero-area"
+        css:if-not-content="#content-core" />
+
+  <!-- Drop hero when control-panel in body -->
+  <drop css:theme="header.hero-area"
+        if-content="//body[contains(@class, 'controlpanel')]" />
+
+</rules>
