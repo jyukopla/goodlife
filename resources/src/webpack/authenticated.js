@@ -6,7 +6,6 @@ import './styles.less';
 import './styles.scss';
 
 
-
 import './js/main.js';
 
 import jQuery from 'jquery';
