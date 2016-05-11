@@ -56,10 +56,40 @@
 }
 
 
-.carousel--item--one
+.carousel--item
 {
-  background: url('img/carousel-temp.png') no-repeat center center;
-  height: 30em;
-  width: auto;
+
+
+  &__one
+  {
+    background: url('img/logos/ok-logo-blue.png');
+    background-position: center center;
+    background-size: cover;
+
+
+    height: 25em;
+    width: auto;
+  }
+
+  &__two
+  {
+    background: url('img/logos/ok-logo-green.png') no-repeat center center;
+    background-position: center center;
+    background-size: cover;
+
+    height: 25em;
+    width: auto;
+  }
+
+  &__three
+  {
+    background: url('img/logos/ok-logo-red.png') no-repeat center center;
+    background-position: center center;
+    background-size: cover;
+
+    height: 25em;
+    width: auto;
+  }
+
 
 }
