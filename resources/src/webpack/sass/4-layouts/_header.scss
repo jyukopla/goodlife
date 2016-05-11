@@ -56,40 +56,71 @@
 }
 
 
-.carousel--item
+
+
+.carousel-test
 {
-
-
-  &__one
+  .carousel--item
   {
-    background: url('img/logos/ok-logo-blue.png');
-    background-position: center center;
-    background-size: cover;
+
+    &__one
+    {
+      background: url('img/logos/ok-logo-blue.png');
+      background-position: center center;
+      background-size: cover;
 
 
-    height: 25em;
-    width: auto;
+      height: 25em;
+      width: auto;
+    }
+
+    &__two
+    {
+      background: url('img/logos/ok-logo-green.png') no-repeat center center;
+      background-position: center center;
+      background-size: cover;
+
+      height: 25em;
+      width: auto;
+    }
+
+    &__three
+    {
+      background: url('img/logos/ok-logo-red.png') no-repeat center center;
+      background-position: center center;
+      background-size: cover;
+
+      height: 25em;
+      width: auto;
+    }
+
+  } // carousel--item
+
+
+
+
+  // NEXT and PREVIOUS button spesific rules
+  .slick-next
+  {
+    &::before
+    {
+      content: ">"
+    }
+    float: right;
+    position: relative;
+    top: -4em;
+    font-size: 4em;
   }
 
-  &__two
+  .slick-prev
   {
-    background: url('img/logos/ok-logo-green.png') no-repeat center center;
-    background-position: center center;
-    background-size: cover;
-
-    height: 25em;
-    width: auto;
+    &::before
+    {
+      content: "<"
+    }
+    float: left;
+    position: relative;
+    top: 2.2em;
+    font-size: 4em;
   }
-
-  &__three
-  {
-    background: url('img/logos/ok-logo-red.png') no-repeat center center;
-    background-position: center center;
-    background-size: cover;
-
-    height: 25em;
-    width: auto;
-  }
-
-
 }
