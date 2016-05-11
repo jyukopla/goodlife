@@ -14,15 +14,15 @@ jQuery(($) => {
 
     // This controls the slick carousel, add additional settings here
     // https://github.com/kenwheeler/slick/
-    $('.carousel-test').slick({
+    $('.hero-area__carousel-wrapper').slick({
         autoplay: true,
         autoplaySpeed: 4000,
         infinite: true,
         speed: 500,
         fade: true,
         cssEase: 'linear',
-        nextArrow: null, //'<button type="button" class="slick-next"></button>', // null to remove
-        prevArrow: null, //'<button type="button" class="slick-prev"></button>', // null to remove
+        nextArrow: null, //'<button type="button" class="slick-next"></button>', // null to remove buttons
+        prevArrow: null, //'<button type="button" class="slick-prev"></button>', // null to remove buttons
       });
   });
 

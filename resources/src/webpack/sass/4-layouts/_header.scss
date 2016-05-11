@@ -1,126 +1,139 @@
 .hero-area
 {
-    &__row
+  .hero-area__carousel-wrapper
+  {
+    &__slide-row-1
     {
-        @include make-row();
+      @include make-row();
 
+      &__bg
+      {
+        background: url('img/logos/ok-logo-red.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
 
-        &__carousell
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
         {
-            height: 400px;
-
-            background: url('img/hero-temp.png') no-repeat center center fixed;
-            -webkit-background-size: cover;
-               -moz-background-size: cover;
-                 -o-background-size: cover;
-                    background-size: cover;
-
-            @include media-breakpoint-up(xs)
-            {
-                @include make-col();
-                @include make-col-span(12);
-            }
-
-
-            .carousell__title__row
-            {
-                @include make-row();
-
-
-                &__title
-                {
-
-                    @include media-breakpoint-up(xs)
-                    {
-                        background-color: rgba(255, 255, 255, .7);
-
-                        @include make-col();
-                        @include make-col-span(12);
-                    }
-                    @include media-breakpoint-up(sm)
-                    {
-                        @include make-col();
-                        @include make-col-span(10);
-
-                        margin: 1em 0 0 1em;
-                    }
-                    @include media-breakpoint-up(md)
-                    {
-                        @include make-col();
-                        @include make-col-span(8);
-                    }
-                }
-            }
+            @include make-col();
+            @include make-col-span(12);
         }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
+
+
     }
-}
 
-
-
-
-.carousel-test
-{
-  .carousel--item
-  {
-
-    &__one
+    &__slide-row-2
     {
-      background: url('img/logos/ok-logo-blue.png');
-      background-position: center center;
-      background-size: cover;
+      @include make-row();
 
+      &__bg
+      {
+        background: url('img/logos/ok-logo-blue.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
 
-      height: 25em;
-      width: auto;
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
     }
 
-    &__two
+    &__slide-row-3
     {
-      background: url('img/logos/ok-logo-green.png') no-repeat center center;
-      background-position: center center;
-      background-size: cover;
+      @include make-row();
 
-      height: 25em;
-      width: auto;
+      &__bg
+      {
+        background: url('img/logos/ok-logo-green.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
+
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
     }
-
-    &__three
-    {
-      background: url('img/logos/ok-logo-red.png') no-repeat center center;
-      background-position: center center;
-      background-size: cover;
-
-      height: 25em;
-      width: auto;
-    }
-
-  } // carousel--item
-
-
-
-
-  // NEXT and PREVIOUS button spesific rules
-  .slick-next
-  {
-    &::before
-    {
-      content: ">"
-    }
-    float: right;
-    position: relative;
-    top: -4em;
-    font-size: 4em;
-  }
-
-  .slick-prev
-  {
-    &::before
-    {
-      content: "<"
-    }
-    float: left;
-    position: relative;
-    top: 2.2em;
-    font-size: 4em;
   }
 }
