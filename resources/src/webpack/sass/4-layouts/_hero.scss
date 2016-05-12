@@ -1,0 +1,184 @@
+.hero-area
+{
+  .hero-area__carousel-wrapper
+  {
+    &__slide-row-1
+    {
+      @include make-row();
+
+      &__bg
+      {
+        background: url('img/logos/ok-logo-red.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
+
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
+
+
+    }
+
+    &__slide-row-2
+    {
+      @include make-row();
+
+      &__bg
+      {
+        background: url('img/logos/ok-logo-blue.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
+
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
+    }
+
+    &__slide-row-3
+    {
+      @include make-row();
+
+      &__bg
+      {
+        background: url('img/logos/ok-logo-green.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
+
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
+    }
+
+    &__slide-row-4
+    {
+      @include make-row();
+
+      &__bg
+      {
+        background: url('img/hero-temp.png') no-repeat center center;
+        background-position: center center;
+        background-size: cover;
+
+        height: 25em;
+        width: auto;
+
+        @include media-breakpoint-up(xs)
+        {
+            @include make-col();
+            @include make-col-span(12);
+        }
+
+        &__title
+        {
+          @include media-breakpoint-up(xs)
+          {
+              background-color: rgba(255, 255, 255, .7);
+
+              @include make-col();
+              @include make-col-span(12);
+          }
+          @include media-breakpoint-up(sm)
+          {
+              @include make-col();
+              @include make-col-span(10);
+
+              margin: 1em 0 0 1em;
+          }
+          @include media-breakpoint-up(md)
+          {
+              @include make-col();
+              @include make-col-span(8);
+          }
+        }
+      }
+    }
+
+  }
+}
