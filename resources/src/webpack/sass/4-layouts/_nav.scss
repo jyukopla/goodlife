@@ -48,6 +48,15 @@
 .bottomrow
 {
 
+  &__border-bottom
+  {
+    margin-bottom: 1em;
+
+    -webkit-box-shadow: 1px 14px 10px -11px black;
+	   -moz-box-shadow: 1px 14px 10px -11px black;
+	        box-shadow: 1px 14px 10px -11px black;
+  }
+
   .navbar-toggler
   {
     outline: none;
