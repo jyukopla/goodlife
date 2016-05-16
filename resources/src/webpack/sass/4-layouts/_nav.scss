@@ -69,5 +69,30 @@
     font-size: 2em;
   }
 
+  .nav-item
+  {
+    &.active
+    {
+      background-color: cyan;
+    }
+    .nav-link
+    {
+      height: 3em;
+      width: 8em;
+      text-align: center;
+      padding: 0.7em;
+
+      &:hover
+      {
+        background-color: green;
+      }
+
+      &::after
+      {
+        content: ">>>";
+      }
+    }
+  }
+
 
 }
