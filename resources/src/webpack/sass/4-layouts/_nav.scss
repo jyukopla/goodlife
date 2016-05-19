@@ -71,9 +71,18 @@
 
   .nav-item
   {
+
+    @include media-breakpoint-down(xs)
+    {
+      width: 100%;
+      margin-left: 0 !important; // Try to find other solution than !important
+      background-color: cyan; //Debug
+    }
+
+
     &.active
     {
-      background-color: cyan;
+      background-color: cyan; //Debug
     }
     .nav-link
     {
