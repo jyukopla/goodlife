@@ -16,7 +16,12 @@
     background-repeat: repeat-x;
     background-position: center;
 
+    color: $white;
 
+    a
+    {
+      color: $white;
+    }
 
     .footer__row
     {
@@ -34,17 +39,35 @@
 
         &--links
         {
-            margin-top: 1rem;
+            ul:nth-child(1)
+            {
+              margin: 6em 0 0 2em;
+            }
+
+            ul:nth-child(2)
+            {
+              margin: 6em 0 0 0;
+            }
         }
 
         &--logo
         {
-            margin-top: 1rem;
+            margin-top: 3rem;
+
+            img
+            {
+              width: 15em;
+            }
 
             p
             {
               padding-top: 0.4rem;
               color: rgba($white, 0.6);
+            }
+
+            ul
+            {
+              margin: 2em 0 0 1em;
             }
         }
 
@@ -54,7 +77,7 @@
 
           ul
           {
-            margin-top: 1rem;
+            margin-top: 6rem;
 
             li
             {
