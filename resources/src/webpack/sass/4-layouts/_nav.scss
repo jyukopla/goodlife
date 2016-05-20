@@ -75,15 +75,20 @@
     @include media-breakpoint-down(xs)
     {
       width: 100%;
-      margin-left: 0 !important; // Try to find other solution than !important
-      background-color: cyan; //Debug
+      margin-left: 0 !important;
     }
 
 
     &.active
     {
-      background-color: cyan; //Debug
+      background-color: $black; //Debug
+
+      > a
+      {
+        color: $white !important;
+      }
     }
+
     .nav-link
     {
       height: 3em;
@@ -91,14 +96,18 @@
       text-align: center;
       padding: 0.7em;
 
+
       &:hover
       {
-        background-color: green;
+        color: $white;
+        background-color: $black;
       }
 
       &::after
       {
-        content: ">>>";
+        content: "▾"; // You can use font icons here
+        color: rgb(233, 94, 39); // Debug
+        padding-left: 0.4em;
       }
     }
   }
