@@ -14,8 +14,9 @@
 <body>
 
 <!-- Top and bottom navigation area -->
+<!-- You can find navigation-area scss rules in _navigation-area.scss partial -->
 	<!-- Padding 0 removes left and right padding from container-fluid element -->
-<div class="container-fluid shadow-border-bottom">
+<div class="container-fluid shadow-border-bottom navigation-area">
 	<div class="container">
 		<div class="row toprow">
 			<div class="toprow__logos col-xs-4 col-md-6">
@@ -68,6 +69,7 @@
 
 
 <!-- hero-area carousel -->
+<!-- You can find hero-area scss rules in _hero-area.scss partial -->
 <header class="container hero-area">
 	<div class="hero-area__carousel-wrapper">
 		<div class="hero-area__carousel-wrapper__slide-row-1">
@@ -195,10 +197,8 @@
 </div>
 <!-- Supportpaths text section -->
 
-
-
 <!-- Main content and paths area -->
-<section class="container m-y-3">
+<section class="container m-y-3 general-content-area">
 	<div class="top-content">
 		<div class="top-content-left">
 			<h1>POLUT JA TEHTÄVÄT</h1>
@@ -213,11 +213,8 @@
 <!-- top-content -->
 
 
-
-
-
-<!-- Paths area -->
-<section class="container paths">
+<!-- Paths area, you can find scss rules from _paths.scss partial -->
+<section class="container path">
 
 	<!-- Stressi path top row -->
 	<div class="paths__title__row">
@@ -248,9 +245,6 @@
 			<div class="task--completed text-xs-center"><img src="img/tasks/Completed.png" alt="" /></div>
 		</div>
 	</div>
-
-
-
 
 	<!-- Mieli maassa path top row -->
 	<div class="paths__title__row">
@@ -313,14 +307,13 @@
 			<div class="task--completed text-xs-center"><img src="img/tasks/Completed.png" alt="" /></div>
 		</div>
 	</div>
-
-
-
-
 </section>
 <!-- paths -->
 
-<!-- Footer area	-->
+
+
+
+<!-- Footer area, you can find scss rules from _footer.scss partial	-->
 <footer class="container-fluid footer-bg-wrapper">
 	<div class="container">
 		<section class="footer__row">

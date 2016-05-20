@@ -1,0 +1,121 @@
+.navigation-area
+{
+  .shadow-border-bottom
+  {
+    padding: 0;
+    margin-bottom: 4em;
+
+    -webkit-box-shadow: 0px 3px 10px 0px black;
+    -moz-box-shadow: 0px 3px 10px 0px black;
+    box-shadow: 0px 3px 10px 0px black;
+  }
+
+
+  .toprow
+  {
+
+    height: 100px;
+
+    &__logos
+    {
+      .navbar-brand
+      {
+        @include media-breakpoint-down(xs)
+        {
+          display: none;
+        }
+      }
+
+      .navbar-brand__mobile
+      {
+        @include media-breakpoint-up(sm)
+        {
+          display: none;
+        }
+      }
+
+      &--big
+      {
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      &--mobile
+      {
+        width: 38px;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+
+
+    &__language-links
+    {
+
+    }
+
+  }
+
+  .bottomrow
+  {
+
+    .navbar-toggler
+    {
+      outline: none;
+      cursor: pointer;
+    }
+
+    &__hamburger
+    {
+      font-size: 2em;
+    }
+
+    .nav-item
+    {
+
+      @include media-breakpoint-down(xs)
+      {
+        width: 100%;
+        margin-left: 0 !important;
+      }
+
+
+      &.active
+      {
+        background-color: $black; //Debug
+
+        > a
+        {
+          color: $white !important;
+        }
+      }
+
+      .nav-link
+      {
+        height: 3em;
+        width: 8em;
+        text-align: center;
+        padding: 0.7em;
+
+
+        &:hover
+        {
+          color: $white;
+          background-color: $black;
+        }
+
+        &::after
+        {
+          content: "▾"; // You can use font icons here
+          color: rgb(233, 94, 39); // Debug
+          padding-left: 0.4em;
+        }
+      }
+    }
+
+
+  }
+
+} /* navigation-area */
