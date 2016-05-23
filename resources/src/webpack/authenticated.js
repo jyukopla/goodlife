@@ -5,7 +5,7 @@ import 'plonetheme.webpack/plone-mosaic-layouts-editor';
 import './styles.less';
 import './styles.scss';
 
-import '../../node_modules/slick-carousel/slick/slick.min.js';
+import 'slick-carousel/slick/slick.min.js';
 import './js/main.js';
 
 import jQuery from 'jquery';

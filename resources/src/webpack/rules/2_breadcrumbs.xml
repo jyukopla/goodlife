@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    css:if-content="#portal-breadcrumbs">
+  <!-- At first, replace theme breadcrumbs with content breadcrumbs -->
+  <replace css:theme-children=".breadcrumbs__row__column"
+           content="//ol[@aria-labelledby='breadcrumbs-you-are-here']" />
+
+  <!-- Then, rebuild the copied content breadcrumbs with inline xslt -->
+  <replace content="//ol[@aria-labelledby='breadcrumbs-you-are-here']">
+    <xsl:for-each select="li/a|li/span[@id='breadcrumbs-current']">
+      <span>
+        <xsl:copy>
+          <xsl:copy-of select="@*" />
+          <xsl:apply-templates />
+        </xsl:copy>
+      </span>
+      <xsl:if test="position() != last()">
+        <xsl:text> &gt; </xsl:text>
+      </xsl:if>
+    </xsl:for-each>
+  </replace>
+
+</rules>
