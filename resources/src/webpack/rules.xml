@@ -13,6 +13,8 @@
 
   <!-- Include modules -->
   <xi:include href="rules/0_webpack.xml" />
+
+  <!--
   <xi:include href="rules/1_meta.xml" />
   <xi:include href="rules/1_toolbar.xml" />
   <xi:include href="rules/2_language.xml" />
@@ -20,5 +22,6 @@
   <xi:include href="rules/3_hero.xml" />
   <xi:include href="rules/3_top-content.xml" />
   <xi:include href="rules/4_paths.xml" />
+  -->
 
 </rules>

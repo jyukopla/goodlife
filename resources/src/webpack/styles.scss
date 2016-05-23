@@ -61,4 +61,7 @@
 
 // Import page spesific styles and overrides
 
-@import "sass/main.scss"
+@import "~bourbon/app/assets/stylesheets/_bourbon.scss";
+
+
+@import "sass/main.scss";
