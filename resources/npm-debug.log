@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.8.6
+3 info using node@v4.4.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchOtherPackageData collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+20 silly cache add args [ 'collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+20 silly cache add   null ]
+21 verbose cache add spec collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+22 silly cache add parsed spec Result {
+22 silly cache add   raw: 'collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+22 silly cache add   scope: null,
+22 silly cache add   name: 'collective.dynapage',
+22 silly cache add   rawSpec: 'https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+22 silly cache add   spec: 'https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+22 silly cache add   type: 'remote' }
+23 silly mapToRegistry name collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'collective.dynapage',
+26 silly mapToRegistry   rawSpec: 'https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+26 silly mapToRegistry   spec: 'https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+26 silly mapToRegistry   type: 'remote' }
+27 silly mapToRegistry uri https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+28 verbose addRemoteTarball https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz not in flight; adding
+29 verbose addRemoteTarball [ 'https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz',
+29 verbose addRemoteTarball   null ]
+30 info retry fetch attempt 1 at 10:47:34 AM
+31 info attempt registry request try #1 at 10:47:34 AM
+32 http fetch GET https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+33 verbose request id d142847350bbeafb
+34 http fetch 403 https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+35 error fetch failed https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+36 warn retry will retry, error on last attempt: Error: fetch failed with status code 403
+37 info retry fetch attempt 2 at 10:47:44 AM
+38 info attempt registry request try #1 at 10:47:44 AM
+39 http fetch GET https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+40 http fetch 403 https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+41 error fetch failed https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+42 warn retry will retry, error on last attempt: Error: fetch failed with status code 403
+43 info retry fetch attempt 3 at 10:49:37 AM
+44 info attempt registry request try #1 at 10:49:38 AM
+45 http fetch GET https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+46 http fetch 403 https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+47 error fetch failed https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz
+48 silly fetchPackageMetaData Error: fetch failed with status code 403
+48 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/fetch.js:51:14)
+48 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+48 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+48 silly fetchPackageMetaData     at Request.onRequestResponse (/usr/local/lib/node_modules/npm/node_modules/request/request.js:952:10)
+48 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+48 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+48 silly fetchPackageMetaData     at HTTPParser.parserOnIncomingClient [as onIncoming] (_http_client.js:419:21)
+48 silly fetchPackageMetaData     at HTTPParser.parserOnHeadersComplete (_http_common.js:103:23)
+48 silly fetchPackageMetaData     at TLSSocket.socketOnData (_http_client.js:309:20)
+48 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+48 silly fetchPackageMetaData  error for collective.dynapage@https://packages.kopla.jyu.fi/plone/packages/collective.dynapage-2.0.0.tar.gz [Error: fetch failed with status code 403]
+49 silly rollbackFailedOptional Starting
+50 silly rollbackFailedOptional Finishing
+51 silly runTopLevelLifecycles Starting
+52 silly runTopLevelLifecycles Finishing
+53 silly install printInstalled
+54 verbose stack Error: fetch failed with status code 403
+54 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/fetch.js:51:14)
+54 verbose stack     at emitOne (events.js:77:13)
+54 verbose stack     at Request.emit (events.js:169:7)
+54 verbose stack     at Request.onRequestResponse (/usr/local/lib/node_modules/npm/node_modules/request/request.js:952:10)
+54 verbose stack     at emitOne (events.js:77:13)
+54 verbose stack     at ClientRequest.emit (events.js:169:7)
+54 verbose stack     at HTTPParser.parserOnIncomingClient [as onIncoming] (_http_client.js:419:21)
+54 verbose stack     at HTTPParser.parserOnHeadersComplete (_http_common.js:103:23)
+54 verbose stack     at TLSSocket.socketOnData (_http_client.js:309:20)
+54 verbose stack     at emitOne (events.js:77:13)
+55 verbose cwd /Users/ere/studentlife/goodlife/resources
+56 error Darwin 15.5.0
+57 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+58 error node v4.4.3
+59 error npm  v3.8.6
+60 error fetch failed with status code 403
+61 error If you need help, you may report this error at:
+61 error     <https://github.com/npm/npm/issues>
+62 verbose exit [ 1, true ]
