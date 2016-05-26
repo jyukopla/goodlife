@@ -19,11 +19,11 @@
   <xi:include href="rules/1_meta.xml" />
   <xi:include href="rules/1_toolbar.xml" />
   <xi:include href="rules/2_language.xml" />
+  <xi:include href="rules/2_login.xml" />
   <xi:include href="rules/2_navbar.xml" />
   <xi:include href="rules/2_breadcrumbs.xml" />
   <xi:include href="rules/3_hero.xml" />
-  <xi:include href="rules/3_top-content.xml" />
-  <xi:include href="rules/4_paths.xml" />
+  <xi:include href="rules/4_content.xml" />
 
   <!-- Temporary cleanup -->
   <drop css:theme=".container.supportpaths" />

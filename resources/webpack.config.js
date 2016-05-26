@@ -37,12 +37,21 @@ const common = merge(require('./lib/plonetheme.webpack/webpack.globals'), {
     new CopyWebpackPlugin(
       [{ from: join(PATHS.src, '..'), to: '..' }],
       { ignore: ['**/webpack/*.js', '**/webpack/*.less',  '**/webpack/*.jsx',
+                 'manifest.cfg',
                  'index.html',
                  'plugins.html',
                  'omakansio.html'
       ]}
     ),
     // Inject bundles
+    new HtmlWebpackPlugin({
+      filename: 'manifest.cfg',
+      template: join(PATHS.src, 'manifest.cfg'),
+      chunksSortMode: function(a, b) {
+        return a.names[0] > b.names[0] ? 1 : -1;
+      },
+      inject: false
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: join(PATHS.src, 'index.html'),
@@ -77,7 +86,7 @@ if(TARGET === 'build' || !TARGET) {
     output: {
       filename: '[name].[chunkhash].js',
       chunkFilename: '[chunkhash].js',
-      publicPath: process.env.PUBLIC_PATH || '/goodlife/++theme++webpack/'
+      publicPath: process.env.PUBLIC_PATH || '/Plone/++theme++webpack/'
     },
     resolve: {
       alias: {
@@ -100,6 +109,7 @@ if(TARGET === 'build' || !TARGET) {
         'process.env.NODE_ENV': JSON.stringify('production')
       }),
       new ExtractTextPlugin('[name].[chunkhash].css'),
+      new ExtractTextPlugin('[name].css'),
       new webpack.optimize.CommonsChunkPlugin(
         '__init__.' + (new Date()).getTime() + '.js'),
       new webpack.optimize.UglifyJsPlugin({

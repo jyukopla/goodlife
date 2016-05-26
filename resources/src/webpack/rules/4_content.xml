@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Replace theme main content with Plone main content -->
+  <replace
+      css:theme-children=".top-content"
+      css:if-content="#content-core">
+    <div id="content" class="top-content-full">
+      <xsl:apply-templates css:select="#content h1.documentFirstHeading" />
+      <xsl:apply-templates css:select="#content .documentDescription" />
+      <xsl:apply-templates css:select="#content #content-core > *" />
+    </div>
+  </replace>
+
+  <replace
+      css:theme-children=".top-content"
+      css:if-not-content="#content-core">
+    <div id="content" class="top-content-full">
+      <xsl:apply-templates css:select="#content > *" />
+    </div>
+  </replace>
+
+  <!-- Place portal status message -->
+  <prepend css:theme=".top-content"
+           css:content="aside#global_statusmessage" />
+  <!-- Refactor portal status message -->
+  <replace css:content="#global_statusmessage">
+    <aside class="top-content-full status-message">
+      <xsl:apply-templates />
+    </aside>
+  </replace>
+
+</rules>
