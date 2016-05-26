@@ -22,10 +22,6 @@
       css:content=".documentDescription" />
   -->
 
-  <!-- Drop hero when no content-core -->
-  <drop css:theme="header.hero-area"
-        css:if-not-content="#content-core" />
-
   <!-- Drop hero when on some special view -->
   <drop css:theme="header.hero-area"
         if-content="//body[contains($path, '@@')]" />
