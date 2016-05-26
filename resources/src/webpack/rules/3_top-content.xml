@@ -16,6 +16,7 @@
       css:theme-children=".top-content"
       css:if-content="#content-core">
     <div class="top-content-full">
+      <xsl:apply-templates css:select=".documentDescription" />
       <xsl:apply-templates css:select="#content-core > *" />
     </div>
   </replace>

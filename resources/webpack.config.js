@@ -36,13 +36,32 @@ const common = merge(require('./lib/plonetheme.webpack/webpack.globals'), {
     // Copy themes
     new CopyWebpackPlugin(
       [{ from: join(PATHS.src, '..'), to: '..' }],
-      { ignore: ['**/webpack/*.js', '**/webpack/*.less',
-                 '**/webpack/*.jsx', 'index.html'] }
+      { ignore: ['**/webpack/*.js', '**/webpack/*.less',  '**/webpack/*.jsx',
+                 'index.html',
+                 'plugins.html',
+                 'omakansio.html'
+      ]}
     ),
     // Inject bundles
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: join(PATHS.src, 'index.html'),
+      chunksSortMode: function(a, b) {
+        return a.names[0] > b.names[0] ? 1 : -1;
+      },
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'omakansio.html',
+      template: join(PATHS.src, 'omakansio.html'),
+      chunksSortMode: function(a, b) {
+        return a.names[0] > b.names[0] ? 1 : -1;
+      },
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'plugins.html',
+      template: join(PATHS.src, 'plugins.html'),
       chunksSortMode: function(a, b) {
         return a.names[0] > b.names[0] ? 1 : -1;
       },
@@ -58,7 +77,7 @@ if(TARGET === 'build' || !TARGET) {
     output: {
       filename: '[name].[chunkhash].js',
       chunkFilename: '[chunkhash].js',
-      publicPath: process.env.PUBLIC_PATH || '/Plone/++theme++webpack/'
+      publicPath: process.env.PUBLIC_PATH || '/goodlife/++theme++webpack/'
     },
     resolve: {
       alias: {
@@ -68,6 +87,8 @@ if(TARGET === 'build' || !TARGET) {
     },
     module: {
       loaders: [
+        { test: /\.css$/,
+          loader: ExtractTextPlugin.extract('style', 'css') },
         { test: /\.less$/,
           loader: ExtractTextPlugin.extract('style', 'css!less') },
         { test: /\.scss$/,
@@ -102,6 +123,8 @@ if(TARGET === 'watch') {
     },
     module: {
       loaders: [
+        { test: /\.css$/,
+          loaders: ['style', 'css'] },
         { test: /\.less$/,
           loaders: ['style', 'css', 'less'] },
         { test: /\.scss$/,
