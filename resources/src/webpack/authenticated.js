@@ -2,7 +2,7 @@ import 'plonetheme.webpack/plone';
 import 'plonetheme.webpack/plone-logged-in';
 import 'plonetheme.webpack/plone-mosaic';
 import 'plonetheme.webpack/plone-mosaic-layouts-editor';
-import 'collective.dynapage';
+// import 'collective.dynapage';
 import './styles.less';
 import './styles.scss';
 
