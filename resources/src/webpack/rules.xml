@@ -27,10 +27,10 @@
   <!-- Only include content when not in special mockup section -->
   <rules css:if-not-content="body.section-omakansio,body.section-plugins">
     <xi:include href="rules/4_content.xml" />
-  </rules>
 
-  <!-- Temporary cleanup -->
-  <drop css:theme=".container.supportpaths" />
-  <drop css:theme=".container.supportpaths-content-area" />
+    <!-- Temporary cleanup -->
+    <drop css:theme=".container.supportpaths" />
+    <drop css:theme=".container.supportpaths-content-area" />
+  </rules>
 
 </rules>
