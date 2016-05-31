@@ -1,0 +1,33 @@
+.stress__nav__wrapper
+{
+  margin: 2em 0;
+  
+  .list-inline-item:not(:last-child)
+  {
+      margin-right: -6px;
+  }
+
+  li
+  {
+    margin-bottom: 3em;
+  }
+
+  .stress__nav__item
+  {
+    background-color: rgb(233, 65, 78);
+    padding: 19px 60px;
+    color: $white;
+    position: relative;
+
+    &:hover
+    {
+      background-color: tint(rgb(233, 65, 78), 40%);;
+    }
+
+    &.active
+    {
+      background-color: tint(rgb(233, 65, 78), 20%);
+    }
+  }
+
+}
