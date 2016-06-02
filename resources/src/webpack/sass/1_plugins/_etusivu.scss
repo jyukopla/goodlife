@@ -1,0 +1,44 @@
+.etusivu
+{
+  .reitti__laatikko
+  {
+    width: auto;
+    height: 10em;
+    margin-bottom: 2em;
+
+    &.punainen
+    {
+      background-color: rgb(255, 84, 84);
+    }
+
+    &.vihrea
+    {
+      background-color: green;
+    }
+
+    &.sininen
+    {
+      background-color: cyan
+    }
+
+    &.neutraali
+    {
+      background-color: orange;
+    }
+
+    a
+    {
+      display: block;
+      width: auto;
+      height: 10em;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      font-size: 2em;
+
+      text-align: center;
+      line-height: 5em;
+
+    }
+
+  }
+}
