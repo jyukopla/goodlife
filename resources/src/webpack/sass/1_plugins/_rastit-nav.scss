@@ -1,4 +1,33 @@
 .rastit-nav
 {
-  
+  &__box
+  {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    a
+    {
+      display: block;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 4em;
+    }
+
+    &.stressi
+    {
+      background-color: green;
+    }
+
+    &.mielimaassa
+    {
+      background-color: cyan;
+    }
+
+    &.ahdistaako
+    {
+      background-color: yellow;
+    }
+  }
 }
