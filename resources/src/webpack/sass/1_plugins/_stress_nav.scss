@@ -1,7 +1,7 @@
 .stress__nav__wrapper
 {
   margin: 2em 0;
-  
+
   .list-inline-item:not(:last-child)
   {
       margin-right: -6px;
@@ -30,4 +30,26 @@
     }
   }
 
+}
+
+
+
+.stressi-laatikko
+{
+  display: block;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+  line-height: 4em;
+
+  a
+  {
+    color: $black;
+  }
+}
+
+.stressi-laatikko--punainen
+{
+  background-color: $supportpaths-distress-red;
 }
