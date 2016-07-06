@@ -2,10 +2,14 @@
 @import "slick";
 
 /* These are PLUGINS.HTML code snippets scss partial files */
-@import 'stress_nav';
-@import 'distress_nav';
-@import 'depress_nav';
 @import 'etusivu';
 @import 'rastit-nav';
 @import 'content-in-one-page';
 @import 'tinymce';
+
+
+/* These are used ONLY for local test enviroment */
+
+//@import 'stress_nav';
+//@import 'distress_nav';
+//@import 'depress_nav';

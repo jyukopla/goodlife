@@ -1,3 +1,54 @@
+
+/*
+*  ----------  HUOM ! -----------
+*  Tämä scss on vain käytössä OK projektin lokaalissa testi ympäristössä
+*  Tätä ei käytetä tuotannossa
+*
+*
+*
+*
+*/
+
+
+
+.rastit-nav
+{
+  &__box
+  {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    a
+    {
+      display: block;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 4em;
+    }
+
+    &.stressi
+    {
+      background-color: green;
+    }
+
+    &.mielimaassa
+    {
+      background-color: cyan;
+    }
+
+    &.ahdistaako
+    {
+      background-color: yellow;
+    }
+  }
+}
+
+
+
+
+
 .stress__nav__wrapper
 {
   margin: 2em 0;
@@ -30,28 +81,4 @@
     }
   }
 
-}
-
-
-
-.stressi-laatikko
-{
-  display: block;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 1em;
-  text-align: center;
-  line-height: 4em;
-  overflow-wrap: break-word;
-  padding: 0.5em;
-
-  a
-  {
-    color: $black;
-  }
-}
-
-.stressi-laatikko--punainen
-{
-  background-color: $supportpaths-distress-red;
 }
