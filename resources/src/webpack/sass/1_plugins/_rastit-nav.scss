@@ -18,55 +18,55 @@
 }
 
 
-.reitti-laatikko
+.ok-reitti-laatikko
 {
   @extend %laatikko-grid;
 }
 
-.reitti-laatikko-stressi
+.ok-reitti-laatikko-stressi
 {
   background-color: $path-stress-red;
 }
 
-.reitti-laatikko-mielimaassa
+.ok-reitti-laatikko-mielimaassa
 {
   background-color: $path-depress-blue;
 }
 
-.reitti-laatikko-jannittaako
+.ok-reitti-laatikko-jannittaako
 {
   background-color: $path-distress-orange;
 }
 
 
 
-.stressi-laatikko
+.ok-stressi-laatikko
 {
   @extend %laatikko-grid;
 }
 
-.stressi-laatikko--punainen
+.ok-stressi-laatikko--punainen
 {
   background-color: $path-stress-red;
 }
 
-.mieliala-laatikko
+.ok-mieliala-laatikko
 {
   @extend %laatikko-grid;
 }
 
-.mieliala-laatikko--sininen
+.ok-mieliala-laatikko--sininen
 {
   background-color: $path-depress-blue;
 }
 
 
-.jannittaako-laatikko
+.ok-jannittaako-laatikko
 {
   @extend %laatikko-grid;
 }
 
-.jannittaako-laatikko--oranssi
+.ok-jannittaako-laatikko--oranssi
 {
   background-color: $path-distress-orange;
 }

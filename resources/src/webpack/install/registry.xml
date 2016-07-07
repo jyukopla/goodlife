@@ -51,16 +51,40 @@
   <records prefix="plone.app.mosaic.structure_tiles.card"
            interface="plone.app.mosaic.interfaces.ITile">
     <value key="default_value">&lt;div class="card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;/div&gt;</value>
-    <value key="category">hidden</value>
+    <value key="category">structure</value>
     <value key="read_only">False</value>
     <value key="name">card</value>
     <value key="settings">False</value>
     <value key="favorite">False</value>
-    <value key="label">Kortti</value>
+    <value key="label">Card</value>
     <value key="tile_type">text</value>
     <value key="rich_text">True</value>
-    <value key="weight">10</value>
+    <value key="weight">80</value>
   </records>
+
+  <record name="plone.app.mosaic.structure_tiles.card.available_actions">
+    <field type="plone.registry.field.List">
+      <title>Available actions for the Card structure tile</title>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element>toolbar-undo</element>
+      <element>toolbar-redo</element>
+      <element>toolbar-code</element>
+      <element>toolbar-styleselect</element>
+      <element>toolbar-bold</element>
+      <element>toolbar-italic</element>
+      <element>toolbar-alignleft</element>
+      <element>toolbar-aligncenter</element>
+      <element>toolbar-alignright</element>
+      <element>toolbar-alignjustify</element>
+      <element>toolbar-bullist</element>
+      <element>toolbar-numlist</element>
+      <element>toolbar-ploneimage</element>
+      <element>toolbar-unlink</element>
+      <element>toolbar-plonelink</element>
+    </value>
+  </record>
 
   <records prefix="plone.app.mosaic.structure_tiles.card_stress"
            interface="plone.app.mosaic.interfaces.ITile">
@@ -213,7 +237,6 @@
     </value>
   </record>
 
-
   <records interface="plone.app.mosaic.interfaces.IFormat"
            prefix="plone.app.mosaic.formats.grid_row_dark"
            remove="true"/>
@@ -295,6 +318,31 @@
       <element>custom/basic.html::Document</element>
       <element>default/basic.html::Document</element>
     </value>
+  </record>
+
+  <record name="plone.other_settings" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="other_settings">
+  <value>{&#13;
+    "importcss_groups": [&#13;
+    {&#13;
+    "title": "Reitti",&#13;
+    "filter": "ok-reitti-"&#13;
+    },&#13;
+    {&#13;
+    "title": "Stressi",&#13;
+    "filter": "ok-stressi-"&#13;
+    },&#13;
+    {&#13;
+    "title": "Mieliala",&#13;
+    "filter": "ok-mieliala-"&#13;
+    },&#13;
+    {&#13;
+    "title": "J&#228;nnitt&#228;&#228;k&#246;",&#13;
+    "filter": "ok-jannittaako-"&#13;
+    }&#13;
+    ],&#13;
+    "importcss_selector_filter":&#13;
+    "ok-"&#13;
+    }</value>
   </record>
 
 </registry>

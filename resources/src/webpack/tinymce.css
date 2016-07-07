@@ -1,60 +1,50 @@
-.ugly {
-    color: white;
-    background: red;
-}
-
-
-
-
-
-
-.reitti-laatikko
+.ok-reitti-laatikko
 {
 
 }
-.reitti-laatikko-stressi
+.ok-reitti-laatikko-stressi
 {
 
 }
-.reitti-laatikko-mielimaassa
+.ok-reitti-laatikko-mielimaassa
 {
 
 }
-.reitti-laatikko-jannittaako
+.ok-reitti-laatikko-jannittaako
 {
 
 }
 
 
 
-.stressi-laatikko
+.ok-stressi-laatikko
 {
 
 }
 
-.stressi-laatikko--punainen
-{
-
-}
-
-
-.mieliala-laatikko
-{
-
-}
-
-.mieliala-laatikko--sininen
+.ok-stressi-laatikko--punainen
 {
 
 }
 
 
-.jannittaako-laatikko
+.ok-mieliala-laatikko
 {
 
 }
 
-.jannittaako-laatikko--oranssi
+.ok-mieliala-laatikko--sininen
+{
+
+}
+
+
+.ok-jannittaako-laatikko
+{
+
+}
+
+.ok-jannittaako-laatikko--oranssi
 {
 
 }
