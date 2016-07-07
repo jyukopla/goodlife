@@ -50,8 +50,8 @@
 
   <records prefix="plone.app.mosaic.structure_tiles.card"
            interface="plone.app.mosaic.interfaces.ITile">
-    <value key="default_value">&lt;div class="card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;a href="#" class="btn btn-primary"&gt;Lisää tähän linkki&lt;/a&gt;&lt;/div&gt;</value>
-    <value key="category">goodlife</value>
+    <value key="default_value">&lt;div class="card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;/div&gt;</value>
+    <value key="category">hidden</value>
     <value key="read_only">False</value>
     <value key="name">card</value>
     <value key="settings">False</value>
@@ -59,8 +59,122 @@
     <value key="label">Kortti</value>
     <value key="tile_type">text</value>
     <value key="rich_text">True</value>
+    <value key="weight">10</value>
+  </records>
+
+  <records prefix="plone.app.mosaic.structure_tiles.card_stress"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="default_value">&lt;div class="kortti-stressi card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;/div&gt;</value>
+    <value key="category">goodlife</value>
+    <value key="read_only">False</value>
+    <value key="name">card-stress</value>
+    <value key="settings">False</value>
+    <value key="favorite">False</value>
+    <value key="label">Stressi</value>
+    <value key="tile_type">text</value>
+    <value key="rich_text">True</value>
+    <value key="weight">100</value>
+  </records>
+
+  <record name="plone.app.mosaic.structure_tiles.card_stress.available_actions">
+    <field type="plone.registry.field.List">
+      <title>Available actions for the Card structure tile</title>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element>toolbar-undo</element>
+      <element>toolbar-redo</element>
+      <element>toolbar-code</element>
+      <element>toolbar-styleselect</element>
+      <element>toolbar-bold</element>
+      <element>toolbar-italic</element>
+      <element>toolbar-alignleft</element>
+      <element>toolbar-aligncenter</element>
+      <element>toolbar-alignright</element>
+      <element>toolbar-alignjustify</element>
+      <element>toolbar-bullist</element>
+      <element>toolbar-numlist</element>
+      <element>toolbar-ploneimage</element>
+      <element>toolbar-unlink</element>
+      <element>toolbar-plonelink</element>
+    </value>
+  </record>
+
+  <records prefix="plone.app.mosaic.structure_tiles.card_mood"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="default_value">&lt;div class="kortti-mieliala card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;/div&gt;</value>
+    <value key="category">goodlife</value>
+    <value key="read_only">False</value>
+    <value key="name">card-mood</value>
+    <value key="settings">False</value>
+    <value key="favorite">False</value>
+    <value key="label">Mieliala</value>
+    <value key="tile_type">text</value>
+    <value key="rich_text">True</value>
     <value key="weight">200</value>
   </records>
+
+  <record name="plone.app.mosaic.structure_tiles.card_mood.available_actions">
+    <field type="plone.registry.field.List">
+      <title>Available actions for the Card structure tile</title>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element>toolbar-undo</element>
+      <element>toolbar-redo</element>
+      <element>toolbar-code</element>
+      <element>toolbar-styleselect</element>
+      <element>toolbar-bold</element>
+      <element>toolbar-italic</element>
+      <element>toolbar-alignleft</element>
+      <element>toolbar-aligncenter</element>
+      <element>toolbar-alignright</element>
+      <element>toolbar-alignjustify</element>
+      <element>toolbar-bullist</element>
+      <element>toolbar-numlist</element>
+      <element>toolbar-ploneimage</element>
+      <element>toolbar-unlink</element>
+      <element>toolbar-plonelink</element>
+    </value>
+  </record>
+
+  <records prefix="plone.app.mosaic.structure_tiles.card_tension"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="default_value">&lt;div class="kortti-jannittako card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;/div&gt;</value>
+    <value key="category">goodlife</value>
+    <value key="read_only">False</value>
+    <value key="name">card-tension</value>
+    <value key="settings">False</value>
+    <value key="favorite">False</value>
+    <value key="label">Jännittääkö</value>
+    <value key="tile_type">text</value>
+    <value key="rich_text">True</value>
+    <value key="weight">300</value>
+  </records>
+
+  <record name="plone.app.mosaic.structure_tiles.card_tension.available_actions">
+    <field type="plone.registry.field.List">
+      <title>Available actions for the Card structure tile</title>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element>toolbar-undo</element>
+      <element>toolbar-redo</element>
+      <element>toolbar-code</element>
+      <element>toolbar-styleselect</element>
+      <element>toolbar-bold</element>
+      <element>toolbar-italic</element>
+      <element>toolbar-alignleft</element>
+      <element>toolbar-aligncenter</element>
+      <element>toolbar-alignright</element>
+      <element>toolbar-alignjustify</element>
+      <element>toolbar-bullist</element>
+      <element>toolbar-numlist</element>
+      <element>toolbar-ploneimage</element>
+      <element>toolbar-unlink</element>
+      <element>toolbar-plonelink</element>
+    </value>
+  </record>
 
   <records prefix="plone.app.mosaic.structure_tiles.text"
            interface="plone.app.mosaic.interfaces.ITile">
@@ -98,6 +212,7 @@
       <element>toolbar-plonelink</element>
     </value>
   </record>
+
 
   <records interface="plone.app.mosaic.interfaces.IFormat"
            prefix="plone.app.mosaic.formats.grid_row_dark"
@@ -171,7 +286,7 @@
   <records interface="plone.app.mosaic.interfaces.IWeightedDict"
            prefix="plone.app.mosaic.tiles_categories.goodlife">
     <value key="name">goodlife</value>
-    <value key="label">Opiskelijankompassi</value>
+    <value key="label">Kortit</value>
     <value key="weight">40</value>
   </records>
 
