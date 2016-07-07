@@ -53,13 +53,27 @@
     <value key="default_value">&lt;div class="card-header"&gt;Harjoitus&lt;/div&gt;&lt;div class="card card-block"&gt;&lt;h3 class="card-title"&gt;Harjoitus 1&lt;/h3&gt;&lt;p class="card-text"&gt;Miten hallitsen stressiä&lt;/p&gt;&lt;a href="#" class="btn btn-primary"&gt;Lisää tähän linkki&lt;/a&gt;&lt;/div&gt;</value>
     <value key="category">goodlife</value>
     <value key="read_only">False</value>
-    <value key="name">text</value>
+    <value key="name">card</value>
     <value key="settings">False</value>
     <value key="favorite">False</value>
     <value key="label">Kortti</value>
     <value key="tile_type">text</value>
     <value key="rich_text">True</value>
     <value key="weight">200</value>
+  </records>
+
+  <records prefix="plone.app.mosaic.structure_tiles.text"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="default_value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus.&lt;/p&gt;&lt;p&gt;Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.&lt;/p&gt;</value>
+    <value key="category">structure</value>
+    <value key="read_only">False</value>
+    <value key="name">text</value>
+    <value key="settings">False</value>
+    <value key="favorite">False</value>
+    <value key="label">Text</value>
+    <value key="tile_type">text</value>
+    <value key="rich_text">True</value>
+    <value key="weight">30</value>
   </records>
 
   <record name="plone.app.mosaic.structure_tiles.card.available_actions">
@@ -130,6 +144,7 @@
       <element>customizelayout</element>
       <element>changelayout</element>
       <element>savelayout</element>
+      <element>delete</element>
       <element>format</element>
       <element>insert</element>
       <element>tile-align-center</element>

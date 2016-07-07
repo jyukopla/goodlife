@@ -7,7 +7,7 @@
 
   <!-- Select mockup -->
   <theme href="index.html" />
-  <theme href="omakansio.html" css:if-content="body.section-omakansio" />
+  <!-- <theme href="omakansio.html" css:if-content="body.section-omakansio" /> -->
   <theme href="plugins.html" css:if-content="body.section-plugins" />
 
   <!-- Disable theme on possible non-content pages -->
