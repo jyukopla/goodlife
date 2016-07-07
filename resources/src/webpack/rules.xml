@@ -26,7 +26,7 @@
   <xi:include href="rules/3_hero.xml" />
 
   <!-- Only include content when not in special mockup section -->
-  <rules css:if-not-content="body.section-omakansio,body.section-plugins">
+  <rules css:if-not-content="body.section-plugins">
     <xi:include href="rules/4_content.xml" />
 
     <!-- Temporary cleanup -->
@@ -34,7 +34,7 @@
     <drop css:theme=".container.supportpaths-content-area" />
   </rules>
 
-  <!-- Stresi -->
+  <!-- Stressi -->
   <theme href="stressi.html" css:if-content=".mosaic-stress-group-1"/>
   <xi:include href="rules/4_stressi.xml" />
 

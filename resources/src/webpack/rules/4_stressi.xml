@@ -5,21 +5,41 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     css:if-content=".mosaic-stress-group-1">
 
+  <drop css:content=".mosaic-IDublinCore-title-tile" />
+  <drop css:content=".mosaic-stress-group-1" />
+  <drop css:content=".mosaic-stress-group-2" />
+  <drop css:content=".mosaic-stress-group-3" />
+
   <replace
       css:theme-children=".content-in-one-page.sivu1"
-      css:content=".mosaic-stress-group-1" />
+      css:content=".mosaic-stress-group-1"
+      method="raw" />
 
   <replace
       css:theme-children=".content-in-one-page.sivu2"
-      css:content=".mosaic-stress-group-2" />
+      css:content=".mosaic-stress-group-2"
+      method="raw" />
 
   <replace
       css:theme-children=".content-in-one-page.sivu3"
-      css:content=".mosaic-stress-group-3" />
+      css:content=".mosaic-stress-group-3"
+      method="raw" />
 
   <prepend
       css:theme=".content-in-one-page.sivu1"
-      css:content="h1.documentFirstHeading" />
+      css:content="h1.documentFirstHeading"
+      method="raw" />
+
+  <after
+      css:theme=".content-in-one-page.sivu3">
+    <section class="container m-y-3 general-content-area">
+      <div class="top-content">
+      <div class="top-content-full">
+        <xsl:apply-templates css:select="#content .row" />
+      </div>
+      </div>
+    </section>
+  </after>
 
   <replace
       css:content="h1.documentFirstHeading">
