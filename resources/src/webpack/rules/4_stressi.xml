@@ -12,8 +12,7 @@
 
   <prepend
       css:theme=".content-in-one-page.sivu1"
-      css:content="h1.documentFirstHeading"
-      method="raw" />
+      css:content="h1.documentFirstHeading" />
 
   <replace
       css:content="h1.documentFirstHeading">
