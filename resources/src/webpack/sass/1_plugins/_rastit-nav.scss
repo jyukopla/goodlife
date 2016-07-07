@@ -1,8 +1,5 @@
 
-
-
-
-.reitti-laatikko
+%laatikko-grid
 {
   display: block;
   color: rgb(0, 0, 0);
@@ -17,6 +14,12 @@
   {
     color: $black;
   }
+}
+
+
+.reitti-laatikko
+{
+  @extend %laatikko-grid;
 }
 
 .reitti-laatikko-stressi
@@ -38,22 +41,31 @@
 
 .stressi-laatikko
 {
-  display: block;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 1em;
-  text-align: center;
-  line-height: 4em;
-  overflow-wrap: break-word;
-  padding: 0.5em;
-
-  a
-  {
-    color: $black;
-  }
+  @extend %laatikko-grid;
 }
 
 .stressi-laatikko--punainen
 {
   background-color: $supportpaths-distress-red;
+}
+
+.mieliala-laatikko
+{
+  @extend %laatikko-grid;
+}
+
+.mieliala-laatikko--sininen
+{
+  background-color: $path-depress-blue;
+}
+
+
+.jannittaako-laatikko
+{
+  @extend %laatikko-grid;
+}
+
+.jannittaako-laatikko--oranssi
+{
+  background-color: $path-distress-orange;
 }
