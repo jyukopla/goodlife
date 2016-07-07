@@ -9,7 +9,19 @@
          css:content="aside#global_statusmessage" />
   <!-- Refactor portal status message -->
   <replace css:content="#global_statusmessage">
-    <aside class="top-content-full status-message">
+    <aside id="global_statusmessage"
+           class="top-content-full status-message">
+      <xsl:apply-templates />
+    </aside>
+  </replace>
+
+  <!-- Place plone lock message -->
+  <after css:theme=".breadcrumbs"
+         css:content="#plone-lock-status" />
+  <!-- Refactor plone lock message -->
+  <replace css:content="#plone-lock-status">
+    <aside id="plone-lock-status"
+           class="top-content-full status-message">
       <xsl:apply-templates />
     </aside>
   </replace>
