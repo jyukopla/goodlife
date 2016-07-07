@@ -13,6 +13,7 @@
   a
   {
     color: $black;
+    padding: 1em 5em;
   }
 }
 
@@ -24,17 +25,17 @@
 
 .reitti-laatikko-stressi
 {
-  background-color: green;
+  background-color: $path-stress-red;
 }
 
 .reitti-laatikko-mielimaassa
 {
-  background-color: cyan;
+  background-color: $path-depress-blue;
 }
 
 .reitti-laatikko-jannittaako
 {
-  background-color: yellow;
+  background-color: $path-distress-orange;
 }
 
 
@@ -46,7 +47,7 @@
 
 .stressi-laatikko--punainen
 {
-  background-color: $supportpaths-distress-red;
+  background-color: $path-stress-red;
 }
 
 .mieliala-laatikko
