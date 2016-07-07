@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Place portal status message -->
+  <after css:theme=".breadcrumbs"
+         css:content="aside#global_statusmessage" />
+  <!-- Refactor portal status message -->
+  <replace css:content="#global_statusmessage">
+    <aside class="top-content-full status-message">
+      <xsl:apply-templates />
+    </aside>
+  </replace>
+
+</rules>

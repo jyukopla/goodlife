@@ -23,14 +23,4 @@
     </div>
   </replace>
 
-  <!-- Place portal status message -->
-  <prepend css:theme=".top-content"
-           css:content="aside#global_statusmessage" />
-  <!-- Refactor portal status message -->
-  <replace css:content="#global_statusmessage">
-    <aside class="top-content-full status-message">
-      <xsl:apply-templates />
-    </aside>
-  </replace>
-
 </rules>

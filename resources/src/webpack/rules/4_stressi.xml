@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    css:if-content=".mosaic-stress-group-1">
+
+  <replace
+      css:theme-children=".content-in-one-page.sivu1"
+      css:content=".mosaic-stress-group-1" />
+
+  <replace
+      css:theme-children=".content-in-one-page.sivu2"
+      css:content=".mosaic-stress-group-2" />
+
+  <replace
+      css:theme-children=".content-in-one-page.sivu3"
+      css:content=".mosaic-stress-group-3" />
+
+  <prepend
+      css:theme=".content-in-one-page.sivu1"
+      css:content="h1.documentFirstHeading" />
+
+  <replace
+      css:content="h1.documentFirstHeading">
+    <div class="row">
+      <div class="col-md-12">
+        <xsl:copy>
+          <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+      </div>
+    </div>
+    <div class="row m-b-2">
+      <div class="col-md-12">
+        <ul class="list-inline list-unstyled">
+          <li class="list-inline-item">
+            <a href="#sivu1">
+              <xsl:copy-of select="(//div[contains(@class, 'mosaic-stress-group-1')]//h2)[1]/text()" />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#sivu2">
+              <xsl:copy-of select="(//div[contains(@class, 'mosaic-stress-group-2')]//h2)[1]/text()" />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#sivu3">
+              <xsl:copy-of select="(//div[contains(@class, 'mosaic-stress-group-3')]//h2)[1]/text()" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </replace>
+
+</rules>

@@ -51,10 +51,16 @@
   {
     background-color: rgb(244, 217, 208);
   }
+}
 
+// Mosaic Row Styles
 
-
-
-
-
+.mosaic-stress-group-1 {
+  @extend .content-in-one-page.sivu1;
+}
+.mosaic-stress-group-2 {
+  @extend .content-in-one-page.sivu2;
+}
+.mosaic-stress-group-3 {
+  @extend .content-in-one-page.sivu3;
 }

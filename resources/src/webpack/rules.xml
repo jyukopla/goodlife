@@ -21,6 +21,7 @@
   <xi:include href="rules/2_language.xml" />
   <xi:include href="rules/2_login.xml" />
   <xi:include href="rules/2_navbar.xml" />
+  <xi:include href="rules/2_status.xml" />
   <xi:include href="rules/2_breadcrumbs.xml" />
   <xi:include href="rules/3_hero.xml" />
 
@@ -32,5 +33,9 @@
     <drop css:theme=".container.supportpaths" />
     <drop css:theme=".container.supportpaths-content-area" />
   </rules>
+
+  <!-- Stresi -->
+  <theme href="stressi.html" css:if-content=".mosaic-stress-group-1"/>
+  <xi:include href="rules/4_stressi.xml" />
 
 </rules>

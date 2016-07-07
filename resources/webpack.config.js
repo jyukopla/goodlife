@@ -39,6 +39,7 @@ const common = merge(require('./lib/plonetheme.webpack/webpack.globals'), {
       { ignore: ['**/webpack/*.js', '**/webpack/*.less',  '**/webpack/*.jsx',
                  'manifest.cfg',
                  'index.html',
+                 'stressi.html',
                  'plugins.html',
                  'omakansio.html'
       ]}
@@ -55,6 +56,14 @@ const common = merge(require('./lib/plonetheme.webpack/webpack.globals'), {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: join(PATHS.src, 'index.html'),
+      chunksSortMode: function(a, b) {
+        return a.names[0] > b.names[0] ? 1 : -1;
+      },
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'stressi.html',
+      template: join(PATHS.src, 'stressi.html'),
       chunksSortMode: function(a, b) {
         return a.names[0] > b.names[0] ? 1 : -1;
       },

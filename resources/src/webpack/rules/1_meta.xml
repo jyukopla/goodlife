@@ -14,6 +14,7 @@
 
   <!-- Merge classes from Plone body into theme body -->
   <merge attributes="class" css:theme="body" css:content="body" />
+  <copy attributes="*" css:theme="body" css:content="body" />
 
   <!-- Logo target from content -->
   <copy attributes="href" css:theme="a.navbar-brand" css:content="a#portal-logo" />
