@@ -245,7 +245,7 @@
            prefix="plone.app.mosaic.formats.stress-group-1">
     <value key="name">stress-group-1</value>
     <value key="category">row</value>
-    <value key="label">Sivu 1</value>
+    <value key="label">Sivu: Osio 1</value>
     <value key="action">row-toggle-class</value>
     <value key="icon">true</value>
     <value key="favorite">false</value>
@@ -256,7 +256,7 @@
            prefix="plone.app.mosaic.formats.stress-group-2">
     <value key="name">stress-group-2</value>
     <value key="category">row</value>
-    <value key="label">Sivu 2</value>
+    <value key="label">Sivu: Osio 2</value>
     <value key="action">row-toggle-class</value>
     <value key="icon">true</value>
     <value key="favorite">false</value>
@@ -267,11 +267,43 @@
            prefix="plone.app.mosaic.formats.stress-group-3">
     <value key="name">stress-group-3</value>
     <value key="category">row</value>
-    <value key="label">Sivu 3</value>
+    <value key="label">Sivu: Osio 3</value>
     <value key="action">row-toggle-class</value>
     <value key="icon">true</value>
     <value key="favorite">false</value>
     <value key="weight">300</value>
+  </records>
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.card-stress">
+    <value key="name">card-stress</value>
+    <value key="category">row</value>
+    <value key="label">Kortti: Stressi</value>
+    <value key="action">row-toggle-class</value>
+    <value key="icon">true</value>
+    <value key="favorite">false</value>
+    <value key="weight">400</value>
+  </records>
+
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.card-mood">
+    <value key="name">card-mood</value>
+    <value key="category">row</value>
+    <value key="label">Kortti: Mieliala</value>
+    <value key="action">row-toggle-class</value>
+    <value key="icon">true</value>
+    <value key="favorite">false</value>
+    <value key="weight">500</value>
+  </records>
+
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.card-tension">
+    <value key="name">card-tension</value>
+    <value key="category">row</value>
+    <value key="label">Kortti: Jännitys</value>
+    <value key="action">row-toggle-class</value>
+    <value key="icon">true</value>
+    <value key="favorite">false</value>
+    <value key="weight">600</value>
   </records>
 
   <record name="plone.app.mosaic.default_available_actions">
@@ -294,6 +326,9 @@
       <element>stress-group-1</element>
       <element>stress-group-2</element>
       <element>stress-group-3</element>
+      <element>card-mood</element>
+      <element>card-stress</element>
+      <element>card-tension</element>
       <element>grid-row-remove-format</element>
     </value>
   </record>

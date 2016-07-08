@@ -64,3 +64,18 @@
 .mosaic-stress-group-3 {
   @extend .content-in-one-page.sivu3;
 }
+
+// Mosaic Row Styles
+
+.mosaic-card-stress {
+  // Stressi
+  @extend .content-in-one-page.sivu1;
+}
+.mosaic-card-mood {
+  // Mieliala
+  @extend .content-in-one-page.sivu2;
+}
+.mosaic-card-tension {
+  // Jännitys
+  @extend .content-in-one-page.sivu3;
+}
