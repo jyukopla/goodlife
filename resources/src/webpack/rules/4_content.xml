@@ -18,9 +18,19 @@
   <replace
       css:theme-children=".top-content"
       css:if-not-content="#content-core">
-    <div id="content" class="top-content-full">
-      <xsl:apply-templates css:select="#content > *" />
-    </div>
+    <xsl:choose>
+      <xsl:when test="$toc">
+        <div id="content" class="top-content-full pat-autotoc"
+             data-pat-autotoc="scrollduration:slow;levels:h2,h4,h5,h6;">
+          <xsl:apply-templates css:select="#content > *" />
+        </div>
+      </xsl:when>
+      <xsl:otherwise>
+        <div id="content" class="top-content-full">
+          <xsl:apply-templates css:select="#content > *" />
+        </div>
+      </xsl:otherwise>
+    </xsl:choose>
   </replace>
 
 </rules>
