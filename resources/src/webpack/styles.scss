@@ -1,6 +1,27 @@
 @import "~bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "sass/main.scss";
 
+.pat-autotoc nav.autotoc-nav {
+  @extend .container;
+  float: none;
+  border: none;
+}
+
+.pat-autotoc nav.autotoc-nav a {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.pat-autotoc nav.autotoc-nav a:before {
+  content: "# ";
+  white-space: nowrap;
+}
+
+.pat-autotoc nav.autotoc-nav a.autotoc-level-1 {
+  margin: 0 1em 0 0;
+}
+
 .mosaic-grid-row:hover:before {
   position: absolute;
   right: 0;
@@ -13,3 +34,4 @@
   background: #ffffca;
   box-shadow: 0px 0px 4px #222;
 }
+
