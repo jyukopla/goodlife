@@ -1,0 +1,33 @@
+%harjoitus-kortti-vakiot
+{
+  // Globaalit jos tarvis
+}
+
+
+
+
+// Mosaic Row Styles
+
+.mosaic-card-stress
+{
+  // Stressi
+  //@extend %harjoitus-kortti-vakiot;
+
+  background-color: rgb(255, 198, 198);
+}
+
+.mosaic-card-mood
+{
+  // Mieliala
+  //@extend %harjoitus-kortti-vakiot;
+
+  background-color: rgb(255, 198, 198);
+}
+
+.mosaic-card-tension
+{
+  // Jännitys
+  //@extend %harjoitus-kortti-vakiot;
+
+  background-color: rgb(255, 198, 198);
+}
