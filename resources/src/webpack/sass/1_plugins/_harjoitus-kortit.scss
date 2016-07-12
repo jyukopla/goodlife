@@ -1,0 +1,30 @@
+%harjoitus-kortti-vakiot
+{
+  .mosaic-tile-content
+  {
+    background-color: rgb(203, 203, 203);
+  }
+}
+
+
+
+
+// Mosaic Row Styles
+
+.mosaic-card-stress
+{
+  // Stressi
+  @extend %harjoitus-kortti-vakiot;
+}
+
+.mosaic-card-mood
+{
+  // Mieliala
+  @extend %harjoitus-kortti-vakiot;
+}
+
+.mosaic-card-tension
+{
+  // Jännitys
+  @extend %harjoitus-kortti-vakiot;
+}
