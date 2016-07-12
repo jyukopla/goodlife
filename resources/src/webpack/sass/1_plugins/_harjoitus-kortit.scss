@@ -13,7 +13,7 @@
   // Stressi
   //@extend %harjoitus-kortti-vakiot;
 
-  background-color: rgb(255, 198, 198);
+  background-color: tint($path-stress-red, 40%);
 }
 
 .mosaic-card-mood
@@ -21,7 +21,7 @@
   // Mieliala
   //@extend %harjoitus-kortti-vakiot;
 
-  background-color: rgb(255, 198, 198);
+  background-color: tint($path-depress-blue, 40%);
 }
 
 .mosaic-card-tension
@@ -29,5 +29,5 @@
   // Jännitys
   //@extend %harjoitus-kortti-vakiot;
 
-  background-color: rgb(255, 198, 198);
+  background-color: tint($path-distress-orange, 40%);
 }
