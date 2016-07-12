@@ -1,6 +1,7 @@
 %harjoitus-kortti-vakiot
 {
   // Globaalit jos tarvis
+  padding-bottom: 0.7em;
 }
 
 
@@ -11,23 +12,26 @@
 .mosaic-card-stress
 {
   // Stressi
-  //@extend %harjoitus-kortti-vakiot;
+  @extend %harjoitus-kortti-vakiot;
 
-  background-color: tint($path-stress-red, 40%);
+  background-color: tint($path-stress-red, 50%);
+  border: 2px solid black;
 }
 
 .mosaic-card-mood
 {
   // Mieliala
-  //@extend %harjoitus-kortti-vakiot;
+  @extend %harjoitus-kortti-vakiot;
 
-  background-color: tint($path-depress-blue, 40%);
+  background-color: tint($path-depress-blue, 50%);
+  border: 2px solid black;
 }
 
 .mosaic-card-tension
 {
   // Jännitys
-  //@extend %harjoitus-kortti-vakiot;
+  @extend %harjoitus-kortti-vakiot;
 
-  background-color: tint($path-distress-orange, 40%);
+  background-color: tint($path-distress-orange, 50%);
+  border: 2px solid black;
 }
