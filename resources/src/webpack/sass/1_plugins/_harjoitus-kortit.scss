@@ -3,6 +3,12 @@
   // Globaalit jos tarvis
   padding-top: 0.7em;
   padding-bottom: 0.7em;
+
+  h3
+  {
+    text-align: center;
+  }
+
 }
 
 
@@ -15,8 +21,29 @@
   // Stressi
   @extend %harjoitus-kortti-vakiot;
 
-  background-color: tint($path-stress-red, 50%);
-  border: 2px solid black;
+  //background-color: tint($path-stress-red, 50%);
+  border: 2px solid tint($path-stress-red, 50%);
+
+  h3
+  {
+    text-align: center;
+
+    &::after
+    {
+      display: block;
+      clear: both;
+      content: "";
+      position: relative;
+      left: 0;
+      bottom: 0;
+      max-width: 20em;
+      height: 1px;
+      width: 50%;
+      border-bottom: 2px solid tint($path-stress-red, 50%);
+      margin: 0 auto;
+      padding: 4px 0;
+    }
+  }
 }
 
 .mosaic-card-mood
@@ -24,8 +51,29 @@
   // Mieliala
   @extend %harjoitus-kortti-vakiot;
 
-  background-color: tint($path-depress-blue, 50%);
-  border: 2px solid black;
+  //background-color: tint($path-depress-blue, 50%);
+  border: 2px solid tint($path-depress-blue, 50%);
+
+  h3
+  {
+    text-align: center;
+
+    &::after
+    {
+      display: block;
+      clear: both;
+      content: "";
+      position: relative;
+      left: 0;
+      bottom: 0;
+      max-width: 20em;
+      height: 1px;
+      width: 50%;
+      border-bottom: 2px solid tint($path-depress-blue, 50%);
+      margin: 0 auto;
+      padding: 4px 0;
+    }
+  }
 }
 
 .mosaic-card-tension
@@ -33,6 +81,27 @@
   // Jännitys
   @extend %harjoitus-kortti-vakiot;
 
-  background-color: tint($path-distress-orange, 50%);
-  border: 2px solid black;
+  //background-color: tint($path-distress-orange, 50%);
+  border: 2px solid tint($path-distress-orange, 50%);
+
+  h3
+  {
+    text-align: center;
+
+    &::after
+    {
+      display: block;
+      clear: both;
+      content: "";
+      position: relative;
+      left: 0;
+      bottom: 0;
+      max-width: 20em;
+      height: 1px;
+      width: 50%;
+      border-bottom: 2px solid ttint($path-distress-orange, 50%);
+      margin: 0 auto;
+      padding: 4px 0;
+    }
+  }
 }
