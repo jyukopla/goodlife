@@ -1,0 +1,46 @@
+.field
+{
+  margin-bottom: 1.8em;
+
+  .formQuestion
+  {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  .fieldTextFormat
+  {
+    margin-bottom: 1em;
+  }
+
+  input, textarea
+  {
+    width: 100%;
+  }
+
+  select
+  {
+    @extend .c-select;
+  }
+}
+
+
+.formControls
+{
+  .context
+  {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .pull-right;
+  }
+}
+
+
+.formid-itsehoito-paivakirjasi + div
+{
+  text-align: right;
+
+  p
+  {
+    padding-top: 1em;
+  }
+}
