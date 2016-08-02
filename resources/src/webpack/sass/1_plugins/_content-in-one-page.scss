@@ -20,12 +20,12 @@
 
   &.sivu1
   {
-    background-color: rgb(255, 162, 162);
+    background-color: tint($path-stress-green, 50%);
   }
 
   &.sivu2
   {
-    background-color: rgb(255, 220, 166);
+    background-color: tint($path-depress-blue, 50%);
 
     .rastit-wrapper
     {
@@ -49,7 +49,7 @@
 
   &.sivu3
   {
-    background-color: rgb(162, 228, 255);
+    background-color: tint($path-distress-orange, 50%);
   }
 }
 
