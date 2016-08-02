@@ -26,7 +26,11 @@
   &.sivu2
   {
     background-color: tint($path-depress-blue, 50%);
+    /*
 
+    Tämä on ollut käytössä plugins.html sivulla. Kommentoitu pois
+    koska se voi aiheuttaa ongelmia tuotannossa
+    
     .rastit-wrapper
     {
       ul
@@ -45,6 +49,7 @@
         font-size: 1.5em;
       }
     }
+    */
   }
 
   &.sivu3
