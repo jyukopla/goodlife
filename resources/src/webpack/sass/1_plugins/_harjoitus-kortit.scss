@@ -21,8 +21,8 @@
   // Stressi
   @extend %harjoitus-kortti-vakiot;
 
-  //background-color: tint($path-stress-red, 50%);
-  border: 2px solid tint($path-stress-red, 50%);
+  //background-color: tint($path-stress-green, 50%);
+  border: 2px solid tint($path-stress-green, 50%);
 
   h3
   {
@@ -39,7 +39,7 @@
       max-width: 20em;
       height: 1px;
       width: 50%;
-      border-bottom: 2px solid tint($path-stress-red, 50%);
+      border-bottom: 2px solid tint($path-stress-green, 50%);
       margin: 0 auto;
       padding: 4px 0;
     }
