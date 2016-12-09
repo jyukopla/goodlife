@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-UI_URL = "https://launchpad.net/plone/5.0/5.0.4/+download/Plone-5.0.4-UnifiedInstaller.tgz"
+UI_URL = "https://launchpad.net/plone/5.0/5.0.5/+download/Plone-5.0.5-UnifiedInstaller.tgz"
 UI_OPTIONS = "standalone --password=admin"
 
 Vagrant.configure("2") do |config|
@@ -33,13 +33,15 @@ Vagrant.configure("2") do |config|
     end
 
     # install Plone
-    config.vm.provision :shell do |shell|
+        config.vm.provision :shell do |shell|
         shell.path = "manifests/install_plone.sh"
         shell.args = UI_URL + " '" + UI_OPTIONS + "'"
     end
 
     # rsync resources folder
     config.vm.synced_folder \
-        "./resources/theme", "/home/vagrant/resources/theme", \
+        "./resources/theme", \
+        "/home/vagrant/resources/theme", \
         type: "rsync"
+
 end

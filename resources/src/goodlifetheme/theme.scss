@@ -1,0 +1,52 @@
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/variables.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.prefixes.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.tabfocus.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.images.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.forms.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.borderradius.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.buttons.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.clearfix.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.gridframework.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.grid.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.font.plone.scss";
+
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/alerts.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/formtabbing.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/controlpanels.plone.scss";
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/pickadate.plone.scss";
+ul.configlets { list-style-type: none; padding: 0; margin: 0; text-align: center; }
+
+section, .plone-modal-wrapper {
+  @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/forms.plone.scss";
+  @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/buttons.plone.scss";
+}
+
+@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/modal.plone.scss";
+.plone-modal .plone-modal-content { background: #fcfcfd; }
+.plone-modal .plone-modal-dialog .plone-modal-header .plone-modal-close { margin-top: 0; }
+
+@import "~bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "sass/main.scss";
+
+body.template-layout {
+  .pat-autotoc nav.autotoc-nav {
+    @extend .container;
+    float: none;
+    border: none;
+  }
+
+  .pat-autotoc nav.autotoc-nav a {
+    padding: 0;
+    margin: 0;
+    display: inline;
+  }
+
+  .pat-autotoc nav.autotoc-nav a:before {
+    content: "# ";
+    white-space: nowrap;
+  }
+
+  .pat-autotoc nav.autotoc-nav a.autotoc-level-1 {
+    margin: 0 1em 0 0;
+  }
+}

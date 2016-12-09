@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Plone Theme</title>
+  <link rel="shortcut icon" type="image/x-icon" href="<% webpackConfig.output.publicPath %>favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<% if (htmlWebpackPlugin.files.chunks[chunk].css[0]) { %>
+  <link rel="stylesheet" data-name="bundle-<%= chunk %>" href="<%= htmlWebpackPlugin.files.chunks[chunk].css[0] %>" />
+<% }} %>
+</head>
+
+<body>
+
+
+
+<!-- Top and bottom navigation area -->
+<!-- You can find navigation-area scss rules in _navigation-area.scss partial -->
+  <!-- Padding 0 removes left and right padding from container-fluid element -->
+<div class="container-fluid shadow-border-bottom navigation-area">
+  <div class="container">
+    <div class="row toprow">
+      <div class="toprow__logos col-xs-4 col-md-6">
+        <a class="navbar-brand" href="#"><img alt="Brand" src="img/jyu-logo.png" class="toprow__logos--big"></a>
+        <a class="navbar-brand__mobile" href="#"><img alt="Brand" src="img/jyu-torch.png" class="toprow__logos--mobile" </a>
+      </div>
+      <div class="toprow__language-links col-xs-8 col-md-6">
+        <ul class="list-inline list-unstyled pull-right">
+          <li class="list-inline-item language-fi"><a href="#">Suomi</a></li>
+          <li class="list-inline-item language-en"><a href="#">English</a></li>
+          <li class="list-inline-item language-ge"><a href="#">German</a></li>
+          <br>
+          <li class="list-inline-item login"><a href="#">Kirjaudu | Login | Anmeldung</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--toprow-->
+    <div class="row bottomrow">
+      <div class="col-md-12">
+        <nav class="navbar navbar-light">
+
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+              <span class="bottomrow__hamburger">&#9776;</span>
+          </button>
+
+          <ul class="nav navbar-nav pull-right collapse navbar-toggleable-xs" id="CollapsingNavbar">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">LINKKI <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!--container-->
+
+
+<!-- Breadcrumbs section, you can find scss rules from _breadcrumbs.scss partial -->
+<section class="container breadcrumbs">
+  <div class="breadcrumbs__row">
+    <div class="breadcrumbs__row__column">
+      <a href="#"><p>Leivänmurut > Pääsivu > Joku muusivu > Ja joku > Toinen polku</p></a>
+    </div>
+  </div>
+</section>
+<!-- breadcrumbs -->
+
+
+
+<!-- Main content and paths area -->
+<section class="container m-y-3 general-content-area">
+  <div class="top-content">
+    <div class="top-content-left">
+      <h1>POLUT JA TEHTÄVÄT</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, rerum, optio? Vel debitis possimus adipisci suscipit aliquam perferendis obcaecati impedit, fugiat quis numquam! Maxime laboriosam sit ut repudiandae dolores suscipit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, rerum, optio? Vel debitis possimus adipisci suscipit aliquam perferendis obcaecati impedit, fugiat quis numquam! Maxime laboriosam sit ut repudiandae dolores suscipit.</p>
+    </div>
+    <div class="top-content-right">
+      <img class="img-fluid hidden-sm-down"src="http://placehold.it/550x350/aeb7e8/00000" alt="">
+    </div>
+  </div>
+</section>
+<!-- top-content -->
+
+
+<!-- Paths area, you can find scss rules from _paths.scss partial -->
+<section class="container path">
+
+  <!-- Stressi path top row -->
+  <div class="paths__title__row">
+    <div class="paths__title__row__column__left">
+      <p>Stressi-reitti on 5 teeman ohjelma stressin käsittelyyn</p>
+    </div>
+    <div class="paths__title__row__column__right"></div>
+  </div>
+
+  <!-- Stressi path bottom row -->
+  <div class="paths__row__stress">
+    <div class="paths__row__stress__grid">
+      <div class="header">
+        <div class="stress__header__circle">
+          <h3 class="stress__header__circle__title">Stressi</h3>
+        </div>
+      </div>
+      <div class="task">
+        <h3>1</h3></div>
+      <div class="task">
+        <h3>2</h3></div>
+      <div class="task">
+        <h3>3</h3></div>
+      <div class="task">
+        <h3>4</h3></div>
+      <div class="task">
+        <h3>5</h3></div>
+      <div class="task--completed text-xs-center"><img src="img/tasks/Completed.png" alt="" /></div>
+    </div>
+  </div>
+
+  <!-- Mieli maassa path top row -->
+  <div class="paths__title__row">
+    <div class="paths__title__row__column__left">
+      <p>Reitti sinulle, joka tunnet tällä hetkellä alakuloa, mielekkyyden puutetta ja tyytymättömyyttä elämään</p>
+    </div>
+    <div class="paths__title__row__column__right"></div>
+  </div>
+
+  <!-- Mieli maassa path bottom row -->
+  <div class="paths__row__depress">
+    <div class="paths__row__depress__grid">
+      <div class="header">
+        <div class="depress__header__circle">
+          <h3 class="depress__header__circle__title">Mieli<br>maassa</h3>
+        </div>
+      </div>
+      <div class="task">
+        <h3>1</h3></div>
+      <div class="task">
+        <h3>2</h3></div>
+      <div class="task">
+        <h3>3</h3></div>
+      <div class="task">
+        <h3>4</h3></div>
+      <div class="task">
+        <h3>5</h3></div>
+      <div class="task--completed text-xs-center"><img src="img/tasks/Completed.png" alt="" /></div>
+    </div>
+  </div>
+
+
+
+  <!-- Ahdistaako path top row -->
+  <div class="paths__title__row">
+    <div class="paths__title__row__column__left">
+      <p>Viiden viikon ohjelma jännittyneisyyden ja ahdistuksen käsittelyyn.</p>
+    </div>
+    <div class="paths__title__row__column__right"></div>
+  </div>
+
+  <!-- Mieli maassa path bottom row -->
+  <div class="paths__row__distress">
+    <div class="paths__row__distress__grid">
+      <div class="header">
+        <div class="distress__header__circle">
+          <h3 class="distress__header__circle__title">Ahdis-<br>taako</h3>
+        </div>
+      </div>
+      <div class="task">
+        <h3>1</h3></div>
+      <div class="task">
+        <h3>2</h3></div>
+      <div class="task">
+        <h3>3</h3></div>
+      <div class="task">
+        <h3>4</h3></div>
+      <div class="task">
+        <h3>5</h3></div>
+      <div class="task--completed text-xs-center"><img src="img/tasks/Completed.png" alt="" /></div>
+    </div>
+  </div>
+</section>
+<!-- paths -->
+
+
+
+
+<!-- Footer area, you can find scss rules from _footer.scss partial	-->
+<footer class="container-fluid footer-bg-wrapper">
+  <div class="container">
+    <section class="footer__row">
+
+      <div class="footer__row__block">
+        <div class="footer__row__block--logo">
+          <img class="img-fluid text-xs-center" src="img/jy-logo-2.png" alt="Jyväskylän Yliopisto">
+          <ul class="list-unstyled">
+            <li >PL 35, 40014 Jyväskylän yliopisto</li>
+            <li>Käyntiosoite:</li>
+            <li>Seminaarinkatu 15</li>
+            <li>Vaihde (014) 260 1211</li>
+            <li>fax (014) 260 1021</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="footer__row__block">
+        <div class="footer__row__block--links">
+          <ul class="list-unstyled pull-left">
+            <li><h4>TUKILINKIT</h4></li>
+            <li><a href="#">OTA YHTEYTTÄ</a></li>
+            <li><a href="#">JÄSENET</a></li>
+            <li><a href="#">LISÄTIETOJA</a></li>
+            <li><a href="#">LINKKI</a></li>
+            <li><a href="#">LINKKI</a></li>
+            <li><a href="#">LINKKI</a></li>
+          </ul>
+          <!-- <ul class="list-unstyled pull-right">
+            <li><a href="#">OTA YHTEYTTÄ</a></li>
+            <li><a href="#">JÄSENET</a></li>
+            <li><a href="#">LISÄTIETOJA</a></li>
+            <li><a href="#">LINKKI</a></li>
+            <li><a href="#">LINKKI</a></li>
+            <li><a href="#">LINKKI</a></li>
+          </ul> -->
+        </div>
+      </div>
+
+      <div class="footer__row__block">
+        <div class="footer__row__block--some">
+
+          <ul class="list-inline list-unstyled pull-right">
+            <li class="text-xs-left"><h4>SEURAA MEITÄ</h4></li>
+            <li class="list-inline-item"><img src="img/some-icons/facebook.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/twitter.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/linkedin.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/instagram.png" alt="" /></li>
+            <li class="list-inline-item"><img src="img/some-icons/youtube.png" alt="" /></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</footer>
+<!-- footer-bg-wrapper -->
+
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script data-name="bundle-<%= chunk %>" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+
+
+</body>
+</html>

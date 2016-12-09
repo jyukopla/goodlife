@@ -1,0 +1,153 @@
+@import "@{barcelonetaPath}/less/variables.plone.less";
+
+#edit-zone #plone-contentmenu-factories [class*="contenttype-"] {
+  padding: 5px 15px 5px 35px;
+  &:before {
+    background-image: none;
+    margin-bottom: 0;
+  }
+  &:after {
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    padding: 0;
+    width: 20px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px 15px;
+    content: "";
+    top: 0;
+  }
+}
+
+#content [class*="contenttype-"]:before {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 -@plone-padding-base-vertical * 0.75 0;
+  padding: 0;
+  left: inherit;
+  width: 18px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 15px 15px;
+  content: "";
+}
+
+.image-icon, .image-tile { float: right; }
+i.glyphicon { padding-right: 0.2em; }
+i.link-https { display: none !important; }
+i.link-external { display: none !important; }
+#content.link-external { display: inline-block; }
+
+/* Toolbar */
+.icon-plone-contentmenu-multilingual:before {
+  content: '\e836';
+}
+.icon-quickedit::before {
+  content: "";
+}
+
+/* Plone content types */
+
+.contenttype-folder:before {
+  background-image: url(icons/entypo-folder-black.svg);
+}
+.contenttype-folder:after{
+  background-image: url(icons/entypo-folder-white.svg);
+}
+.contenttype-collection:before {
+  background-image: url(icons/entypo-archive-black.svg);
+}
+.contenttype-collection:after{
+  background-image: url(icons/entypo-archive-white.svg);
+}
+.contenttype-image:before {
+  background-image: url(icons/fontawesome-picture-black.svg);
+}
+.contenttype-image:after{
+  background-image: url(icons/fontawesome-picture-white.svg);
+}
+.contenttype-link:before {
+  background-image: url(icons/mfglabs-link-black.svg);
+}
+.contenttype-link:after{
+  background-image: url(icons/mfglabs-link-white.svg);
+}
+.contenttype-document:before {
+  background-image: url(icons/fontawesome-doc-inv-black.svg);
+}
+.contenttype-document:after{
+  background-image: url(icons/fontawesome-doc-inv-white.svg);
+}
+.contenttype-event:before {
+  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+}
+.contenttype-event:after{
+  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+}
+.contenttype-file:before {
+  background-image: url(icons/fontawesome-attach-black.svg);
+}
+.contenttype-file:after{
+  background-image: url(icons/fontawesome-attach-white.svg);
+}
+.contenttype-news-item:before {
+  background-image: url(icons/modernpics-signal-black.svg);
+}
+.contenttype-news-item:after{
+  background-image: url(icons/modernpics-signal-white.svg);
+}
+.contenttype-lrf:before {
+  background-image: url(icons/fontawesome-language-black.svg);
+}
+.contenttype-lrf:after{
+  background-image: url(icons/fontawesome-language-white.svg);
+}
+.contenttype-lif:before {
+  background-image: url(icons/fontawesome-camera-alt-black.svg);
+}
+.contenttype-lif:after{
+  background-image: url(icons/fontawesome-camera-alt-white.svg);
+}
+
+/* Form Folder */
+.contenttype-easyform:before {
+  background-image: url(icons/fontawesome-wpforms-black.svg);
+}
+.contenttype-easyform:after{
+  background-image: url(icons/fontawesome-wpforms-white.svg);
+}
+.contenttype-formfolder:before {
+  background-image: url(icons/fontawesome-wpforms-black.svg);
+}
+.contenttype-formfolder:after{
+  background-image: url(icons/fontawesome-wpforms-white.svg);
+}
+
+/* collective.dynapage */
+.contenttype-collective-dynapage:before {
+  background-image: url(icons/elusive-website-black.svg);
+}
+.contenttype-collective-dynapage:after{
+  background-image: url(icons/elusive-website-white.svg);
+}
+.contenttype-collective-dynaitem-collection:before {
+  background-image: url(icons/entypo-archive-black.svg);
+}
+.contenttype-collective-dynaitem-collection:after{
+  background-image: url(icons/entypo-archive-white.svg);
+}
+.contenttype-collective-dynaitem-feed:before {
+  background-image: url(icons/fontawesome-rss-black.svg);
+}
+.contenttype-collective-dynaitem-feed:after{
+  background-image: url(icons/fontawesome-rss-white.svg);
+}
+.contenttype-collective-dynaitem-image:before {
+  background-image: url(icons/typicons-picture-outline-black.svg);
+}
+.contenttype-collective-dynaitem-image:after{
+  background-image: url(icons/typicons-picture-outline-white.svg);
+}

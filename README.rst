@@ -1,41 +1,43 @@
-Vagrant setup
--------------
+goodlife.theme
+=========================
 
-* start vagrant with autosynchronized theme with
-
-  .. code:: bash
-
-     make up
+This is a Plone theme based on Webpack.
 
 
-Theme mockup
-------------
+Build with a local Plone site
+-----------------------------
 
-* start webpack development server
+Start Plone and webpack-dev-server:
 
-  .. code:: bash
+.. code:: shell
 
-     make watch
+   $ make watch
 
-* edit mockup ``index.html`` and resource files in ``./resources/src/webpack``
-* open preview from ``./resources/theme/webpack/index.html``
-* CSS and JS changes are live-reloaded
-* HTML changes require manual refresh
+An example Plone site with hot-reloaded theme should be now available
+at http://localhost:8080/Plone/ (at first, the theme must be manually
+enabled from the configuration panel).
+
+Production theme is built with:
+
+.. code:: shell
+
+   $ make
+
+Please, note that Plone must be running while running the build, because
+webpack fetches all the default resources directly from a Plone site.
 
 
-Plone integration
------------------
+Build with a vagrant based Plone site
+-------------------------------------
 
-* start Plone server
+Start Plone and webpack-dev-server:
 
-  .. code:: bash
+.. code:: shell
 
-     make serve
+   $ make -f Makefile.vagrant watch
 
-* open http://localhost:8080/
-* click to create a new Plone site (username ``admin``, password ``admin``)
-* create a new Plone-site with id ``Plone``
-* open *admin* => *Site Setup* from toolbar
-* open *Theming* control panel
-* activate theme
-* open http://localhost:8080/
+Production theme is built with:
+
+.. code:: shell
+
+   $ make -f Makefile.vagrant

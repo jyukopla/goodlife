@@ -12,7 +12,7 @@
 /plone
 /plonectl.sh
 /resources/node_modules/
-/resources/theme/webpack
+/resources/theme/
 /result
 /src/
 /test.py

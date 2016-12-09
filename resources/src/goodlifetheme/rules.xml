@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Select mockup -->
+  <theme href="index.html" />
+
+  <!-- <theme href="omakansio.html" css:if-content="body.section-omakansio" /> -->
+  <theme href="plugins.html" css:if-content="body.section-plugins" />
+
+  <!-- Disable theme on possible non-content pages -->
+  <notheme css:if-not-content="#visual-portal-wrapper" />
+
+  <!-- Include modules -->
+  <xi:include href="rules/0_webpack.xml" />
+
+  <xi:include href="rules/1_meta.xml" />
+  <xi:include href="rules/1_toolbar.xml" />
+  <xi:include href="rules/2_language.xml" />
+  <xi:include href="rules/2_login.xml" />
+  <xi:include href="rules/2_navbar.xml" />
+  <xi:include href="rules/2_status.xml" />
+  <xi:include href="rules/2_breadcrumbs.xml" />
+  <xi:include href="rules/3_hero.xml" />
+
+  <!-- Only include content when not in special mockup section -->
+  <rules css:if-not-content="body.section-plugins">
+    <xi:include href="rules/4_content.xml" />
+
+    <!-- Temporary cleanup -->
+    <drop css:theme=".container.supportpaths" />
+    <drop css:theme=".container.supportpaths-content-area" />
+  </rules>
+
+  <!-- Stressi -->
+  <theme href="stressi.html" css:if-content=".mosaic-stress-group-1"/>
+  <xi:include href="rules/4_stressi.xml" />
+
+  <!-- TTW customizations -->
+  <xi:include href="++theme++goodlifetheme-custom/custom.xml" />
+
+</rules>

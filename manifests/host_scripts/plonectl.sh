@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ "X$1" != "X" ]; then
-    vagrant ssh -c "LC_ALL=en_US.UTF-8 ./runbin.sh instance $1 $2 $3 $4 $5 $6"
+    vagrant ssh -c "./runbin.sh instance $1 $2 $3 $4 $5 $6"
 else
     echo
     echo "$0 runs a Plone instance bin command line"

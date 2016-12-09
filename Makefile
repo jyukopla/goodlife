@@ -1,25 +1,40 @@
+BUILDOUT_BIN ?= $(shell command -v buildout || echo 'bin/buildout')
+BUILDOUT_ARGS ?=
+
 all: build
 
-build: buildout.cfg
-	vagrant up
-	./buildout.sh
+build: clean resources/theme
 
-up: build
-	[ ! -d ./resources/theme ] && make -C resources || true
-	vagrant rsync-auto
+watch: clean bin/instance resources/Makefile
+	make -j watch_plone watch_theme
 
-watch: build
+watch_plone: bin/instance
+	bin/instance fg
+
+watch_theme: resources/Makefile
+	sleep 10 # wait for Plone
 	make -C resources watch
 
-serve: build
-	./plonectl.sh fg
-
 clean:
-	vagrant halt -f
-	make -C resources clean
-	rm -f kill_plone.sh plonectl.sh buildout.sh vagrant_scp.sh
-	rm -rf plone
+	rm -rf .installed.cfg bin develop-eggs parts resources/theme
 
 ###
 
-.PHONY: all build watch serve clean
+.PHONY: all build clean watch watch_plone watch_theme
+
+bootstrap-buildout.py:
+	curl -k -O https://bootstrap.pypa.io/bootstrap-buildout.py
+
+bin/buildout: bootstrap-buildout.py buildout.cfg
+	python bootstrap-buildout.py -c buildout.cfg
+
+bin/instance: $(BUILDOUT_BIN) buildout.cfg
+	$(BUILDOUT_BIN) -N $(BUILDOUT_ARGS) install instance plonesite
+
+resources/theme: bin/instance resources/Makefile
+	bin/instance start; \
+	  make -C resources build; \
+	  status=$$?; \
+	  bin/instance stop; \
+	  exit $$status
+

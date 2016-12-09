@@ -1,0 +1,106 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "f6766a8b042c2453a4e153af03294383",
+      "css": "list-numbered",
+      "code": 61643,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9755f76110ae4d12ac5f9466c9152031",
+      "css": "book",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d35a1d35efeb784d1dc9ac18b9b6c2b6",
+      "css": "pencil",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "032bd8bbd70adf90ead98b6813bfe446",
+      "css": "newspaper",
+      "code": 61930,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3e674995cacc2b09692c096ea7eb6165",
+      "css": "megaphone",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "381da2c2f7fd51f8de877c044d7f439d",
+      "css": "picture",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0ccb084ddeeae372673793ed0b45bb4a",
+      "css": "folder",
+      "code": 59396,
+      "src": "entypo"
+    },
+    {
+      "uid": "ead4c82d04d7758db0f076584893a8c1",
+      "css": "calendar-empty",
+      "code": 61747,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1fb8776fe6f1d3bbf970996fdfcf0f94",
+      "css": "link",
+      "code": 61563,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "0d6ab6194c0eddda2b8c9cedf2ab248e",
+      "css": "attach",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "96ea1be71f597a5bdfc8f791ada4f651",
+      "css": "archive",
+      "code": 59399,
+      "src": "entypo"
+    },
+    {
+      "uid": "e6t4yvmv401e9gpo2anslq4uqy2iz692",
+      "css": "signal",
+      "code": 59400,
+      "src": "modernpics"
+    },
+    {
+      "uid": "5408be43f7c42bccee419c6be53fdef5",
+      "css": "doc-text",
+      "code": 61686,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "cb89a11fa3722b7648ce26f40aaed8f0",
+      "css": "website",
+      "code": 59398,
+      "src": "elusive"
+    },
+    {
+      "uid": "72b1277834cba5b7944b0a6cac7ddb0d",
+      "css": "rss",
+      "code": 61598,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "96819a35f3d743b4df0ea2e92803eeb5",
+      "css": "picture-outline",
+      "code": 59401,
+      "src": "typicons"
+    }
+  ]
+}
