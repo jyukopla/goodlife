@@ -12,6 +12,7 @@
 /plone
 /plonectl.sh
 /resources/node_modules/
+/resources/.plonetheme-upload-cookie
 /resources/theme/
 /result
 /src/
