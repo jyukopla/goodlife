@@ -1,0 +1,1268 @@
+/* kuvakarusellin kuvat eli hero area
+	- kuvien osoitteet
+	- heroarean korkeus
+- piilotus??? mistä piilotan, piilotanko css:llä?
+
+*/
+
+/* TESTAILUJA JA LUONNOSTELUA MUOKKAA SIISTI VIIMEISTELE VAIHDA VARSINAISEKSI */
+
+.general-content-area {
+   line-height: 160%;
+}
+
+.mosaic-subheading-tile {
+    margin-top: 1em;
+
+}
+.mosaic-IDublinCore-title-tile {
+    margin-top:0.8em;
+}
+
+h1 {
+    margin-top:0em;
+}
+
+.piilotettu {
+    display:none;
+}
+
+
+
+
+/* kuvakaruselli eli hero-area pois äkyvistä stressi, mieli maassa
+ja jänniittääkö tai ahdistaako osioihin
+*/
+.section-stressi .hero-area, .section-mieli-maassa .hero-area, .section-jannittaako-tai-ahdistaako .hero-area {
+    display:none;
+}
+
+.navigation-area.shadow-border-bottom {
+    margin-bottom: 1.3em;
+}
+
+.separator {
+    display:none;
+}
+
+.breadcrumbs__row {
+    margin: 0em -.9375rem;
+}
+
+.m-t-3, .m-y-3 {
+    margin-top: 0.7rem !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: rgb(91,91,91);
+}
+
+.navigation-area img {
+    padding: 0em;
+}
+
+img {
+    padding-top: 0.4em;
+    padding-bottom: 1em;
+}
+.image-left, image-right {
+    padding-top: 0em;
+}
+
+.general-content-area ul {
+    padding-left: 1em;
+
+}
+
+.general-content-area ul li {
+    list-style: none;
+    padding: 0.3em;
+    padding-left: 0.9em;
+    background: url("../images/kompassit/list-bullet-turquoise.png") no-repeat scroll 0px 0.91em transparent;
+}
+
+.general-content-area ul li ul li{
+    list-style: none;
+    background: url("../images/kompassit/list-bullet-turquoise-small.png") no-repeat scroll 0px 0.89em transparent;
+}
+
+/* */
+
+
+
+
+/* kuvakarusellin kuvat eli hero area
+	- kuvien osoitteet
+	- heroarean korkeus
+- piilotus??? mistä piilotan, piilotanko css:llä?
+
+ */
+
+/* kuvakarusellin kuvat eli hero area
+    - kuvien osoitteet
+	- hero-arean korkeus ja alamarginaali
+*/
+.hero-area {
+   margin-bottom:3%;
+   margin-top:3.6%;
+}
+
+.hero-area__carousel-wrapper__slide-row-1__bg__title, .hero-area__carousel-wrapper__slide-row-2__bg__title, .hero-area__carousel-wrapper__slide-row-3__bg__title {
+   margin:0em;
+   display:none;
+}
+
+.hero-area .hero-area__carousel-wrapper__slide-row-1__bg {
+    background: url(/images/kuvakarusellikuvat/hero-area__carousel-wrapper__slide-row-1__bg-kuva.png) center center no-repeat;
+    background-size: contain;
+    height: 11em;
+    width: 100%;
+}
+
+.hero-area .hero-area__carousel-wrapper__slide-row-2__bg {
+    background: url(/images/kuvakarusellikuvat/hero-area__carousel-wrapper__slide-row-2__bg-kuva.png) center center no-repeat;
+    background-size: contain;
+    height: 11em;
+    width: 100%;
+}
+
+.hero-area .hero-area__carousel-wrapper__slide-row-3__bg {
+    background: url(/images/kuvakarusellikuvat/hero-area__carousel-wrapper__slide-row-3__bg-kuva.png) center center no-repeat;
+    background-size: contain;
+    height: 11em;
+    width: 100%;
+}
+
+/* */
+
+/* HUOMIOITA */
+.mosaic-tile-oktile-huomioita h3 {
+  // font-size: 150%;
+   text-align: center;
+}
+
+.mosaic-tile-oktile-huomioita h5 {
+ //  font-size: 120%;
+   text-align: center;
+}
+
+.mosaic-tile-oktile-huomioita h6 {
+   padding:0.4em;
+}
+
+.mosaic-tile-oktile-huomioita p {
+   font-size: 95%;
+  // text-align: center;
+   font-style: italic;
+}
+
+
+.ok-tarina {
+    background: rgb(220, 231, 190);
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+.vasen {
+    background: rgb(220, 231, 190);
+    padding-top: 0em;
+    padding-left: 0em;
+    padding-bottom: 1em;
+}
+
+
+/* HARJOITUKSET */
+
+
+.mosaic-card-stress-tile img,
+.mosaic-card-mood-tile img,
+.mosaic-card-tension-tile img {
+    padding: 0em;
+}
+
+.mosaic-card-stress-tile .card-block,
+.mosaic-card-mood-tile .card-block,
+.mosaic-card-tension-tile .card-block {
+    background: rgb(140, 177, 39, 0.3);
+}
+.ok-rasti-laatikko-rasti-otsikko.card-block {
+    background: rgba(121, 184, 41, 0.3);
+}
+
+.ok-rasti-laatikko-rasti1.card-block {
+    background: rgba(206, 72, 123, 0.3);
+}
+
+.ok-rasti-laatikko-rasti2.card-block {
+    background: rgba(130, 79, 156, 0.3);
+}
+
+.ok-rasti-laatikko-rasti3.card-block {
+    background: rgba(233, 65, 78, 0.3);
+}
+
+.ok-rasti-laatikko-rasti4.card-block {
+    background: rgba(240, 131, 12, 0.3);
+}
+.ok-rasti-laatikko-rasti5.card-block {
+    background: rgba(48, 166, 204, 0.3);
+}
+
+
+.mosaic-tile-oktile-harjoitus-otsikko {
+    background: rgb(121, 184, 41);
+    padding: 1.5em;
+    padding-bottom: 0.9em;
+    margin-top: 2em;
+    color: rgb(60,60,60);
+
+}
+
+.mosaic-tile-oktile-harjoitus-otsikko h5 {
+    color: rgb(250,250,250);
+    text-transform: uppercase;
+    font-size: 1.2em;
+
+}
+
+
+.mosaic-tile-oktile-harjoitus-otsikko ul {
+    float: right;
+    display: inline;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    background: transparent;
+
+}
+
+.mosaic-tile-oktile-harjoitus-otsikko ul li {
+    list-style: none;
+    background: transparent;
+    padding: 0em;
+    margin: 0em;
+}
+.mosaic-tile-oktile-harjoitus-otsikko img {
+    padding: 0em;
+    margin: 0em;
+
+}
+.mosaic-tile-oktile-harjoitus-otsikko ul {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mosaic-tile-oktile-harjoitus {
+    padding: 1em;
+    margin: 0em 0em 1.2em 0em;
+    background: rgb(240, 240, 210);
+    border: 1px solid  rgb(170, 170, 100);
+
+}
+.template-layout_view .mosaic-card-stress,
+.template-layout_view .mosaic-card-mood,
+.template-layout_view .mosaic-card-tension {
+    margin-left: 0px;
+    margin-right: 0px;
+    background: rgb(240, 240, 210);
+    border:none;
+    padding: 1em 0.5em 0.5em 0.5em;
+}
+
+.mosaic-card-mood h3,
+.mosaic-card-stress h3,
+.mosaic-card-tension h3 {
+    text-align: left;
+}
+
+.mosaic-card-mood h3::after,
+.mosaic-card-stress h3::after,
+.mosaic-card-tension h3::after {
+    display: block;
+    clear: both;
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    max-width: 0em;
+    height: 0px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 4px 0;
+}
+
+.template-layout_view .mosaic-card-stress .icons li,
+.template-layout_view .mosaic-card-mood .icons li,
+.template-layout_view .mosaic-card-tension .icons li {
+    list-style: none;
+    background: transparent;
+    padding: 0em;
+    margin: 0em;
+    line-height: 50%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+.template-layout_view .mosaic-card-stress .icons,
+.template-layout_view .mosaic-card-mood .icons,
+.template-layout_view .mosaic-card-tension .icons {
+    padding: 0em;
+    margin: 0em;
+    float: left;
+}
+
+
+.icons-inline,
+.icons-inline,
+.icons-inline {
+   padding: 0em;
+
+}
+
+
+/* */
+
+/* reittien laatikon*/
+
+/* KOKEILU,  */
+.template-layout_view .mosaic-stress-group-3 {
+    margin-left: 0px;
+    background-color: inherit;
+}
+/* KOKEILU,  */
+.mosaic-stress-group-3 .mosaic-width-half,
+.mosaic-stress-group-3 .mosaic-width-third,
+.mosaic-stress-group-3 .mosaic-width-quarter {
+    min-height: 1px;
+    padding-left: 0em;
+    padding-right: 15px;
+}
+
+.ok-stressi-laatikko,
+.ok-jannittaako-laatikko,
+.ok-mieliala-laatikko,
+.ok-reitti-laatikko  {
+    cursor: auto;
+}
+
+.ok-stressi-laatikko,
+.ok-jannittaako-laatikko,
+.ok-mieliala-laatikko,
+.ok-reitti-laatikko  {
+    padding: 0em;
+    width: 100%;
+    display: block;
+
+    border:none;
+}
+
+.template-layout_view.section-harjoituksia .ok-stressi-laatikko,
+.section-harjoituksia .ok-jannittaako-laatikko,
+.section-harjoituksia .ok-mieliala-laatikko,
+.section-harjoituksia .ok-reitti-laatikko  {
+ //   min-height: 5.4em;
+}
+
+.ok-stressi-laatikko a,
+.ok-jannittaako-laatikko a,
+.ok-mieliala-laatikko a {
+    padding: 1.5em;
+    display: block;
+    border:none;
+}
+
+
+
+/* TESTI MUOKKAA*/
+.ok-reitti-laatikko {
+    padding: 1.5em;
+    padding-left:2.5em;
+    padding-right:0em;
+
+    padding:0em;
+}
+
+.ok-reitti-laatikko-stressi {
+    background-color: rgb(160, 201, 122);
+    background-color: rgb(140, 177, 39);
+    background-image:url("../images/kompassit/kompassi_etusivu_vihrea.png");
+    background-repeat: no-repeat;
+    background-size: 5.5em;
+    background-position:  -1.5em 0.3em;
+    border: 1px solid rgb(141, 166, 118);
+}
+
+
+.ok-reitti-laatikko-mielimaassa {
+    background-color: rgb(105, 199, 188);
+    background-color: rgb(18, 164, 159);
+    background-image:url("../images/kompassit/kompassi_etusivu_sininen.png");
+    background-repeat: no-repeat;
+    background-size: 5.5em;
+    background-position:  -1.5em 0.3em;
+    border: 1px solid rgb(120, 161, 156);
+}
+
+.ok-reitti-laatikko-jannittaako {
+    background-color: rgb(245, 170, 100);
+
+    background-color: rgb(240, 134, 14);
+    background-image:url("../images/kompassit/kompassi_etusivu_oranssi.png");
+    background-repeat: no-repeat;
+    background-size: 5.5em;
+    background-position:  -1.5em 0.3em;
+    border: 1px solid rgb(217, 160, 95);
+
+}
+
+.mosaic-width-quarter .ok-reitti-laatikko-stressi {
+    background-color: rgb(160, 201, 122);
+    background-image:url("../images/kompassit/kompassi_etusivu_vihrea.png");
+    background-repeat: no-repeat;
+    background-size: 3.9em;
+    background-position:  -0.7em 0.4em;
+    border: 1px solid rgb(141, 166, 118);
+}
+
+
+.mosaic-width-quarter .ok-reitti-laatikko-mielimaassa {
+    background-color: rgb(105, 199, 188);
+    background-image:url("../images/kompassit/kompassi_etusivu_sininen.png");
+    background-repeat: no-repeat;
+    background-size: 3.9em;
+    background-position: -0.7em -0.2em;
+    border: 1px solid rgb(120, 161, 156);
+}
+
+.mosaic-width-quarter .ok-reitti-laatikko-jannittaako {
+    background-color: rgb(245, 170, 100);
+    background-image:url("../images/kompassit/kompassi_etusivu_oranssi.png");
+    background-repeat: no-repeat;
+    background-size: 3.9em;
+    background-position:  -0.7em 0.4em;
+    border: 1px solid rgb(222, 160, 102);
+
+}
+
+/* värikokeilu PUNAINEN */
+.ok-reitti-laatikko-jannittaako_punainen
+{
+    background-color: rgb(221, 127, 162);
+    background-color: rgba(206, 72, 123, 0.7);
+    background-image:url("../images/kompassit/kompassi_etusivu_punainen.png");
+    background-repeat: no-repeat;
+    background-size: 3.9em;
+    background-position: left bottom;
+
+
+}
+
+
+.mosaic-width-quarter .ok-reitti-laatikko {
+    text-align: right;
+    padding: 1.35em 0em 1.35em 2.8em;
+    text-align: center;
+    background-size:2.9em;
+    background-size:4.1em;
+    background-position: -0.9em 0.55em;
+
+  //      text-align: right;
+ //   padding: 1.35em;
+
+}
+.mosaic-width-quarter .ok-reitti-laatikko-mielimaassa {
+    padding: 0.7em;
+    padding-left: 2.8em;
+    text-align: right;
+   text-align: center;
+  //  background-position: -0.7em -0.2em;
+
+}
+
+.mosaic-grid-cell .ok-kysely-laatikko {
+    padding: 0.7em;
+    padding-right: 2.8em;
+   // padding-right: 2.4em;
+    text-align: left;
+
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko-kysely {
+    background-color: rgb(255, 255, 204);
+//    background-image:url("../images/kompassit/kompassi_etusivu_varikas.png");
+//    background-image: linear-gradient(to bottom, rgba(255, 255, 204,0.4) 0%, rgba(255, 255, 204,0.4) 100%), url(../images/kompassit/kompassi_etusivu_varikas.png);
+
+    background-image:url("../images/kompassit/kompassi_etusivu_varikas_oikea-yla.png");
+ //   background-image: linear-gradient(to bottom, rgba(255, 255, 204,0.3) 0%, rgba(255, 255, 204,0.3) 100%), url(../images/kompassit/kompassi_etusivu_varikas_oikea-yla.png);
+
+
+    background-repeat: no-repeat;
+ //   background-position: left bottom;
+    background-position: right top;
+    background-size:3em;
+
+    border: 1px solid rgb(222,222,0);
+    border: 1px solid rgb(194, 194, 0);
+    border: 1px solid rgb(209, 209, 170);
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko a {
+    line-height: 1.3em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    margin-left: 3.9em;
+    -webkit-box-decoration-break: clone;
+   -ms-box-decoration-break: clone;
+   -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: block;
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko-stressi a {
+    background-color: rgb(160, 201, 122);
+    background-color: rgba(160, 201, 122, 0.6);
+    background-color: rgb(140, 177, 39);
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko-mielimaassa a {
+    background-color: rgb(105, 199, 188);
+    background-color: rgba(105, 199, 188,0.6);
+
+    background-color: rgb(18, 164, 159);
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko-jannittaako a {
+    background-color: rgb(245, 170, 100);
+    background-color: rgba(245, 170, 100, 0.6);
+    background-color: rgb(240, 134, 14);
+
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko-kysely a {
+    background-color: rgb(255, 255, 204);
+    background-color: rgba(255, 255, 204,0.6);
+   /* tarkista nämä, vaihdoin kyvan puolta*/
+    margin-left: 1.3em;
+    margin-left:0em;
+}
+
+
+/* Reittien rastien laatikot */
+
+/* Stressireittin alasivujen laatikot */
+
+
+.mosaic-stress-group-3 h1, .mosaic-stress-group-3 h2, .mosaic-stress-group-3 h3,
+.mosaic-stress-group-3 h4, .mosaic-stress-group-3 h5, .mosaic-stress-group-3 h6 {
+    text-transform: uppercase;
+
+}
+
+.ok-stressi-laatikko--punainen {
+    background-color: rgb(160, 201, 122);
+    background-color: rgb(121, 184, 41);
+    background-color: rgb(140, 177, 39);
+ //   background-image:url("../images/kompassit/kompassi_etusivu_vihrea.png");
+//    background-repeat: no-repeat;
+//    background-size: contain;
+//    background-position:  105% -1em;
+    border: 1px solid rgb(141, 166, 118);
+}
+
+.ok-mieliala-laatikko--sininen {
+    background-color: rgb(52, 179, 165);
+    border: 1px solid rgb(66, 130, 123);
+}
+
+.ok-jannittaako-laatikko--oranssi {
+    background-color: rgb(240, 134, 14);
+    border: 1px solid rgb(168, 108, 40);
+}
+
+.ok-stressi-laatikko, .ok-mieliala-laatikko, .ok-jannittaako-laatikko {
+    margin: 0;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+}
+
+.mosaic-width-quarter .ok-stressi-laatikko {
+    min-height: 5em;
+     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+
+.mosaic-stress-group-3 {
+
+}
+
+
+/* Reittien rastien laatikot */
+/* laitettanko näihin myös kuva? */
+
+h6 .ok-rasti-laatikko-rasti-otsikko {
+    background-color: rgb(121, 184, 41);
+    background-color: rgba(121, 184, 41,0.7);
+
+}
+
+h6 .ok-rasti-laatikko-rasti1 {
+    background-color: rgb(206, 72, 123);
+    background-color: rgba(206, 72, 123, 0.7);
+
+
+}
+h6 .ok-rasti-laatikko-rasti2 {
+    background-color: rgb(130, 79, 156);
+    background-color: rgba(130, 79, 156, 0.7);
+
+}
+
+h6 .ok-rasti-laatikko-rasti3 {
+    background-color: rgb(233, 65, 78);
+    background-color: rgba(233, 65, 78, 0.7);
+
+}
+
+h6 .ok-rasti-laatikko-rasti4 {
+    background-color: rgb(240, 131, 12);
+    background-color: rgb(218, 177, 128);
+
+    background-color: rgba(240, 131, 12,0.7);
+
+}
+
+h6 .ok-rasti-laatikko-rasti5 {
+    background-color: rgb(48, 166, 204);
+    background-color: rgba(48, 166, 204, 0.7);
+  //  border: 1px solid rgb(56, 126, 148);
+
+}
+
+.ok-rasti-laatikko-rasti-otsikko {
+    background-color: rgb(121, 184, 41);
+  //  background-color: rgba(121, 184, 41,0.7);
+ //   border: 1px solid rgb(82, 125, 28);
+    border: none;
+}
+
+.ok-rasti-laatikko-rasti1 {
+    background-color: rgb(206, 72, 123);
+  //  background-color: rgba(206, 72, 123, 0.7);
+
+ //   border: 1px solid rgb(150, 57, 93);
+    border: none;
+}
+.ok-rasti-laatikko-rasti2 {
+    background-color: rgb(130, 79, 156);
+  //  background-color: rgba(130, 79, 156, 0.7);
+ //   border: 1px solid rgb(95, 66, 110);
+    border: none;
+}
+
+.ok-rasti-laatikko-rasti3 {
+    background-color: rgb(233, 65, 78);
+  //  background-color: rgba(233, 65, 78, 0.7);
+ //   border: 1px solid rgb(173, 21, 33);
+    border: none;
+}
+
+.ok-rasti-laatikko-rasti4 {
+    background-color: rgb(240, 131, 12);
+
+
+ //   background-color: rgba(240, 131, 12,0.7);
+ //   border: 1px solid rgb(196, 133, 63);
+    border: none;
+}
+
+.ok-rasti-laatikko-rasti5 {
+    background-color: rgb(48, 166, 204);
+ //   background-color: rgba(48, 166, 204, 0.7);
+  //  border: 1px solid rgb(56, 126, 148);
+    border: none;
+}
+
+.active .ok-rasti-laatikko-rasti-otsikko {
+    background-color: rgb(121, 184, 41);
+//    border: 1px solid rgb(82, 125, 28);
+}
+
+.active .ok-rasti-laatikko-rasti1 {
+    background-color: rgb(206, 72, 123);
+
+ //   border: 1px solid rgb(150, 57, 93);
+}
+
+.active .ok-rasti-laatikko-rasti2 {
+    background-color: rgb(130, 79, 156);
+ //   border: 1px solid rgb(95, 66, 110);
+}
+
+.active .ok-rasti-laatikko-rasti3 {
+    background-color: rgb(233, 65, 78);
+ //   border: 1px solid rgb(173, 21, 33);
+}
+.active .ok-rasti-laatikko-rasti4 {
+    background-color: rgb(240, 131, 12);
+ //   border: 1px solid rgb(196, 133, 63);
+}
+
+.active .ok-rasti-laatikko-rasti5 {
+    background-color: rgb(48, 166, 204);
+ //   border: 1px solid rgb(56, 126, 148);
+}
+
+.active {
+//    font-weight: bold;
+}
+/* */
+
+
+
+/* Tesksi kuvan päällä */
+
+.ok-teksti-kuvan-paalla {
+    overflow: hidden;
+    position: relative;
+}
+
+.ok-teksti-kuvan-paalla img {
+    min-height:18em;
+}
+
+.teksti-kuvan-paalla {
+   margin: 4%;
+   margin-bottom: 8%;
+   padding: 2%;
+   padding-bottom: 1%;
+
+   position: absolute;
+   bottom: 3%;
+   right: 0;
+
+   width: 80%;
+
+   color: rgb(250,250,250);
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.4);
+
+}
+
+
+.teksti-kuvan-paalla a {
+    background: transparent;
+    color: rgb(240,240,240);
+    text-decoration: underline;
+
+}
+.valkoinen {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(10,10,10);
+}
+
+.valkoinen a {
+    background: transparent;
+    color: rgb(40,40,40);
+    text-decoration: underline;
+}
+
+
+/* */
+
+
+
+/* LUONNNOKSIA PITÄÄ EHDOTTOMASTI MUOKATA JA POISTAA LUONNOSVAIHTOEHDOT */
+
+/* KOMPASSI NAVIGAATIO */
+
+
+.kompassi_navi {
+   text-align: left;
+    margin-bottom:3em;
+    max-width:51em;
+    margin:auto;
+    margin-bottom: 1em;
+    position:relative;
+    text-align: center;
+
+}
+
+
+
+.kompassi_navi h3, .kompassi_navi h2 {
+    font-size:1.3em;
+    color:rgb(102, 102, 102);
+    text-transform: uppercase;
+    margin-bottom: 0em;
+}
+
+.kompassi_navi h2 {
+    text-align: center;
+    font-size:2.1em;
+    padding: 0.1em;
+    color:rgb(212, 12, 12);
+}
+
+.kompassi_navi h2 a {
+    color:rgb(90, 90, 90);
+}
+
+.kompassi_navi h3 .active {
+    font-size:1.5em;
+}
+
+
+
+.kompassi_navi p {
+    color: rgb(153, 153, 153);
+    font-size:1em;
+    margin: 0em;
+    text-align: center;
+}
+
+
+.kompassi_navi_teksti {
+   text-align: left;
+ //  max-width:16em;
+   margin:auto;
+   margin-bottom:0.5em;
+   background: rgb(255, 255, 255);
+   background: rgba(255, 255, 255, 0.6);
+   padding:0.4em;
+   padding-bottom:0em;
+}
+
+
+
+
+.kompassi_navi .kompassi_navi_alempi {
+    position:relative;
+    height:20.5em;
+    background: url("../images/kompassit/kompassi_otsikko.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+
+.oktiles-kompassi-navigaatio-otsikko .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_otsikko.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+.oktiles-kompassi-navigaatio-1-rasti .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_1-rasti.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+.oktiles-kompassi-navigaatio-2-rasti .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_2-rasti.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+.oktiles-kompassi-navigaatio-3-rasti .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_3-rasti.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+
+}
+
+.oktiles-kompassi-navigaatio-4-rasti .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_4-rasti.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+.oktiles-kompassi-navigaatio-5-rasti .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_5-rasti.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+.oktiles-kompassi-navigaatio-yhteenveto .kompassi_navi_alempi {
+    background: url("../images/kompassit/kompassi_yhteenveto.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 1em;
+}
+
+.kompassi_navi_yla {
+    height:5.7em;
+}
+
+.kompassi_navi_oikea {
+    width:17em;
+    position:absolute;
+    top:0em;
+    right: 0em;
+}
+
+
+.kompassi_navi_vasen {
+    width:17em;
+    position:absolute;
+    top:0em;
+    left: 0em;
+}
+
+.kompassi_navi_otsikko {
+  // max-width:25em;
+    text-align: center;
+}
+
+.kompassi_navi_otsikko .intro {
+    position:relative;
+    top:0.6em;
+    left: 7em;
+    margin:0em;
+    z-index: 222;
+    font-size: 1.5em;
+}
+
+.kompassi_navi_1-rasti {
+    position:relative;
+    top:3em;
+    left: 0em;
+    margin:0em;
+
+}
+
+.kompassi_navi_1-rasti p{
+    text-align: left;
+}
+
+.kompassi_navi_2-rasti {
+    position:relative;
+    top:7.2em;
+    left: 0em;
+    margin:0em;
+}
+
+.kompassi_navi_2-rasti p{
+    text-align: left;
+}
+
+.kompassi_navi_3-rasti {
+    position:relative;
+    top:17.1em;
+    left: 0em;
+    text-align: center;
+    max-width:16em;
+}
+
+.kompassi_navi_4-rasti {
+    position:relative;
+    top:10.6em;
+    left: 1.2em;
+    width:15em;
+}
+
+.kompassi_navi_4-rasti p{
+    text-align: left;
+}
+
+.kompassi_navi_5-rasti {
+    position:relative;
+    top:-0.9em;
+    left: 0.9em;
+    max-width:15em;
+}
+
+.kompassi_navi_5-rasti p{
+    text-align: left;
+}
+
+.kompassi_navi_otsikko .loppusanat {
+    position:relative;
+    top:-6.5em;
+    left: 4.3em;
+    max-width:16em;
+    z-index: 222;
+    font-size: 1.5em;
+}
+
+
+.kompassi_navi a {
+    color:rgb(102, 102, 102);
+}
+
+.kompassi_navi_otsikko .active a {
+    color: rgb(125, 181, 56);
+
+}
+
+.kompassi_navi_1-rasti .active a {
+    color: rgb(204, 73, 123);
+}
+
+.kompassi_navi_2-rasti .active a {
+    color: rgb(130, 79, 156);
+}
+
+.kompassi_navi_3-rasti .active a {
+    color: rgb(233, 65, 79);
+}
+
+.kompassi_navi_4-rasti .active a {
+    color: rgb(238, 135, 15);
+}
+
+.kompassi_navi_5-rasti .active a {
+    color: rgb(48, 166, 204);
+}
+
+.kompassi_navi_otsikko a:hover {
+    color: rgb(125, 181, 56);
+}
+.kompassi_navi_1-rasti a:hover {
+    color: rgb(204, 73, 123);
+}
+.kompassi_navi_2-rasti a:hover {
+    color: rgb(130, 79, 156);
+}
+.kompassi_navi_3-rasti a:hover {
+    color: rgb(233, 65, 79);
+}
+.kompassi_navi_4-rasti a:hover {
+    color: rgb(238, 135, 15);
+}
+.kompassi_navi_5-rasti a:hover {
+    color: rgb(48, 166, 204);
+}
+/* */
+
+
+
+/* @media määreet, tyylin muutplset kapeammille näytöille */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+
+.ok-reitti-laatikko {
+ //   padding: 1.5em;
+ //   padding-left:3.0em;
+    min-height: 4.5em;
+ }
+
+   .mosaic-grid-cell .ok-reitti-laatikko a {
+    line-height: 1.3em;
+    padding: 0.9em .5em 0.9em .5em;
+    margin-left: 3.9em;
+    -webkit-box-decoration-break: clone;
+   -ms-box-decoration-break: clone;
+   -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: block;
+}
+
+
+.mosaic-grid-cell .ok-reitti-laatikko-stressi a,
+.mosaic-grid-cell .ok-reitti-laatikko-jannittaako a {
+    padding: 1.5em 1em 1.5em 0em;
+ }
+
+}
+
+
+
+
+@media screen and (max-width: 1199px) {
+
+.oktiles-kompassi-navigaatio-alasivut-sivussa .kompassi_navi_oikea {
+    max-width: 14em;
+}
+.oktiles-kompassi-navigaatio-alasivut-sivussa .kompassi_navi .kompassi_navi_1-rasti {
+    margin:auto;
+}
+
+.oktiles-kompassi-navigaatio-alasivut-sivussa.kompassi_navi .kompassi_navi_2-rasti {
+    margin:auto;
+}
+
+}
+
+@media screen and (max-width: 990px) {
+
+.kompassi_navi .kompassi_navi_oikea {
+    max-width: 16em;
+}
+.kompassi_navi .kompassi_navi_1-rasti {
+    margin:auto;
+    max-width: 12em;
+}
+
+.kompassi_navi .kompassi_navi_2-rasti {
+    margin:auto;
+    max-width: 12em;
+}
+
+}
+
+@media screen and (max-width: 580px) {
+
+.kompassi_navi .kompassi_navi_oikea,
+.kompassi_navi .kompassi_navi_vasen,
+.kompassi_navi .kompassi_navi_ala,
+.kompassi_navi .kompassi_navi_1-rasti,
+.kompassi_navi .kompassi_navi_2-rasti,
+.kompassi_navi .kompassi_navi_3-rasti,
+.kompassi_navi .kompassi_navi_4-rasti,
+.kompassi_navi .kompassi_navi_5-rasti {
+    position:relative;
+    top:0em;
+    left: 0em;
+    margin: auto;
+    margin-bottom:0em;
+    width: 100%;
+    max-width:17em;
+    text-align:left;
+}
+.kompassi_navi .kompassi_navi_alempi {
+    margin-top:0.5em;
+    height: 100%;
+}
+
+.kompassi_navi_teksti {
+    padding-bottom:0.2em;
+}
+.oktiles-kompassi-navigaatio-alasivut-sivussa .kompassi_navi_teksti-sivussa {
+    margin-top: 0em;
+}
+
+.hero-area .hero-area__carousel-wrapper__slide-row-1__bg,
+.hero-area .hero-area__carousel-wrapper__slide-row-2__bg,
+.hero-area .hero-area__carousel-wrapper__slide-row-3__bg {
+    height: 8em;
+}
+
+}
+
+@media screen and (max-width: 543px) {
+
+.navigation-area .toprow {
+       height:85px;
+}
+
+.navigation-area .bottomrow {
+        float: right;
+        margin-top: -60px;
+        padding: 0;
+}
+
+.navigation-area .bottomrow .navbar-toggler {
+    float: right;
+}
+
+.navigation-area .toprow__logos--mobile {
+  display: block;
+  background: url(/++theme++goodlifetheme/img/jyu-logo.png) no-repeat;
+  background-size: contain;
+  background-position: 0em 0.3em;
+  width: 180px;
+  height: 80px;
+  margin-left:-10px;
+  padding-left: 180px;
+}
+
+.navbar {
+    padding: 0rem;
+   }
+}
+
+
+@media screen and (max-width: 385px) {
+
+.hero-area .hero-area__carousel-wrapper__slide-row-1__bg,
+.hero-area .hero-area__carousel-wrapper__slide-row-2__bg,
+.hero-area .hero-area__carousel-wrapper__slide-row-3__bg {
+    height: 5em;
+}
+
+.mosaic-grid-cell .ok-reitti-laatikko a {
+    padding: 1.2em .5em 1.2em 0em;
+}
+
+
+}
+
+
+@media screen and (max-width: 330px) {
+
+
+.ok-reitti-laatikko {
+    min-height: 3em;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+ }
+
+   .mosaic-grid-cell .ok-reitti-laatikko a {
+    line-height: 1.3em;
+    padding: 1em 0.2em 1em 0em;
+    margin-left: 20%;
+    -webkit-box-decoration-break: clone;
+   -ms-box-decoration-break: clone;
+   -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: block;
+
+}
+
+
+.ok-reitti-laatikko-stressi,
+.ok-reitti-laatikko-mielimaassa,
+.ok-reitti-laatikko-jannittaako {
+    background-size: 35%;
+
+}
+
+
+
+
+}

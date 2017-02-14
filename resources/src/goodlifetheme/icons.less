@@ -1,20 +1,18 @@
+[class*="contenttype-"]:after,
+[class*="contenttype-"]:before {
+  display: inline-block;
+  vertical-align: -0.1em;
+  width: 1em;
+  height: 1em;
+}
+
 #edit-zone #plone-contentmenu-factories [class*="contenttype-"] {
-  padding: 0 15px 5px 25px;
-  &:before {
-    background-image: none;
-    margin-bottom: 0;
-  }
+  padding: 0 0 15px 40px;
+  &:before { display: none; }
   &:after {
-    display: inline-block;
     position: absolute;
+    font-size: 20px;
     left: 12px;
-    padding: 0;
-    width: 20px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 20px 20px;
-    content: "";
   }
 }
 
@@ -32,190 +30,192 @@ i.glyphicon { padding-right: 0.2em; }
 
 /* Plone content types */
 .contenttype-folder:before {
-  background-image: url(icons/entypo-folder-black.svg);
+  content: url(icons/entypo-folder-black.svg);
 }
 .contenttype-folder:after{
-  background-image: url(icons/entypo-folder-white.svg);
+  content: url(icons/entypo-folder-white.svg);
 }
 .contenttype-collection:before {
-  background-image: url(icons/entypo-archive-black.svg);
+  content: url(icons/entypo-archive-black.svg);
 }
 .contenttype-collection:after{
-  background-image: url(icons/entypo-archive-white.svg);
+  content: url(icons/entypo-archive-white.svg);
 }
 .contenttype-image:before {
-  background-image: url(icons/fontawesome-picture-black.svg);
+  content: url(icons/fontawesome-picture-black.svg);
 }
 .contenttype-image:after{
-  background-image: url(icons/fontawesome-picture-white.svg);
+  content: url(icons/fontawesome-picture-white.svg);
 }
 .contenttype-link:before {
-  background-image: url(icons/mfglabs-link-black.svg);
+  content: url(icons/mfglabs-link-black.svg);
 }
 .contenttype-link:after{
-  background-image: url(icons/mfglabs-link-white.svg);
+  content: url(icons/mfglabs-link-white.svg);
 }
 .contenttype-document:before {
-  background-image: url(icons/fontawesome-doc-inv-black.svg);
+  content: url(icons/fontawesome-doc-inv-black.svg);
+  width: 0.8571em;
 }
 .contenttype-document:after{
-  background-image: url(icons/fontawesome-doc-inv-white.svg);
+  content: url(icons/fontawesome-doc-inv-white.svg);
+  width: 0.8571em;
 }
 .contenttype-event:before {
-  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+  content: url(icons/fontawesome-calendar-empty-black.svg);
 }
 .contenttype-event:after{
-  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+  content: url(icons/fontawesome-calendar-empty-white.svg);
 }
 .contenttype-file:before {
-  background-image: url(icons/fontawesome-attach-black.svg);
+  content: url(icons/fontawesome-attach-black.svg);
 }
 .contenttype-file:after{
-  background-image: url(icons/fontawesome-attach-white.svg);
+  content: url(icons/fontawesome-attach-white.svg);
 }
 .contenttype-news-item:before {
-  background-image: url(icons/modernpics-signal-black.svg);
+  content: url(icons/modernpics-signal-black.svg);
 }
 .contenttype-news-item:after{
-  background-image: url(icons/modernpics-signal-white.svg);
+  content: url(icons/modernpics-signal-white.svg);
 }
 .contenttype-lrf:before {
-  background-image: url(icons/fontawesome-language-black.svg);
+  content: url(icons/fontawesome-language-black.svg);
 }
 .contenttype-lrf:after{
-  background-image: url(icons/fontawesome-language-white.svg);
+  content: url(icons/fontawesome-language-white.svg);
 }
 .contenttype-lif:before {
-  background-image: url(icons/fontawesome-camera-alt-black.svg);
+  content: url(icons/fontawesome-camera-alt-black.svg);
 }
 .contenttype-lif:after{
-  background-image: url(icons/fontawesome-camera-alt-white.svg);
+  content: url(icons/fontawesome-camera-alt-white.svg);
 }
 
 /* collective.dynapage */
 .contenttype-collective-dynapage:before {
-  background-image: url(icons/elusive-website-black.svg);
+  content: url(icons/elusive-website-black.svg);
 }
 .contenttype-collective-dynapage:after{
-  background-image: url(icons/elusive-website-white.svg);
+  content: url(icons/elusive-website-white.svg);
 }
 .contenttype-collective-dynaitem-collection:before {
-  background-image: url(icons/entypo-archive-black.svg);
+  content: url(icons/entypo-archive-black.svg);
 }
 .contenttype-collective-dynaitem-collection:after{
-  background-image: url(icons/entypo-archive-white.svg);
+  content: url(icons/entypo-archive-white.svg);
 }
 .contenttype-collective-dynaitem-feed:before {
-  background-image: url(icons/fontawesome-rss-black.svg);
+  content: url(icons/fontawesome-rss-black.svg);
 }
 .contenttype-collective-dynaitem-feed:after{
-  background-image: url(icons/fontawesome-rss-white.svg);
+  content: url(icons/fontawesome-rss-white.svg);
 }
 .contenttype-collective-dynaitem-image:before {
-  background-image: url(icons/typicons-picture-outline-black.svg);
+  content: url(icons/typicons-picture-outline-black.svg);
 }
 .contenttype-collective-dynaitem-image:after{
-  background-image: url(icons/typicons-picture-outline-white.svg);
+  content: url(icons/typicons-picture-outline-white.svg);
 }
 
 /* Form Folder */
 .contenttype-easyform:before {
-  background-image: url(icons/fontawesome-wpforms-black.svg);
+  content: url(icons/fontawesome-wpforms-black.svg);
 }
 .contenttype-easyform:after{
-  background-image: url(icons/fontawesome-wpforms-white.svg);
+  content: url(icons/fontawesome-wpforms-white.svg);
 }
 .contenttype-formfolder:before {
-  background-image: url(icons/fontawesome-wpforms-black.svg);
+  content: url(icons/fontawesome-wpforms-black.svg);
 }
 .contenttype-formfolder:after{
-  background-image: url(icons/fontawesome-wpforms-white.svg);
+  content: url(icons/fontawesome-wpforms-white.svg);
 }
 
 /* Collective roster */
 .contenttype-collective-roster-roster:before {
-  background-image: url(icons/entypo-users-black.svg);
+  content: url(icons/entypo-users-black.svg);
 }
 .contenttype-collective-roster-roster:after{
-  background-image: url(icons/entypo-users-white.svg);
+  content: url(icons/entypo-users-white.svg);
 }
 .contenttype-collective-roster-person:before {
-  background-image: url(icons/entypo-user-black.svg);
+  content: url(icons/entypo-user-black.svg);
 }
 .contenttype-collective-roster-person:after{
-  background-image: url(icons/entypo-user-white.svg);
+  content: url(icons/entypo-user-white.svg);
 }
 
 /* Portal View */
 .contenttype-portal-view:before {
-  background-image: url(icons/fontawesome-th-large-black.svg);
+  content: url(icons/fontawesome-th-large-black.svg);
 }
 .contenttype-portal-view:after{
-  background-image: url(icons/fontawesome-th-large-white.svg);
+  content: url(icons/fontawesome-th-large-white.svg);
 }
 .contenttype-portal-view-column-folder:before {
-  background-image: url(icons/fontawesome-menu-black.svg);
+  content: url(icons/fontawesome-menu-black.svg);
 }
 .contenttype-portal-view-column-folder:after{
-  background-image: url(icons/fontawesome-menu-white.svg);
+  content: url(icons/fontawesome-menu-white.svg);
 }
 .contenttype-rss-listing:before {
-  background-image: url(icons/fontawesome-rss-black.svg);
+  content: url(icons/fontawesome-rss-black.svg);
 }
 .contenttype-rss-listing:after{
-  background-image: url(icons/fontawesome-rss-white.svg);
+  content: url(icons/fontawesome-rss-white.svg);
 }
 .contenttype-changing-content:before {
-  background-image: url(icons/entypo-picture-black.svg);
+  content: url(icons/entypo-picture-black.svg);
 }
 .contenttype-changing-content:after{
-  background-image: url(icons/entypo-picture-white.svg);
+  content: url(icons/entypo-picture-white.svg);
 }
 
 /* Opetusohjelma */
 .contenttype-jyu-opetusohjelma:before {
-  background-image: url(icons/entypo-graduation-cap-black.svg);
+  content: url(icons/entypo-graduation-cap-black.svg);
 }
 .contenttype-jyu-opetusohjelma:after{
-  background-image: url(icons/entypo-graduation-cap-white.svg);
+  content: url(icons/entypo-graduation-cap-white.svg);
 }
 
 /* Tutkasivu */
 .contenttype-jyu-tutka-page:before {
-  background-image: url(icons/fontawesome-bank-black.svg);
+  content: url(icons/fontawesome-bank-black.svg);
 }
 .contenttype-jyu-tutka-page:after{
-  background-image: url(icons/fontawesome-bank-white.svg);
+  content: url(icons/fontawesome-bank-white.svg);
 }
 
 /* News item */
 .contenttype-jyu-newsitem-internal_event:before {
-  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+  content: url(icons/fontawesome-calendar-empty-black.svg);
 }
 .contenttype-jyu-newsitem-internal_event:after{
-  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+  content: url(icons/fontawesome-calendar-empty-white.svg);
 }
 .contenttype-jyu-newsitem-external_event:before {
-  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+  content: url(icons/fontawesome-calendar-empty-black.svg);
 }
 .contenttype-jyu-newsitem-external_event:after{
-  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+  content: url(icons/fontawesome-calendar-empty-white.svg);
 }
 .contenttype-jyu-newsitem-dissertation:before {
-  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+  content: url(icons/fontawesome-calendar-empty-black.svg);
 }
 .contenttype-jyu-newsitem-dissertation:after{
-  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+  content: url(icons/fontawesome-calendar-empty-white.svg);
 }
 .contenttype-jyu-newsitem-internal_news_item:before {
-  background-image: url(icons/modernpics-article-black.svg);
+  content: url(icons/modernpics-article-black.svg);
 }
 .contenttype-jyu-newsitem-internal_news_item:after{
-  background-image: url(icons/modernpics-article-white.svg);
+  content: url(icons/modernpics-article-white.svg);
 }
 .contenttype-jyu-newsitem-external_news_item:before {
-  background-image: url(icons/modernpics-article-black.svg);
+  content: url(icons/modernpics-article-black.svg);
 }
 .contenttype-jyu-newsitem-external_news_item:after{
-  background-image: url(icons/modernpics-article-white.svg);
+  content: url(icons/modernpics-article-white.svg);
 }
