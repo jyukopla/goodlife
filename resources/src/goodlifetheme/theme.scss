@@ -73,14 +73,7 @@ body.plone-toolbar-top, body.plone-toolbar-left {
 // Fix issue where pat-structure navbar did not work with BS4
 @include media-breakpoint-up(lg) {
   .pat-structure .navbar {
-    flex-direction: row;
-    padding-bottom: 0;
-    padding-right: 0;
-    padding-left: 0;
-    a {
-      height: 2em;
-      min-width: 2em;
-    }
+    display: block;
   }
 }
 
