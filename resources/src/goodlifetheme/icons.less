@@ -1,7 +1,5 @@
-@import "@{barcelonetaPath}/less/variables.plone.less";
-
 #edit-zone #plone-contentmenu-factories [class*="contenttype-"] {
-  padding: 5px 15px 5px 35px;
+  padding: 0 15px 5px 25px;
   &:before {
     background-image: none;
     margin-bottom: 0;
@@ -15,30 +13,13 @@
     height: 30px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 15px 15px;
+    background-size: 20px 20px;
     content: "";
-    top: 0;
   }
-}
-
-#content [class*="contenttype-"]:before {
-  display: inline-block;
-  position: relative;
-  margin: 0 0 -@plone-padding-base-vertical * 0.75 0;
-  padding: 0;
-  left: inherit;
-  width: 18px;
-  height: 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 15px 15px;
-  content: "";
 }
 
 .image-icon, .image-tile { float: right; }
 i.glyphicon { padding-right: 0.2em; }
-i.link-https { display: none !important; }
-i.link-external { display: none !important; }
 #content.link-external { display: inline-block; }
 
 /* Toolbar */
@@ -50,7 +31,6 @@ i.link-external { display: none !important; }
 }
 
 /* Plone content types */
-
 .contenttype-folder:before {
   background-image: url(icons/entypo-folder-black.svg);
 }
@@ -112,20 +92,6 @@ i.link-external { display: none !important; }
   background-image: url(icons/fontawesome-camera-alt-white.svg);
 }
 
-/* Form Folder */
-.contenttype-easyform:before {
-  background-image: url(icons/fontawesome-wpforms-black.svg);
-}
-.contenttype-easyform:after{
-  background-image: url(icons/fontawesome-wpforms-white.svg);
-}
-.contenttype-formfolder:before {
-  background-image: url(icons/fontawesome-wpforms-black.svg);
-}
-.contenttype-formfolder:after{
-  background-image: url(icons/fontawesome-wpforms-white.svg);
-}
-
 /* collective.dynapage */
 .contenttype-collective-dynapage:before {
   background-image: url(icons/elusive-website-black.svg);
@@ -150,4 +116,106 @@ i.link-external { display: none !important; }
 }
 .contenttype-collective-dynaitem-image:after{
   background-image: url(icons/typicons-picture-outline-white.svg);
+}
+
+/* Form Folder */
+.contenttype-easyform:before {
+  background-image: url(icons/fontawesome-wpforms-black.svg);
+}
+.contenttype-easyform:after{
+  background-image: url(icons/fontawesome-wpforms-white.svg);
+}
+.contenttype-formfolder:before {
+  background-image: url(icons/fontawesome-wpforms-black.svg);
+}
+.contenttype-formfolder:after{
+  background-image: url(icons/fontawesome-wpforms-white.svg);
+}
+
+/* Collective roster */
+.contenttype-collective-roster-roster:before {
+  background-image: url(icons/entypo-users-black.svg);
+}
+.contenttype-collective-roster-roster:after{
+  background-image: url(icons/entypo-users-white.svg);
+}
+.contenttype-collective-roster-person:before {
+  background-image: url(icons/entypo-user-black.svg);
+}
+.contenttype-collective-roster-person:after{
+  background-image: url(icons/entypo-user-white.svg);
+}
+
+/* Portal View */
+.contenttype-portal-view:before {
+  background-image: url(icons/fontawesome-th-large-black.svg);
+}
+.contenttype-portal-view:after{
+  background-image: url(icons/fontawesome-th-large-white.svg);
+}
+.contenttype-portal-view-column-folder:before {
+  background-image: url(icons/fontawesome-menu-black.svg);
+}
+.contenttype-portal-view-column-folder:after{
+  background-image: url(icons/fontawesome-menu-white.svg);
+}
+.contenttype-rss-listing:before {
+  background-image: url(icons/fontawesome-rss-black.svg);
+}
+.contenttype-rss-listing:after{
+  background-image: url(icons/fontawesome-rss-white.svg);
+}
+.contenttype-changing-content:before {
+  background-image: url(icons/entypo-picture-black.svg);
+}
+.contenttype-changing-content:after{
+  background-image: url(icons/entypo-picture-white.svg);
+}
+
+/* Opetusohjelma */
+.contenttype-jyu-opetusohjelma:before {
+  background-image: url(icons/entypo-graduation-cap-black.svg);
+}
+.contenttype-jyu-opetusohjelma:after{
+  background-image: url(icons/entypo-graduation-cap-white.svg);
+}
+
+/* Tutkasivu */
+.contenttype-jyu-tutka-page:before {
+  background-image: url(icons/fontawesome-bank-black.svg);
+}
+.contenttype-jyu-tutka-page:after{
+  background-image: url(icons/fontawesome-bank-white.svg);
+}
+
+/* News item */
+.contenttype-jyu-newsitem-internal_event:before {
+  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+}
+.contenttype-jyu-newsitem-internal_event:after{
+  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+}
+.contenttype-jyu-newsitem-external_event:before {
+  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+}
+.contenttype-jyu-newsitem-external_event:after{
+  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+}
+.contenttype-jyu-newsitem-dissertation:before {
+  background-image: url(icons/fontawesome-calendar-empty-black.svg);
+}
+.contenttype-jyu-newsitem-dissertation:after{
+  background-image: url(icons/fontawesome-calendar-empty-white.svg);
+}
+.contenttype-jyu-newsitem-internal_news_item:before {
+  background-image: url(icons/modernpics-article-black.svg);
+}
+.contenttype-jyu-newsitem-internal_news_item:after{
+  background-image: url(icons/modernpics-article-white.svg);
+}
+.contenttype-jyu-newsitem-external_news_item:before {
+  background-image: url(icons/modernpics-article-black.svg);
+}
+.contenttype-jyu-newsitem-external_news_item:after{
+  background-image: url(icons/modernpics-article-white.svg);
 }

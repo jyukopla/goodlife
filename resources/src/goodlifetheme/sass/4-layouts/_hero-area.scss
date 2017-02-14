@@ -17,8 +17,7 @@
 
         @include media-breakpoint-up(xs)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
 
         &__title
@@ -27,20 +26,15 @@
           {
               background-color: rgba(255, 255, 255, .7);
 
-              @include make-col();
-              @include make-col-span(12);
+              @include make-col(12);
           }
           @include media-breakpoint-up(sm)
           {
-              @include make-col();
-              @include make-col-span(10);
-
-              margin: 1em 0 0 1em;
+              @include make-col(10);
           }
           @include media-breakpoint-up(md)
           {
-              @include make-col();
-              @include make-col-span(8);
+              @include make-col(8);
           }
         }
       }
@@ -63,8 +57,7 @@
 
         @include media-breakpoint-up(xs)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
 
         &__title
@@ -73,20 +66,17 @@
           {
               background-color: rgba(255, 255, 255, .7);
 
-              @include make-col();
-              @include make-col-span(12);
+              @include make-col(12);
           }
           @include media-breakpoint-up(sm)
           {
-              @include make-col();
-              @include make-col-span(10);
+              @include make-col(10);
 
               margin: 1em 0 0 1em;
           }
           @include media-breakpoint-up(md)
           {
-              @include make-col();
-              @include make-col-span(8);
+              @include make-col(8);
           }
         }
       }
@@ -107,8 +97,7 @@
 
         @include media-breakpoint-up(xs)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
 
         &__title
@@ -117,20 +106,17 @@
           {
               background-color: rgba(255, 255, 255, .7);
 
-              @include make-col();
-              @include make-col-span(12);
+              @include make-col(12);
           }
           @include media-breakpoint-up(sm)
           {
-              @include make-col();
-              @include make-col-span(10);
+              @include make-col(10);
 
               margin: 1em 0 0 1em;
           }
           @include media-breakpoint-up(md)
           {
-              @include make-col();
-              @include make-col-span(8);
+              @include make-col(8);
           }
         }
       }
@@ -151,8 +137,7 @@
 
         @include media-breakpoint-up(xs)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
 
         &__title
@@ -161,20 +146,17 @@
           {
               background-color: rgba(255, 255, 255, .7);
 
-              @include make-col();
-              @include make-col-span(12);
+              @include make-col(12);
           }
           @include media-breakpoint-up(sm)
           {
-              @include make-col();
-              @include make-col-span(10);
+              @include make-col(10);
 
               margin: 1em 0 0 1em;
           }
           @include media-breakpoint-up(md)
           {
-              @include make-col();
-              @include make-col-span(8);
+              @include make-col(8);
           }
         }
       }

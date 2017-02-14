@@ -8,23 +8,19 @@
     {
         @include media-breakpoint-up(xs)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
         @include media-breakpoint-up(sm)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
         @include media-breakpoint-up(md)
         {
-            @include make-col();
-            @include make-col-span(3);
+            @include make-col(3);
         }
         @include media-breakpoint-up(lg)
         {
-            @include make-col();
-            @include make-col-span(2);
+            @include make-col(2);
         }
 
         /* Styles from SM DOWN */
@@ -41,19 +37,16 @@
         {
             height: 4em;
 
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
         @include media-breakpoint-up(sm)
         {
-            @include make-col();
-            @include make-col-span(12);
+            @include make-col(12);
         }
         @include media-breakpoint-up(md)
         {
             height: 9em;
-            @include make-col();
-            @include make-col-span(1);
+            @include make-col(1);
         }
 
         &--completed
@@ -63,19 +56,16 @@
             {
                 height: 4em;
 
-                @include make-col();
-                @include make-col-span(12);
+                @include make-col(12);
             }
             @include media-breakpoint-up(sm)
             {
-                @include make-col();
-                @include make-col-span(12);
+                @include make-col(12);
             }
             @include media-breakpoint-up(md)
             {
                 height: 9em;
-                @include make-col();
-                @include make-col-span(1);
+                @include make-col(1);
 
                 img
                 {
@@ -105,8 +95,7 @@
   {
     @include media-breakpoint-up(xs)
     {
-        @include make-col();
-        @include make-col-span(12);
+        @include make-col(12);
     }
   }
 
@@ -114,8 +103,7 @@
   {
     @include media-breakpoint-up(xs)
     {
-        @include make-col();
-        @include make-col-span(12);
+        @include make-col(12);
     }
   }
 }

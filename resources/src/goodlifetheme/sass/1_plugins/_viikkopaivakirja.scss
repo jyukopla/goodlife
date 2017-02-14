@@ -12,17 +12,16 @@
     margin-bottom: 1em;
   }
 
-  input, textarea
-  {
-    width: 100%;
-  }
+  //input, textarea
+  //{
+  //  width: 100%;
+  //}
 
   select
   {
-    @extend .c-select;
+//    @extend .c-select;
   }
 }
-
 
 .formControls
 {
@@ -30,7 +29,7 @@
   {
     @extend .btn;
     @extend .btn-primary;
-    @extend .pull-xs-right;
+    @extend .float-right;
   }
 }
 

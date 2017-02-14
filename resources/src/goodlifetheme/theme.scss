@@ -10,6 +10,9 @@
 @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.grid.plone.scss";
 @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/mixin.font.plone.scss";
 
+//$plone-font-path: "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/";
+//@import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/fonts.plone.scss";
+
 @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/alerts.plone.scss";
 @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/formtabbing.plone.scss";
 @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/controlpanels.plone.scss";
@@ -24,9 +27,62 @@ section, .plone-modal-wrapper {
 @import "~plonetheme.barceloneta/plonetheme/barceloneta/theme/scss/modal.plone.scss";
 .plone-modal .plone-modal-content { background: #fcfcfd; }
 .plone-modal .plone-modal-dialog .plone-modal-header .plone-modal-close { margin-top: 0; }
+.template-usergroup-groupprefs form,
+.template-usergroup-userprefs form {
+  overflow: auto;
+}
+.plone-toolbar-logo > img {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+body.plone-toolbar-top, body.plone-toolbar-left {
+  #edit-zone {
+    #contentview-contentrules {
+      display: none;
+    }
+    nav ul.plone-toolbar-main {
+      display: none;
+    }
+  }
+}
+body.plone-toolbar-top, body.plone-toolbar-left {
+  &.userrole-editor,
+  &.userrole-reviewer,
+  &.userrole-manager {
+    #edit-zone {
+      nav ul.plone-toolbar-main {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// Hide BS4 caret
+.pat-structure .dropdown-toggle:after{ display: none; }
 
 @import "~bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "sass/main.scss";
+
+@include media-breakpoint-only(xs) {
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+}
+
+// Fix issue where pat-structure navbar did not work with BS4
+@include media-breakpoint-up(lg) {
+  .pat-structure .navbar {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    a {
+      height: 2em;
+      min-width: 2em;
+    }
+  }
+}
 
 body.template-layout {
   .pat-autotoc nav.autotoc-nav {
@@ -50,3 +106,129 @@ body.template-layout {
     margin: 0 1em 0 0;
   }
 }
+
+@import '~bootstrap/scss/mixins/grid';
+
+.mosaic-enabled, .mosaic-grid, .template-layout {
+  .mosaic-grid-row {
+    position: relative;
+    @include make-row($gutters: $grid-gutter-widths);
+  }
+}
+
+// Mosaic Grid (responsive)
+.mosaic-grid {
+  .mosaic-width-full {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col($grid-columns);
+  }
+  .mosaic-width-half {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include media-breakpoint-up(xs) {
+      @include make-col($grid-columns);
+    }
+    @include media-breakpoint-up(sm) {
+      @include make-col($grid-columns / 2);
+    }
+  }
+  .mosaic-width-quarter {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include media-breakpoint-up(xs) {
+      @include make-col($grid-columns);
+    }
+    @include media-breakpoint-up(sm) {
+      @include make-col($grid-columns / 2);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col($grid-columns / 4);
+    }
+  }
+  .mosaic-width-three-quarters {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include media-breakpoint-up(xs) {
+      @include make-col($grid-columns);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(($grid-columns / 4) * 3);
+    }
+  }
+  .mosaic-width-third {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include media-breakpoint-up(xs) {
+      @include make-col($grid-columns);
+    }
+    @include media-breakpoint-up(sm) {
+      @include make-col($grid-columns / 2);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col($grid-columns / 3);
+    }
+  }
+  .mosaic-width-two-thirds {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include media-breakpoint-up(xs) {
+      @include make-col($grid-columns);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(($grid-columns / 3) * 2);
+    }
+  }
+}
+
+// Mosaic Editor Grid (non-responsive)
+.mosaic-enabled {
+  .mosaic-width-full {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col($grid-columns);
+  }
+  .mosaic-width-half {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col($grid-columns / 2);
+  }
+  .mosaic-width-quarter {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col($grid-columns / 4);
+  }
+  .mosaic-width-three-quarters {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col(($grid-columns / 4) * 3);
+  }
+  .mosaic-width-third {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col($grid-columns / 3);
+  }
+  .mosaic-width-two-thirds {
+    @include make-col-ready($gutters: $grid-gutter-widths);
+    @include make-col(($grid-columns / 3) * 2);
+  }
+}
+
+// Better carousel editing
+body.mosaic-enabled nav.menu .row .nav-item {
+  transition: none;
+  .content {
+    transition: none;
+    ul {
+      transition: none;
+    }
+  }
+  &:hover {
+    overflow: visible;
+  }
+}
+
+.mosaic-grid-row.mosaic-no-gutters {
+  .mosaic-grid-cell {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*
+.mosaic-panel[data-panel="posts"] .mosaic-tile img {
+  max-width: none;
+}
+.mosaic-panel[data-panel="posts"] {
+  overflow: hidden;
+}
+*/

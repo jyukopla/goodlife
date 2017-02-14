@@ -3,8 +3,7 @@
 {
   @include media-breakpoint-up(xs)
   {
-      @include make-col();
-      @include make-col-span(4);
+      @include make-col(4);
   }
 
   .wrapper
@@ -36,8 +35,7 @@
     {
       @include media-breakpoint-up(xs)
       {
-          @include make-col();
-          @include make-col-span(12);
+          @include make-col(12);
       }
     }
   }

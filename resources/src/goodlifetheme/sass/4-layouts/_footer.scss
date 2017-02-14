@@ -30,11 +30,12 @@
 
       &__block
       {
-        @include make-col();
 
         @media (min-width: 24em)
         {
-          @include make-col-span(4);
+          @include make-col(4);
+          display: flex;
+          align-items: flex-end;
         }
 
         &--links
@@ -52,11 +53,14 @@
 
         &--logo
         {
+            width: 100%;
+            text-align: center;
             margin-top: 3rem;
 
             img
             {
-              width: 15em;
+              width: 80%;
+              max-width: 15em;
             }
 
             p

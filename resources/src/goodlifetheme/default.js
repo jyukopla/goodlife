@@ -1,13 +1,11 @@
 import 'plone';
-
-import 'slick-carousel/slick/slick.min.js';
-import './js/main.js';
-
+import './icons.less';
 import './default.less';
-import './theme.scss';
-import './tinymce.css';
+import './theme';
 
-import jQuery from 'jquery';  // Expose jQuery for convenience
-window.jQuery = jQuery;
+// Expose jQuery for convenience
+import jQuery from 'jquery';
+window.$ = window.jQuery = jQuery;
 
-window.require = undefined;  // Fix @@search
+// Fix @@search
+window.require = undefined;

@@ -5,39 +5,64 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <!-- Select mockup -->
-  <theme href="index.html" />
+  <!-- We select no mockup with <theme/>, because we use themed layouts -->
 
-  <!-- <theme href="omakansio.html" css:if-content="body.section-omakansio" /> -->
-  <theme href="plugins.html" css:if-content="body.section-plugins" />
+  <!-- Login instructions -->
+  <replace css:content="a#add-user">
+    <xsl:copy>
+      <xsl:apply-templates select="@id|@href|node()"/>
+    </xsl:copy>
+  </replace>
 
-  <!-- Disable theme on possible non-content pages -->
-  <notheme css:if-not-content="#visual-portal-wrapper" />
+  <!-- Login instructions -->
+  <replace css:content="#login_form">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+    <xsl:if test="$login_instructions">
+      <xsl:copy-of select="(document($login_instructions,
+                            $diazo-base-document)/html/body//article)[1]
+                           //*[self::h1 or self::h2 or self::ul or self::p]" />
+    </xsl:if>
+  </replace>
 
-  <!-- Include modules -->
-  <xi:include href="rules/0_webpack.xml" />
+  <!-- Drop in-body scripts -->
+  <drop content="//script[not(@data-name)]" />
 
-  <xi:include href="rules/1_meta.xml" />
-  <xi:include href="rules/1_toolbar.xml" />
-  <xi:include href="rules/2_language.xml" />
-  <xi:include href="rules/2_login.xml" />
-  <xi:include href="rules/2_navbar.xml" />
-  <xi:include href="rules/2_status.xml" />
-  <xi:include href="rules/2_breadcrumbs.xml" />
-  <xi:include href="rules/3_hero.xml" />
+  <!-- Move scripts within body after bundle -->
+  <after content-children="/html/body" method="raw">
+    <xsl:copy-of select="//script[not(@data-name)]" />
+  </after>
 
-  <!-- Only include content when not in special mockup section -->
-  <rules css:if-not-content="body.section-plugins">
-    <xi:include href="rules/4_content.xml" />
+  <!-- Drop logged-in bundles for anonymous users -->
+  <drop css:if-content="body.userrole-anonymous"
+        content="//*[@data-name='bundle-logged-in']" />
 
-    <!-- Temporary cleanup -->
-    <drop css:theme=".container.supportpaths" />
-    <drop css:theme=".container.supportpaths-content-area" />
-  </rules>
+  <!-- Inject custom.css -->
+  <after content-children="/html/head">
+    <link rel="stylesheet" data-bundle="diazo">
+      <xsl:attribute name="href">
+        <xsl:value-of select="$portal_url" />
+        <xsl:text>/++theme++goodlifetheme-custom/custom.css</xsl:text>
+      </xsl:attribute>
+    </link>
+  </after>
 
-  <!-- Stressi -->
-  <theme href="stressi.html" css:if-content=".mosaic-stress-group-1"/>
-  <xi:include href="rules/4_stressi.xml" />
+  <!-- Inject custom.js -->
+  <after content-children="/html/body">
+    <xsl:element name="script">
+      <xsl:attribute name="type">
+        <xsl:text>text/javascript</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="data-bundle">
+        <xsl:text>diazo</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="src">
+        <xsl:value-of select="$portal_url" />
+        <xsl:text>/++theme++goodlifetheme-custom/custom.js</xsl:text>
+      </xsl:attribute>
+    </xsl:element>
+  </after>
 
   <!-- TTW customizations -->
   <xi:include href="++theme++goodlifetheme-custom/custom.xml" />
