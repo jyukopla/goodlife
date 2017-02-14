@@ -21,12 +21,12 @@ const PLONE = new PlonePlugin({
   sourcePath: PATHS.src,
   ignore: [
     path.join(THEMENAME, '?(*.js|*.jsx|*.less|*.scss)'),  // allow tinymce.css
-    path.join(THEMENAME, 'bundles', '*'),
     path.join(THEMENAME, 'components', '*'),
     path.join(THEMENAME, 'components', 'icons', '*'),
     path.join(THEMENAME, 'fonts', '*'),
     path.join(THEMENAME, 'icons', '*'),
-    path.join(THEMENAME, 'media', '*')
+    path.join(THEMENAME, 'originals', '*'),
+    path.join(THEMENAME, 'sass', '*')
   ]
 });
 

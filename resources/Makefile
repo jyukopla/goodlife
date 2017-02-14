@@ -55,13 +55,9 @@ node_modules: package.json
 	npm install
 	touch node_modules
 
-src/goodlifetheme/icons: node_modules fontello.json fontello-goodlife.json
+src/goodlifetheme/icons: node_modules fontello.json
 	fontello-svg --config fontello.json --no-css --verbose \
 	  --out src/goodlifetheme/icons \
 	  --fill-colors "black:rgb(0,0,0)|white:rgb(255,255,255)"
-	fontello-svg --config fontello-goodlife.json --no-css --verbose \
-	  --out src/goodlifetheme/icons \
-	  --fill-colors "black:rgb(0,0,0)|white:rgb(255,255,255)|\
-	                 torch:rgb(0,41,87)|flame:rgb(241,86,63)"
 	sed -i -E 's|svg height="([^"]+)" width="([^"]+)"|svg viewBox="0 0 \2 \1"|g' \
 	  src/goodlifetheme/icons/*.svg
