@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title data-tile="./@@plone.app.standardtiles.headtitle">Title</title>
+  <link rel="icon"
+        href="<%= webpackConfig.output.publicPath %>favicon.ico"/>
+  <link data-tile="./@@plone.app.standardtiles.searchlink"/>
+  <link data-tile="./@@plone.app.standardtiles.authorlink"/>
+  <link data-tile="./@@plone.app.standardtiles.dublincore"/>
+  <link data-tile="./@@plone.app.standardtiles.navigationlink"/>
+  <link data-tile="./@@plone.app.standardtiles.rsslink"/>
+  <link data-tile="./@@plone.app.standardtiles.canonical_url"/>
+  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <% if (htmlWebpackPlugin.files.chunks[chunk].css[0]) { %>
+  <link rel="stylesheet" data-name="bundle-<%= chunk %>"
+        href="<%= htmlWebpackPlugin.files.chunks[chunk].css[0] %>"/>
+  <% }} %>
+</head>
+<body>
+
+<div data-tile="./@@plone.app.standardtiles.toolbar"></div>
+
+<!-- Top and bottom navigation area -->
+<!-- You can find navigation-area scss rules in _navigation-area.scss partial -->
+<!-- Padding 0 removes left and right padding from container-fluid element -->
+<div class="container-fluid shadow-border-bottom navigation-area">
+  <div class="container">
+    <div class="row toprow">
+      <div class="toprow__logos col-4 col-md-6">
+        <div data-tile="./@@plone.app.standardtiles.logo"></div>
+      </div>
+    </div>
+    <!--toprow-->
+    <div class="row bottomrow">
+      <div class="col-md-12">
+        <nav class="navbar navbar-light">
+
+          <button class="navbar-toggler hidden-sm-up pat-aria-expand"
+                  type="button" id="navbar-toggler"
+                  aria-controls="CollapsingNavbar"
+                  aria-expanded="false">
+              <span class="bottomrow__hamburger">&#9776;</span>
+          </button>
+
+          <ul class="nav navbar-nav pull-right collapse navbar-toggleable"
+              id="CollapsingNavbar"
+              data-tile="./fi/@@plone.app.standardtiles.global_sections"
+              data-rules="/++sitelayout++goodlife/navbar.xml">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">LINKKI <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINKKI</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!--container-->
+
+<!-- hero-area carousel -->
+<!-- You can find hero-area scss rules in _hero-area.scss partial -->
+<header class="container hero-area">
+  <div class="hero-area__carousel-wrapper">
+    <div class="hero-area__carousel-wrapper__slide-row-1">
+      <div class="hero-area__carousel-wrapper__slide-row-1__bg">
+        <div class="hero-area__carousel-wrapper__slide-row-1__bg__title">
+          <h1>SLIDE 1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-area__carousel-wrapper__slide-row-2">
+      <div class="hero-area__carousel-wrapper__slide-row-2__bg">
+        <div class="hero-area__carousel-wrapper__slide-row-2__bg__title">
+          <h1>SLIDE 2</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-area__carousel-wrapper__slide-row-3">
+      <div class="hero-area__carousel-wrapper__slide-row-3__bg">
+        <div class="hero-area__carousel-wrapper__slide-row-3__bg__title">
+          <h1>SLIDE 3</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- hero-area -->
+
+<!-- Breadcrumbs section, you can find scss rules from _breadcrumbs.scss partial -->
+<section class="container breadcrumbs">
+  <div class="breadcrumbs__row">
+    <div class="breadcrumbs__row__column"
+         data-tile="./@@plone.app.standardtiles.path_bar"
+         data-rules="/++sitelayout++goodlife/breadcrumbs.xml">
+        <a href="#"><p>Leivänmurut > Pääsivu > Joku muusivu > Ja joku > Toinen polku</p></a>
+    </div>
+  </div>
+</section>
+<!-- breadcrumbs -->
+
+<!-- Main content and paths area -->
+<section class="container m-y-3 general-content-area">
+  <div class="top-content">
+    <div class="top-content-full">
+
+      <aside id="global_statusmessage" data-slots="&gt; global_statusmessage">
+        <div data-tile="./@@plone.app.standardtiles.global_statusmessage"></div>
+      </aside>
+
+      <article id="content" data-panel="content" data-slots="content body">
+        <div data-slots="main">
+          <header>
+            <div data-tile="./@@plone.app.standardtiles.viewletmanager?manager=plone.abovecontenttitle"></div>
+            <div data-tile="./@@plone.app.standardtiles.title"
+                 data-slots="content-title">
+            </div>
+            <div data-tile="./@@plone.app.standardtiles.description"
+                 data-slots="content-description">
+            </div>
+          </header>
+          <div data-slots="content-core"></div>
+        </div>
+      </article>
+
+      <footer>
+        <div data-tile="./@@plone.app.standardtiles.discussion"></div>
+      </footer>
+
+    </div>
+  </div>
+</section>
+<!-- top-content -->
+
+<!-- Footer area, you can find scss rules from _footer.scss partial -->
+<footer class="container-fluid footer-bg-wrapper">
+  <div class="container row">
+    <div class="footer__row__block">
+      <div class="footer__row__block--logo">
+        <a href="https://www.jyu.fi/" title="Jyväskylän yliopisto">
+          <img src="https://opiskelu.jyu.fi/++theme++jyutheme.opiskelu/images/jyu-identity-light.png" />
+        </a>
+      </div>
+    </div>
+    <div data-tile="./@@plone.app.standardtiles.portletmanager?manager=plone.footerportlets"
+         data-rules="/++sitelayout++goodlife/footer.xml">
+    </div>
+  </div>
+</footer>
+<!-- footer-bg-wrapper -->
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script data-name="bundle-<%= chunk %>" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+
+</body>
+</html>
