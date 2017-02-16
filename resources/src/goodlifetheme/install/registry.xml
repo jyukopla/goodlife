@@ -269,8 +269,18 @@
   <!-- Mosaic tiles -->
 
   <records prefix="plone.app.mosaic.app_tiles.plone_app_standardtiles_tableofcontents"
-           interface="plone.app.mosaic.interfaces.ITile"
-           remove="true" />
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">plone.app.standardtiles.tableofcontents</value>
+    <value key="label">Table of contents</value>
+    <value key="category">structure</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"/>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">100</value>
+  </records>
 
   <!-- Goodlife tiles -->
 
@@ -495,12 +505,14 @@
   <record name="plone.app.mosaic.app_tiles.plone_app_standardtiles_html.available_actions">
     <value purge="false">
       <element>toolbar-removeformat</element>
+      <element>toolbar-anchor</element>
     </value>
   </record>
 
   <record name="plone.app.mosaic.widget_actions.plone_app_z3cform_widget_RichTextFieldWidget.actions">
     <value purge="false">
       <element>toolbar-removeformat</element>
+      <element>toolbar-anchor</element>
     </value>
   </record>
 
