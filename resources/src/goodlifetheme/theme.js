@@ -12,24 +12,28 @@ import 'slick-carousel';
 import './comments';
 
 jQuery(($) => {
-
-  $(document).ready(function()
-  {
-
-    // This controls the slick carousel, add additional settings here
-    // https://github.com/kenwheeler/slick/
-    $('.hero-area__carousel-wrapper').slick({
-      autoplay: true,
-      autoplaySpeed: 4000,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear',
-      nextArrow: null, //'<button type="button" class="slick-next"></button>', // null to remove buttons
-      prevArrow: null, //'<button type="button" class="slick-prev"></button>', // null to remove buttons
-    });
+  // This controls the slick carousel, add additional settings here
+  // https://github.com/kenwheeler/slick/
+  $('.hero-area__carousel-wrapper').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    nextArrow: null, //'<button type="button" class="slick-next"></button>', // null to remove buttons
+    prevArrow: null, //'<button type="button" class="slick-prev"></button>', // null to remove buttons
   });
 
+  function moveToAnchor() {
+    if (window.location.hash) {
+      const target = $(window.location.hash);
+      if (target.length) {
+        $('html, body').animate({scrollTop: target.offset().top - 60}, 0);
+      }
+    }
+  }
+  $(window).on('hashchange', moveToAnchor);
 });
 
 import './theme.scss';
