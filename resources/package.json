@@ -28,7 +28,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "bourbon": "^4.3.1",
     "brace": "^0.8.0",
-    "mockup": "git+https://github.com/plone/mockup.git#5b98b969e0d4ce697ec8a032f197d7b909e19601",
+    "mockup": "git+https://github.com/plone/mockup.git#5f865414fd414f4d61064946717789f51f9d7bab",
     "plone-mosaic": "git+https://github.com/plone/plone.app.mosaic.git#f131c8c80c3b2468d236017d322a05b8579c8e55",
     "plonetheme.barceloneta": "git+https://github.com/plone/plonetheme.barceloneta.git#d9f71f2f02cfb28fe9c0e2844dd4be9fb8b9fb6c",
     "slick-carousel": "^1.6.0",
