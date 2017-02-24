@@ -25,9 +25,11 @@ jQuery(($) => {
     prevArrow: null, //'<button type="button" class="slick-prev"></button>', // null to remove buttons
   });
 
+  // Anchor scrolltop
   function moveToAnchor() {
-    if (window.location.hash) {
-      const target = $(window.location.hash);
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+      const target = $(hash + ',[name="' + hash.substring(1) +'"]');
       if (target.length) {
         $('html, body').animate({scrollTop: target.offset().top - 60}, 0);
       }
