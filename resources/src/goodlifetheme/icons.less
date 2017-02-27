@@ -5,9 +5,6 @@
   width: 1em;
   height: 1em;
 }
-[class*="contenttype-"]:before {
-  margin-right: 0.5em;
-}
 [class*="contenttype-"]:after {
   display: none;
 }
@@ -27,22 +24,16 @@
 
 .image-icon, .image-tile { float: right; }
 i.glyphicon { padding-right: 0.2em; }
-#content.link-external { display: inline-block; }
-.pat-structure [class*="contenttype-"] {
-  &:before {
-    margin-right: 0;
-  }
+article header [class*="contenttype-"]:before {
+  margin-right: 0.5em;
 }
-.pattern-relateditems[class*="contenttype-"] {
-  &:before {
-    vertical-align: bottom;
-  }
-  &:after {
-    content: "";
-  }
+.pattern-relateditems[class*="contenttype-"] &:before {
+  vertical-align: bottom;
+}
+.pattern-relateditems[class*="contenttype-"] &:after {
+  content: "";
 }
 
-/* Toolbar */
 .icon-plone-contentmenu-multilingual:before {
   content: '\e836';
 }
