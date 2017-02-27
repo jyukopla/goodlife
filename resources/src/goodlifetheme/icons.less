@@ -5,9 +5,12 @@
   width: 1em;
   height: 1em;
 }
+[class*="contenttype-"]:before {
+  margin-right: 0.5em;
+}
 
 #edit-zone #plone-contentmenu-factories [class*="contenttype-"] {
-  padding: 0 0 15px 40px;
+  padding: 5px 0 5px 40px;
   &:before { display: none; }
   &:after {
     position: absolute;
@@ -19,6 +22,14 @@
 .image-icon, .image-tile { float: right; }
 i.glyphicon { padding-right: 0.2em; }
 #content.link-external { display: inline-block; }
+.pattern-relateditems[class*="contenttype-"] {
+  &:before {
+    vertical-align: bottom;
+  }
+  &:after {
+    content: "";
+  }
+}
 
 /* Toolbar */
 .icon-plone-contentmenu-multilingual:before {
