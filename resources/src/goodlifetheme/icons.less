@@ -1,5 +1,5 @@
-[class*="contenttype-"]:after,
-[class*="contenttype-"]:before {
+[class*="contenttype-"]:before,
+[class*="contenttype-"]:after {
   display: inline-block;
   vertical-align: -0.1em;
   width: 1em;
@@ -8,11 +8,17 @@
 [class*="contenttype-"]:before {
   margin-right: 0.5em;
 }
+[class*="contenttype-"]:after {
+  display: none;
+}
 
 #edit-zone #plone-contentmenu-factories [class*="contenttype-"] {
   padding: 5px 0 5px 40px;
-  &:before { display: none; }
+  &:before {
+    display: none;
+  }
   &:after {
+    display: inline-block;
     position: absolute;
     font-size: 20px;
     left: 12px;
