@@ -29,7 +29,7 @@
     "bourbon": "^4.3.1",
     "brace": "^0.8.0",
     "mockup": "git+https://github.com/plone/mockup.git#5f865414fd414f4d61064946717789f51f9d7bab",
-    "plone-mosaic": "git+https://github.com/plone/plone.app.mosaic.git#f131c8c80c3b2468d236017d322a05b8579c8e55",
+    "plone-mosaic": "git+https://github.com/plone/plone.app.mosaic.git#51a0f42a2abd3f53c990d06cb9ff4003210c8d85",
     "plonetheme.barceloneta": "git+https://github.com/plone/plonetheme.barceloneta.git#d9f71f2f02cfb28fe9c0e2844dd4be9fb8b9fb6c",
     "slick-carousel": "^1.6.0",
     "tether": "^1.3.8"
