@@ -16,6 +16,8 @@
   <replace css:content="#portal-globalnav">
     <xsl:for-each select="li/a">
       <li class="nav-item">
+        <xsl:copy-of select="parent::li/@id" />
+
         <xsl:if test="parent::*[@class='selected']">
           <xsl:attribute name="class">nav-item active</xsl:attribute>
         </xsl:if>
