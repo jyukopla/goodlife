@@ -13,6 +13,7 @@
       <xsl:apply-templates select="@id|@href|node()"/>
     </xsl:copy>
   </replace>
+  <drop css:content="#login-forgotten-password" />
 
   <!-- Login instructions -->
   <replace css:content="#login_form">
